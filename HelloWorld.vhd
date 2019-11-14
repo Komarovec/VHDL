@@ -1,15 +1,16 @@
-entity HelloWorld is
-end entity;
 
-architecture sim of HelloWorld is
+use std.textio.all; 
+
+entity hello_world is
+end hello_world;
+
+architecture behaviour of hello_world is
 begin
-
-    process is
+    process
+        variable l : line;
     begin
-
-        report "Hello World!";
+        write (l, String'("Hello world!"));
+        writeline (output, l);
         wait;
-
     end process;
-
-end architecture;
+end behaviour;

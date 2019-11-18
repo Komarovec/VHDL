@@ -1,4 +1,0 @@
-v 4
-file . "HearthBeat.vhd" "ed9f532ea4e9e3eaf452a2524a7b2201c7963dda" "20191114202135.135":
-  entity heartbeat at 1( 0) + 0 on 11;
-  architecture behaviour of heartbeat at 8( 119) + 0 on 12;

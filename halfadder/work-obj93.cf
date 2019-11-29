@@ -1,0 +1,7 @@
+v 4
+file . "halfadder_testbench.vhd" "754f223ec7f826fa0daae48b383aba49d22df8f4" "20191129114345.001":
+  entity halfadder_testbench at 1( 0) + 0 on 13;
+  architecture behaviour of halfadder_testbench at 7( 106) + 0 on 14;
+file . "halfadder.vhd" "cd7df3d63646bef27b0bb9f0198d5ccbcdc81a53" "20191129113732.134":
+  entity halfadder at 1( 0) + 0 on 11;
+  architecture behaviour of halfadder at 13( 225) + 0 on 12;

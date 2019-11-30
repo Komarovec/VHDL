@@ -1,4 +1,0 @@
-v 4
-file . "display.vhd" "c3842987d5573f0bbd8a73eb764e84de28e00c57" "20191129140404.669":
-  entity display at 1( 0) + 0 on 13;
-  architecture behaviour of display at 12( 245) + 0 on 14;

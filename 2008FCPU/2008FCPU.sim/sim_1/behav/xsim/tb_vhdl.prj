@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/h2.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/kbd.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/ram.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd" \
+"../../../../2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd" \
+"../../../../2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,73 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 366e601e06294a20b99c8a7a0845079a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_behav xil_defaultlib.tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.util
+Compiling package xil_defaultlib.h2_pkg
+Compiling package xil_defaultlib.core_pkg
+Compiling package xil_defaultlib.vga_pkg
+Compiling package xil_defaultlib.uart_pkg
+Compiling package xil_defaultlib.kbd_pkg
+Compiling architecture rtl of entity xil_defaultlib.ctrm [\ctrm(g=(100000000,0,true),m=794...]
+Compiling architecture rtl of entity xil_defaultlib.ctrm [\ctrm(g=(100000000,0,true),m=525...]
+Compiling architecture rtl of entity xil_defaultlib.ctrm [\ctrm(g=(100000000,0,true))\]
+Compiling architecture rtl of entity xil_defaultlib.ctrm [\ctrm(g=(100000000,0,true),m=12)...]
+Compiling architecture rtl of entity xil_defaultlib.ctrm [\ctrm(g=(100000000,0,true),m=80)...]
+Compiling architecture rtl of entity xil_defaultlib.ctrm [\ctrm(g=(100000000,0,true),m=40)...]
+Compiling architecture rtl of entity xil_defaultlib.losr [\losr(g=(100000000,0,true),n=8)\]
+Compiling architecture rtl of entity xil_defaultlib.vga_core [\vga_core(g=(100000000,0,true))\]
+Compiling architecture behav of entity xil_defaultlib.dual_port_block_ram [\dual_port_block_ram(g=(10000000...]
+Compiling architecture behav of entity xil_defaultlib.single_port_block_ram [\single_port_block_ram(g=(100000...]
+Compiling architecture behav of entity xil_defaultlib.vga_top [\vga_top(g=(100000000,0,true))\]
+Compiling architecture rlt of entity xil_defaultlib.atoi [\atoi(g=(100000000,0,true),n=8)\]
+Compiling architecture rtl of entity xil_defaultlib.vt100 [\vt100(g=(100000000,0,true))\]
+Compiling architecture rtl of entity xil_defaultlib.state_changed [\state_changed(g=(100000000,0,tr...]
+Compiling architecture structural of entity xil_defaultlib.state_block_changed [\state_block_changed(g=(10000000...]
+Compiling architecture behavior of entity xil_defaultlib.reset_generator [\reset_generator(g=(100000000,0,...]
+Compiling architecture rtl of entity xil_defaultlib.rising_edge_detector [\rising_edge_detector(g=(1000000...]
+Compiling architecture structural of entity xil_defaultlib.rising_edge_detectors [\rising_edge_detectors(g=(100000...]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=1)\]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=8)\]
+Compiling architecture rtl of entity xil_defaultlib.interrupt_request_handler [\interrupt_request_handler(g=(10...]
+Compiling architecture rtl of entity xil_defaultlib.h2 [\h2(cpu_id="0000011001100110")\]
+Compiling architecture behav of entity xil_defaultlib.dual_port_block_ram [\dual_port_block_ram(g=(10000000...]
+Compiling architecture structural of entity xil_defaultlib.core [\core(g=(100000000,0,true))\]
+Compiling architecture behavior of entity xil_defaultlib.fifo [\fifo(g=(100000000,0,true),data_...]
+Compiling architecture behavior of entity xil_defaultlib.fifo [\fifo(g=(100000000,0,true),data_...]
+Compiling architecture behaviour of entity xil_defaultlib.uart_baud [\uart_baud(g=(100000000,0,true),...]
+Compiling architecture behaviour of entity xil_defaultlib.uart_baud [\uart_baud(g=(100000000,0,true),...]
+Compiling architecture behaviour of entity xil_defaultlib.uart_tx [\uart_tx(g=(100000000,0,true),n=...]
+Compiling architecture behaviour of entity xil_defaultlib.uart_rx [\uart_rx(g=(100000000,0,true),n=...]
+Compiling architecture structural of entity xil_defaultlib.uart_core [\uart_core(g=(100000000,0,true),...]
+Compiling architecture structural of entity xil_defaultlib.uart_top [\uart_top(g=(100000000,0,true),f...]
+Compiling architecture behav of entity xil_defaultlib.timer [\timer(g=(100000000,0,true))\]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=7)\]
+Compiling architecture rtl of entity xil_defaultlib.ps2_debounce [\ps2_debounce(counter_size=8)\]
+Compiling architecture rtl of entity xil_defaultlib.ps2_kbd_core [\ps2_kbd_core(clock_frequency=10...]
+Compiling architecture rtl of entity xil_defaultlib.ps2_kbd_top [\ps2_kbd_top(clock_frequency=100...]
+Compiling architecture rtl of entity xil_defaultlib.keyboard [\keyboard(g=(100000000,0,true))\]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=4)\]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=16)\]
+Compiling architecture rtl of entity xil_defaultlib.timer_us [\timer_us(g=(100000000,0,true),t...]
+Compiling architecture rtl of entity xil_defaultlib.led_7_segment_display [\led_7_segment_display(g=(100000...]
+Compiling architecture rtl of entity xil_defaultlib.timer_us [\timer_us(g=(100000000,0,true),t...]
+Compiling architecture rtl of entity xil_defaultlib.debounce_us [\debounce_us(g=(100000000,0,true...]
+Compiling architecture structural of entity xil_defaultlib.debounce_block_us [\debounce_block_us(g=(100000000,...]
+Compiling architecture structural of entity xil_defaultlib.debounce_block_us [\debounce_block_us(g=(100000000,...]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=15)\]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=10)\]
+Compiling architecture rtl of entity xil_defaultlib.reg [\reg(g=(100000000,0,true),n=6)\]
+Compiling architecture rtl of entity xil_defaultlib.ram_interface [\ram_interface(g=(100000000,0,tr...]
+Compiling architecture behav of entity xil_defaultlib.top [\top(g=(100000000,0,true),reset_...]
+Compiling architecture testing of entity xil_defaultlib.tb
+Built simulation snapshot tb_behav

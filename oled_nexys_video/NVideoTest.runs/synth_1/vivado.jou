@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Feb 15 17:55:48 2020
+# Process ID: 8264
+# Current directory: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1
+# Command line: vivado.exe -log oled_ctrl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source oled_ctrl.tcl
+# Log file: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1/oled_ctrl.vds
+# Journal file: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source oled_ctrl.tcl -notrace

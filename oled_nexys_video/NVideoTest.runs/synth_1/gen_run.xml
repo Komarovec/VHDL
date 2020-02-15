@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-3" LaunchTime="1581785744">
+  <File Type="PA-TCL" Name="oled_ctrl.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="oled_ctrl_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="oled_ctrl_reports.tcl"/>
+  <File Type="RDS-RDS" Name="oled_ctrl.vds"/>
+  <File Type="RDS-UTIL" Name="oled_ctrl_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="oled_ctrl_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="oled_ctrl.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="oled_ctrl_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="oled_ctrl_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/ascii_rom.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZedBoard-OLED-master/rtl/ascii_rom.vhd"/>
+        <Attr Name="ImportTime" Val="1494135462"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/delay.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZedBoard-OLED-master/rtl/delay.vhd"/>
+        <Attr Name="ImportTime" Val="1494135462"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/oled_ex.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZedBoard-OLED-master/rtl/oled_ex.vhd"/>
+        <Attr Name="ImportTime" Val="1494135462"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/oled_init.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZedBoard-OLED-master/rtl/oled_init.vhd"/>
+        <Attr Name="ImportTime" Val="1494135462"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/spi_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZedBoard-OLED-master/rtl/spi_ctrl.vhd"/>
+        <Attr Name="ImportTime" Val="1494135462"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/oled_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZedBoard-OLED-master/rtl/oled_ctrl.vhd"/>
+        <Attr Name="ImportTime" Val="1494135462"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="oled_ctrl"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Nexys-Video-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1581780727"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

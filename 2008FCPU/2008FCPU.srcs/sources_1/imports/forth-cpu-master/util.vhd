@@ -2108,14 +2108,14 @@ architecture behav of dual_port_block_ram is
 					read(input_line, tmp);
 					ram_data(i) := std_ulogic_vector(to_stdlogicvector(tmp));
 				elsif the_file_type = FILE_HEX then
-				    --ram_data(i):=(others => '0');
 				-- !!! Synthesis cannot be done !!!
-					assert (data_length mod 4) = 0 report "(data_length%4)!=0" severity failure;
-					for j in 1 to (data_length/4) loop
-						c:= input_line((data_length/4) - j + 1);
-						slv((j*4)-1 downto (j*4)-4) := hex_char_to_std_ulogic_vector_tb(c);
-					end loop;
-					ram_data(i) := slv;
+				    ram_data(i):=(others => '0');
+--					assert (data_length mod 4) = 0 report "(data_length%4)!=0" severity failure;
+--					for j in 1 to (data_length/4) loop
+--						c:= input_line((data_length/4) - j + 1);
+--						slv((j*4)-1 downto (j*4)-4) := hex_char_to_std_ulogic_vector_tb(c);
+--					end loop;
+--					ram_data(i) := slv;
 				else
 					report "Incorrect file type given: " & file_format'image(the_file_type) severity failure;
 				end if;

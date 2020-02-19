@@ -109,7 +109,7 @@ end;
 
 architecture structural of core is
 	constant interrupt_address_length: natural     := n_bits(number_of_interrupts);
-	constant file_name:                string      := "h2.hex";
+	constant file_name:                string      := "h2.bin";
 	constant file_type:                file_format := file_hex;
 	signal pc:    address    := (others => '0'); -- Program counter
 	signal insn:  word       := (others => '0'); -- Instruction issued by program counter

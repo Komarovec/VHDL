@@ -175,89 +175,89 @@ use ieee.math_real.all;
 use work.vga_pkg.all;
 use work.util.all;
 
-entity vt100_tb is
-	generic(g: common_generics);
-end entity;
+--entity vt100_tb is
+--	generic(g: common_generics);
+--end entity;
 
-architecture behav of vt100_tb is
-	constant clock_period: time := 1000 ms / g.clock_frequency;
-	signal clk, rst: std_ulogic := '0';
-	signal stop:     std_ulogic := '0';
-	signal clk25MHz, rst25MHz: std_ulogic := '0';
+--architecture behav of vt100_tb is
+--	constant clock_period: time := 1000 ms / g.clock_frequency;
+--	signal clk, rst: std_ulogic := '0';
+--	signal stop:     std_ulogic := '0';
+--	signal clk25MHz, rst25MHz: std_ulogic := '0';
 
-	signal char:     std_ulogic_vector(7 downto 0);
-	signal we:       std_ulogic := '0';
-	signal busy:     std_ulogic := '0';
-	signal physical: vga_physical_interface;
+--	signal char:     std_ulogic_vector(7 downto 0);
+--	signal we:       std_ulogic := '0';
+--	signal busy:     std_ulogic := '0';
+--	signal physical: vga_physical_interface;
 
-	-- NB. 'string' range is (1 to X), not (X-1 downto 0)
-	-- HT = Horizontal Tab
-	-- LF = Line Feed
-	-- CR = Carriage Return
-	-- ESC = Escape
-	constant CSI:   string := ESC & "[";
-	constant RESET: string := CSI & "0m";
-	constant RED:   string := CSI & "31m";
-	constant GREEN: string := CSI & "32m";
-	constant NL:    string := CR & LF;
-	constant test_string: string := "Hello!" & HT & "World!" & RED & NL & "How are you?" & RESET & NL ;
-	shared variable test_vector: ulogic_string(test_string'range) := to_std_ulogic_vector(test_string);
-	shared variable index: integer := 1; -- starts at '1' due to string range
+--	-- NB. 'string' range is (1 to X), not (X-1 downto 0)
+--	-- HT = Horizontal Tab
+--	-- LF = Line Feed
+--	-- CR = Carriage Return
+--	-- ESC = Escape
+--	constant CSI:   string := ESC & "[";
+--	constant RESET: string := CSI & "0m";
+--	constant RED:   string := CSI & "31m";
+--	constant GREEN: string := CSI & "32m";
+--	constant NL:    string := CR & LF;
+--	constant test_string: string := "Hello!" & HT & "World!" & RED & NL & "How are you?" & RESET & NL ;
+--	shared variable test_vector: ulogic_string(test_string'range) := to_std_ulogic_vector(test_string);
+--	shared variable index: integer := 1; -- starts at '1' due to string range
 
-	constant g_cs25MHz: common_generics := (clock_frequency => 25_000_000, asynchronous_reset => g.asynchronous_reset, delay => g.delay);
-begin
-	cs: entity work.clock_source_tb
-		generic map(g => g, hold_rst => 2)
-		port map(stop => stop, clk => clk, rst => rst);
+--	constant g_cs25MHz: common_generics := (clock_frequency => 25_000_000, asynchronous_reset => g.asynchronous_reset, delay => g.delay);
+--begin
+--	cs: entity work.clock_source_tb
+--		generic map(g => g, hold_rst => 2)
+--		port map(stop => stop, clk => clk, rst => rst);
 
-	cs25MHz: entity work.clock_source_tb
-		generic map(g => g_cs25MHz, hold_rst => 2)
-		port map(stop => stop, clk => clk25MHz, rst => rst25MHz);
+--	cs25MHz: entity work.clock_source_tb
+--		generic map(g => g_cs25MHz, hold_rst => 2)
+--		port map(stop => stop, clk => clk25MHz, rst => rst25MHz);
 
 
-	uut: work.vga_pkg.vt100
-	generic map(g => g)
-	port map(
-		clk      => clk,
-		clk25MHz => clk25MHz,
-		rst      => rst,
-		we       => we,
-		char     => char,
-		busy     => busy,
-		o_vga    => physical);
+--	uut: work.vga_pkg.vt100
+--	generic map(g => g)
+--	port map(
+--		clk      => clk,
+--		clk25MHz => clk25MHz,
+--		rst      => rst,
+--		we       => we,
+--		char     => char,
+--		busy     => busy,
+--		o_vga    => physical);
 
-	stimulus_process: process
-	begin
-		char <= test_vector(index);
-		we <= '0';
-		wait for clock_period * 20;
+--	stimulus_process: process
+--	begin
+--		char <= test_vector(index);
+--		we <= '0';
+--		wait for clock_period * 20;
 
-		for i in test_vector'range loop
-			we <= '1';
-			char <= test_vector(index);
-			wait for clock_period;
-			we <= '0';
-			wait for clock_period;
+--		for i in test_vector'range loop
+--			we <= '1';
+--			char <= test_vector(index);
+--			wait for clock_period;
+--			we <= '0';
+--			wait for clock_period;
 
-			while busy = '1' loop
-				wait until busy = '0';
-				wait for clock_period;
-			end loop;
+--			while busy = '1' loop
+--				wait until busy = '0';
+--				wait for clock_period;
+--			end loop;
 
-			-- wait for clock_period * 20;
-			-- wait until busy = '0';
-			-- report integer'image(index);
-			if index < (test_vector'high - 1) then
-				index := index + 1;
-			else
-				index := 1;
-			end if;
-		end loop;
+--			-- wait for clock_period * 20;
+--			-- wait until busy = '0';
+--			-- report integer'image(index);
+--			if index < (test_vector'high - 1) then
+--				index := index + 1;
+--			else
+--				index := 1;
+--			end if;
+--		end loop;
 
-		stop <= '1';
-		wait;
-	end process;
-end architecture;
+--		stop <= '1';
+--		wait;
+--	end process;
+--end architecture;
 
 ----- VGA Test Bench ----------------------------------------------------------
 

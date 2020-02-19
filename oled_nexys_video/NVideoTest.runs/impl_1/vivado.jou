@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Feb 15 17:59:17 2020
-# Process ID: 5068
-# Current directory: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/impl_1
+# Start of session at: Sun Feb 16 20:50:09 2020
+# Process ID: 6804
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/impl_1
 # Command line: vivado.exe -log oled_ctrl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source oled_ctrl.tcl -notrace
-# Log file: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/impl_1/oled_ctrl.vdi
-# Journal file: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/impl_1\vivado.jou
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/impl_1/oled_ctrl.vdi
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source oled_ctrl.tcl -notrace

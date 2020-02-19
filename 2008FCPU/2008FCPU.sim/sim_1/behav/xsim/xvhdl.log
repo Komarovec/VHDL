@@ -1,92 +1,67 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'clock_source_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'reg'
 INFO: [VRFC 10-3107] analyzing entity 'shift_register'
-INFO: [VRFC 10-3107] analyzing entity 'shift_register_tb'
 INFO: [VRFC 10-3107] analyzing entity 'timer_us'
-INFO: [VRFC 10-3107] analyzing entity 'timer_us_tb'
 INFO: [VRFC 10-3107] analyzing entity 'rising_edge_detector'
-INFO: [VRFC 10-3107] analyzing entity 'rising_edge_detector_tb'
 INFO: [VRFC 10-3107] analyzing entity 'rising_edge_detectors'
 INFO: [VRFC 10-3107] analyzing entity 'half_adder'
 INFO: [VRFC 10-3107] analyzing entity 'full_adder'
-INFO: [VRFC 10-3107] analyzing entity 'full_adder_tb'
 INFO: [VRFC 10-3107] analyzing entity 'fifo'
-INFO: [VRFC 10-3107] analyzing entity 'fifo_tb'
 INFO: [VRFC 10-3107] analyzing entity 'counter'
-INFO: [VRFC 10-3107] analyzing entity 'counter_tb'
 INFO: [VRFC 10-3107] analyzing entity 'lfsr'
-INFO: [VRFC 10-3107] analyzing entity 'lfsr_tb'
 INFO: [VRFC 10-3107] analyzing entity 'io_pins'
-INFO: [VRFC 10-3107] analyzing entity 'io_pins_tb'
 INFO: [VRFC 10-3107] analyzing entity 'dual_port_block_ram'
-WARNING: [VRFC 10-2115] shared variables must be of a protected type [C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2131]
+WARNING: [VRFC 10-2115] shared variables must be of a protected type [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2135]
 INFO: [VRFC 10-3107] analyzing entity 'single_port_block_ram'
-WARNING: [VRFC 10-2115] shared variables must be of a protected type [C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2225]
+WARNING: [VRFC 10-2115] shared variables must be of a protected type [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2229]
 INFO: [VRFC 10-3107] analyzing entity 'data_source'
 INFO: [VRFC 10-3107] analyzing entity 'ucpu'
-INFO: [VRFC 10-3107] analyzing entity 'ucpu_tb'
 INFO: [VRFC 10-3107] analyzing entity 'restoring_divider'
-INFO: [VRFC 10-3107] analyzing entity 'restoring_divider_tb'
 INFO: [VRFC 10-3107] analyzing entity 'debounce_us'
-INFO: [VRFC 10-3107] analyzing entity 'debounce_us_tb'
 INFO: [VRFC 10-3107] analyzing entity 'debounce_block_us'
 INFO: [VRFC 10-3107] analyzing entity 'state_changed'
 INFO: [VRFC 10-3107] analyzing entity 'state_block_changed'
 INFO: [VRFC 10-3107] analyzing entity 'reset_generator'
-INFO: [VRFC 10-3107] analyzing entity 'reset_generator_tb'
 INFO: [VRFC 10-3107] analyzing entity 'bit_count'
-INFO: [VRFC 10-3107] analyzing entity 'bit_count_tb'
 INFO: [VRFC 10-3107] analyzing entity 'majority'
-INFO: [VRFC 10-3107] analyzing entity 'majority_tb'
 INFO: [VRFC 10-3107] analyzing entity 'delay_line'
-INFO: [VRFC 10-3107] analyzing entity 'delay_line_tb'
 INFO: [VRFC 10-3107] analyzing entity 'gray_encoder'
 INFO: [VRFC 10-3107] analyzing entity 'gray_decoder'
-INFO: [VRFC 10-3107] analyzing entity 'gray_tb'
 INFO: [VRFC 10-3107] analyzing entity 'parity_module'
 INFO: [VRFC 10-3107] analyzing entity 'hamming_7_4_encoder'
 INFO: [VRFC 10-3107] analyzing entity 'hamming_7_4_decoder'
-INFO: [VRFC 10-3107] analyzing entity 'hamming_7_4_tb'
 INFO: [VRFC 10-3107] analyzing entity 'vga_controller'
-INFO: [VRFC 10-3107] analyzing entity 'vga_tb'
-INFO: [VRFC 10-3107] analyzing entity 'led_7_segment_display'
-INFO: [VRFC 10-3107] analyzing entity 'led_7_segment_display_tb'
 INFO: [VRFC 10-3107] analyzing entity 'sine'
 INFO: [VRFC 10-3107] analyzing entity 'cosine'
 INFO: [VRFC 10-3107] analyzing entity 'sine_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'core'
 INFO: [VRFC 10-3107] analyzing entity 'interrupt_request_handler'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/kbd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/kbd.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'keyboard'
 INFO: [VRFC 10-3107] analyzing entity 'ps2_kbd_top'
 INFO: [VRFC 10-3107] analyzing entity 'ps2_kbd_core'
 INFO: [VRFC 10-3107] analyzing entity 'ps2_debounce'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/ram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/ram.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'ram_interface'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'vt100_tb'
-WARNING: [VRFC 10-2115] shared variables must be of a protected type [C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd:204]
-WARNING: [VRFC 10-2115] shared variables must be of a protected type [C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd:205]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'atoi'
 INFO: [VRFC 10-3107] analyzing entity 'vt100'
 INFO: [VRFC 10-3107] analyzing entity 'vga_top'
 INFO: [VRFC 10-3107] analyzing entity 'vga_core'
 INFO: [VRFC 10-3107] analyzing entity 'ctrm'
 INFO: [VRFC 10-3107] analyzing entity 'losr'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'uart_top'
 INFO: [VRFC 10-3107] analyzing entity 'uart_core'
 INFO: [VRFC 10-3107] analyzing entity 'uart_baud'
 INFO: [VRFC 10-3107] analyzing entity 'uart_rx'
 INFO: [VRFC 10-3107] analyzing entity 'uart_tx'
-INFO: [VRFC 10-3107] analyzing entity 'uart_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'timer'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'top'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'tb'
-WARNING: [VRFC 10-2115] shared variables must be of a protected type [C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd:127]
-WARNING: [VRFC 10-2444] return type of pure function cannot be of access type [C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd:354]
+WARNING: [VRFC 10-2115] shared variables must be of a protected type [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd:127]
+WARNING: [VRFC 10-2444] return type of pure function cannot be of access type [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sim_1/imports/forth-cpu-master/tb.vhd:355]

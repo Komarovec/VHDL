@@ -812,134 +812,134 @@ begin
 	end process;
 end architecture;
 
-library ieee, work;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.uart_pkg.all;
-use work.util.common_generics;
+--library ieee, work;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--use work.uart_pkg.all;
+--use work.util.common_generics;
 
-entity uart_tb is
-	generic(g: common_generics);
-end entity;
+--entity uart_tb is
+--	generic(g: common_generics);
+--end entity;
 
-architecture testing of uart_tb is
-	constant clock_period: time     := 1000 ms / g.clock_frequency;
-	constant use_fifo:     boolean  := true;
-	signal rst, clk:     std_ulogic := '1';
-	signal stop:         boolean    := false;
-	signal loopback:     boolean    := true;
-	signal tx, rx:       std_ulogic;
-	signal di, do:       std_ulogic_vector(7 downto 0);
-	signal reg:          std_ulogic_vector(15 downto 0);
-	signal clock_reg_tx_we: std_ulogic;
-	signal clock_reg_rx_we: std_ulogic;
-	signal control_reg_we:  std_ulogic;
+--architecture testing of uart_tb is
+--	constant clock_period: time     := 1000 ms / g.clock_frequency;
+--	constant use_fifo:     boolean  := true;
+--	signal rst, clk:     std_ulogic := '1';
+--	signal stop:         boolean    := false;
+--	signal loopback:     boolean    := true;
+--	signal tx, rx:       std_ulogic;
+--	signal di, do:       std_ulogic_vector(7 downto 0);
+--	signal reg:          std_ulogic_vector(15 downto 0);
+--	signal clock_reg_tx_we: std_ulogic;
+--	signal clock_reg_rx_we: std_ulogic;
+--	signal control_reg_we:  std_ulogic;
 
-	signal tx_fifo_full:  std_ulogic;
-	signal tx_fifo_empty: std_ulogic;
-	signal tx_fifo_we:    std_ulogic := '0';
-	signal rx_fifo_full:  std_ulogic;
-	signal rx_fifo_empty: std_ulogic;
-	signal rx_fifo_re:    std_ulogic := '0';
-begin
-	-- duration: process begin wait for 20000 us; stop <= true; wait; end process;
-	clk_process: process
-	begin
-		rst <= '1';
-		wait for clock_period * 5;
-		rst <= '0';
-		while not stop loop
-			clk <= '1';
-			wait for clock_period / 2;
-			clk <= '0';
-			wait for clock_period / 2;
-		end loop;
-		wait;
-	end process;
+--	signal tx_fifo_full:  std_ulogic;
+--	signal tx_fifo_empty: std_ulogic;
+--	signal tx_fifo_we:    std_ulogic := '0';
+--	signal rx_fifo_full:  std_ulogic;
+--	signal rx_fifo_empty: std_ulogic;
+--	signal rx_fifo_re:    std_ulogic := '0';
+--begin
+--	-- duration: process begin wait for 20000 us; stop <= true; wait; end process;
+--	clk_process: process
+--	begin
+--		rst <= '1';
+--		wait for clock_period * 5;
+--		rst <= '0';
+--		while not stop loop
+--			clk <= '1';
+--			wait for clock_period / 2;
+--			clk <= '0';
+--			wait for clock_period / 2;
+--		end loop;
+--		wait;
+--	end process;
 
-	-- TODO: Assert what we receive is what we sent, also, introduce
-	-- framing and parity errors and make sure we catch them.
-	stimulus: process 
-		procedure write(data: std_ulogic_vector(di'range)) is
-		begin
-			wait for clock_period * 1;
-			while tx_fifo_full = '1' loop
-				wait for clock_period;
-			end loop;
-			di <= data;
-			tx_fifo_we <= '1';
-			wait for clock_period;
-			tx_fifo_we <= '0';
-		end procedure;
-	begin
-		di <= x"00";
-		wait until rst = '0';
-		wait for clock_period;
-		reg             <=  x"8080";
-		control_reg_we  <=  '1';
-		wait for clock_period;
-		control_reg_we  <=  '0';
-		reg             <=  x"0036";
-		clock_reg_tx_we <=  '1';
-		wait for clock_period;
-		clock_reg_tx_we <=  '0';
-		clock_reg_rx_we <=  '1';
-		reg             <=  x"0035";
-		wait for clock_period;
-		clock_reg_rx_we <=  '0';
-		wait for clock_period;
+--	-- TODO: Assert what we receive is what we sent, also, introduce
+--	-- framing and parity errors and make sure we catch them.
+--	stimulus: process 
+--		procedure write(data: std_ulogic_vector(di'range)) is
+--		begin
+--			wait for clock_period * 1;
+--			while tx_fifo_full = '1' loop
+--				wait for clock_period;
+--			end loop;
+--			di <= data;
+--			tx_fifo_we <= '1';
+--			wait for clock_period;
+--			tx_fifo_we <= '0';
+--		end procedure;
+--	begin
+--		di <= x"00";
+--		wait until rst = '0';
+--		wait for clock_period;
+--		reg             <=  x"8080";
+--		control_reg_we  <=  '1';
+--		wait for clock_period;
+--		control_reg_we  <=  '0';
+--		reg             <=  x"0036";
+--		clock_reg_tx_we <=  '1';
+--		wait for clock_period;
+--		clock_reg_tx_we <=  '0';
+--		clock_reg_rx_we <=  '1';
+--		reg             <=  x"0035";
+--		wait for clock_period;
+--		clock_reg_rx_we <=  '0';
+--		wait for clock_period;
 
-		write(x"AA");
-		write(x"BB");
-		write(x"CC");
-		write(x"DD");
-		write(x"EE");
-		write(x"FF");
-		wait for clock_period;
-		while tx_fifo_empty = '0' loop
-			wait for clock_period;
-		end loop;
-		loopback <= false;
-		wait for clock_period * 50000;
-		stop <= true;
-		wait;
-	end process;
+--		write(x"AA");
+--		write(x"BB");
+--		write(x"CC");
+--		write(x"DD");
+--		write(x"EE");
+--		write(x"FF");
+--		wait for clock_period;
+--		while tx_fifo_empty = '0' loop
+--			wait for clock_period;
+--		end loop;
+--		loopback <= false;
+--		wait for clock_period * 50000;
+--		stop <= true;
+--		wait;
+--	end process;
 
-	ack: process
-	begin
-		while not stop loop
-			if rx_fifo_empty = '0' then
-				rx_fifo_re <= '1';
-			else
-				rx_fifo_re <= '0';
-			end if;
-			wait for clock_period;
-		end loop;
-		wait;
-	end process;
-	rx <= tx when loopback else '0'; -- loop back test
-	uut: work.uart_pkg.uart_top
-		generic map (g => g, baud => 115200, format => uart_8N1, use_fifo => use_fifo)
-		port map (
-			clk => clk,
-			rst => rst,
+--	ack: process
+--	begin
+--		while not stop loop
+--			if rx_fifo_empty = '0' then
+--				rx_fifo_re <= '1';
+--			else
+--				rx_fifo_re <= '0';
+--			end if;
+--			wait for clock_period;
+--		end loop;
+--		wait;
+--	end process;
+--	rx <= tx when loopback else '0'; -- loop back test
+--	uut: work.uart_pkg.uart_top
+--		generic map (g => g, baud => 115200, format => uart_8N1, use_fifo => use_fifo)
+--		port map (
+--			clk => clk,
+--			rst => rst,
 
-			tx             =>  tx,
-			tx_fifo_full   =>  tx_fifo_full,
-			tx_fifo_empty  =>  tx_fifo_empty,
-			tx_fifo_we     =>  tx_fifo_we,
-			tx_fifo_data   =>  di,
+--			tx             =>  tx,
+--			tx_fifo_full   =>  tx_fifo_full,
+--			tx_fifo_empty  =>  tx_fifo_empty,
+--			tx_fifo_we     =>  tx_fifo_we,
+--			tx_fifo_data   =>  di,
 
-			rx             =>  rx,
-			rx_fifo_full   =>  rx_fifo_full,
-			rx_fifo_empty  =>  rx_fifo_empty,
-			rx_fifo_re     =>  rx_fifo_re,
-			rx_fifo_data   =>  do,
+--			rx             =>  rx,
+--			rx_fifo_full   =>  rx_fifo_full,
+--			rx_fifo_empty  =>  rx_fifo_empty,
+--			rx_fifo_re     =>  rx_fifo_re,
+--			rx_fifo_data   =>  do,
 
-			reg             => reg,
-			clock_reg_tx_we => clock_reg_tx_we,
-			clock_reg_rx_we => clock_reg_rx_we,
-			control_reg_we  => control_reg_we);
+--			reg             => reg,
+--			clock_reg_tx_we => clock_reg_tx_we,
+--			clock_reg_rx_we => clock_reg_rx_we,
+--			control_reg_we  => control_reg_we);
 
-end architecture;
+--end architecture;
 

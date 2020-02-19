@@ -174,35 +174,27 @@ begin
                 when Idle =>
                     if en = '1' then
                         current_state <= ClearDC;
-                        after_page_state <= Alphabet;
+                        after_page_state <= HelloWorldScreen;
                         temp_page <= "00";
                     end if;
+                    
                 -- Set current_screen to constant alphabet_screen and update the screen; go to state Wait1 afterwards
                 when Alphabet =>
                     current_screen <= alphabet_screen;
+                    after_update_state <= Done;
                     current_state <= UpdateScreen;
-                    after_update_state <= Wait1;
-                -- Wait 4ms and go to ClearScreen
-                when Wait1 =>
-                    temp_delay_ms <= "111110100000"; -- 4000
-                    after_state <= ClearScreen;
-                    current_state <= Transition3; -- Transition3 = delay transition states
-                -- Set current_screen to constant clear_screen and update the screen; go to state Wait2 afterwards
+                    
                 when ClearScreen =>
                     current_screen <= clear_screen;
-                    after_update_state <= Wait2;
+                    after_update_state <= Done;
                     current_state <= UpdateScreen;
-                -- Wait 1ms and go to HelloWorldScreen
-                when Wait2 =>
-                    temp_delay_ms <= "001111101000"; -- 1000
-                    after_state <= HelloWorldScreen;
-                    current_state <= Transition3; -- Transition3 = delay transition states
-                -- Set currentScreen to constant hello_world_screen and update the screen; go to state Done afterwards
+                    
                 when HelloWorldScreen =>
                     current_screen <= hello_world_screen;
                     after_update_state <= Done;
                     current_state <= UpdateScreen;
                 -- Do nothing until en is deassertted and then current_state is Idle
+                
                 when Done            =>
                     if en = '0' then
                         current_state <= Idle;
@@ -310,27 +302,40 @@ begin
                 -- 1. Set en to 1
                 -- 2. Waits for spi_ctrl to finish
                 -- 3. Goes to clear state (Transition5)
-                when Transition1 =>
-                    temp_spi_en <= '1';
-                    current_state <= Transition2;
-                when Transition2 =>
-                    if temp_spi_fin = '1' then
-                        current_state <= Transition5;
-                    end if;
+--                when Transition1 =>
+--                    temp_spi_en <= '1';
+--                    current_state <= Transition2;
+--                when Transition2 =>
+--                    if temp_spi_fin = '1' then
+--                        current_state <= Transition5;
+--                    end if;
                 -- End SPI transitions
 
                 -- Delay transitions
                 -- 1. Set delay_en to 1
                 -- 2. Waits for delay to finish
                 -- 3. Goes to Clear state (Transition5)
-                when Transition3 =>
-                    temp_delay_en <= '1';
-                    current_state <= Transition4;
-                when Transition4 =>
-                    if temp_delay_fin = '1' then
-                        current_state <= Transition5;
-                    end if;
+--                when Transition3 =>
+--                    temp_delay_en <= '1';
+--                    current_state <= Transition4;
+--                when Transition4 =>
+--                    if temp_delay_fin = '1' then
+--                        current_state <= Transition5;
+--                    end if;
                 -- End Delay transitions
+
+                -- Wait 1ms and go to HelloWorldScreen
+--                when Wait2 =>
+--                    temp_delay_ms <= "001111101000"; -- 1000
+--                    after_state <= HelloWorldScreen;
+--                    current_state <= Transition3; -- Transition3 = delay transition states
+                -- Set currentScreen to constant hello_world_screen and update the screen; go to state Done afterwards
+                 -- Wait 4ms and go to ClearScreen
+--                when Wait1 =>
+--                    temp_delay_ms <= "111110100000"; -- 4000
+--                    after_state <= ClearScreen;
+--                    current_state <= Transition3; -- Transition3 = delay transition states
+--                -- Set current_screen to constant clear_screen and update the screen; go to state Wait2 afterwards
 
                 -- Clear transition
                 -- 1. Sets both delay_en and en to 0

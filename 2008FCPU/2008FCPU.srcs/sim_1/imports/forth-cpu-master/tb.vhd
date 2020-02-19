@@ -158,25 +158,26 @@ begin
 		btnl        => btnl,
 		btnr        => btnr,
 		sw          => sw,
-		an          => an,
-		ka          => ka,
+		--an          => an,
+		--ka          => ka,
 		ld          => ld,
 		rx          => rx,
-		tx          => tx,
-		o_vga       => o_vga,
+		tx          => tx
+		--o_vga       => o_vga,
 
-		ps2_keyboard_data => ps2_keyboard_data,
-		ps2_keyboard_clk  => ps2_keyboard_clk,
+		--ps2_keyboard_data => ps2_keyboard_data,
+		--ps2_keyboard_clk  => ps2_keyboard_clk,
 
-		ram_cs    =>  ram_cs,
-		mem_oe    =>  mem_oe,
-		mem_wr    =>  mem_wr,
-		mem_adv   =>  mem_adv,
-		mem_wait  =>  mem_wait,
-		flash_cs  =>  flash_cs,
-		flash_rp  =>  flash_rp,
-		mem_addr  =>  mem_addr,
-		mem_data  =>  mem_data);
+--		ram_cs    =>  ram_cs,
+--		mem_oe    =>  mem_oe,
+--		mem_wr    =>  mem_wr,
+--		mem_adv   =>  mem_adv,
+--		mem_wait  =>  mem_wait,
+--		flash_cs  =>  flash_cs,
+--		flash_rp  =>  flash_rp,
+--		mem_addr  =>  mem_addr,
+--		mem_data  =>  mem_data
+		);
 
 	-- NB. It would be nice to configure these as off/on, as well as
 	-- controlling how long they run for from here.

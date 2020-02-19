@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1'
+HD_PWD='D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

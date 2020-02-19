@@ -17,27 +17,29 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-create_project -in_memory -part xc7a100tcsg324-3
+set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
+create_project -in_memory -part xc7a200tsbg484-3
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.xpr} [current_project]
+set_property webtalk.parent_dir D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.cache/wt [current_project]
+set_property parent.project_path D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {c:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.cache/ip} [current_project]
+set_property ip_output_repo d:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -vhdl2008 -library xil_defaultlib {
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/h2.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/kbd.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/ram.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd}
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/h2.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/kbd.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/ram.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -47,10 +49,13 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc
+set_property used_in_implementation false [get_files D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top top -part xc7a100tcsg324-3
+synth_design -top top -part xc7a200tsbg484-3
 
 
 # disable binary constraint mode for synth run checkpoints

@@ -42,32 +42,33 @@ entity top is
 		-- Switches
 		sw:       in  std_ulogic_vector(7 downto 0) := (others => 'X'); -- switches
 		-- Simple LED outputs
-		an:       out std_ulogic_vector(3 downto 0) := (others => '0'); -- anodes   7 segment display
-		ka:       out std_ulogic_vector(7 downto 0) := (others => '0'); -- cathodes 7 segment display
+--		an:       out std_ulogic_vector(3 downto 0) := (others => '0'); -- anodes   7 segment display
+--		ka:       out std_ulogic_vector(7 downto 0) := (others => '0'); -- cathodes 7 segment display
 
 		ld:       out std_ulogic_vector(7 downto 0) := (others => '0'); -- leds
 
 		-- UART
 		rx:       in  std_ulogic                    := 'X';  -- uart rx
-		tx:       out std_ulogic                    := '0';  -- uart tx
+		tx:       out std_ulogic                    := '0'  -- uart tx
 
 		-- VGA
-		o_vga:    out vga_physical_interface;
+--		o_vga:    out vga_physical_interface;
 
 		-- PS/2 Interface
-		ps2_keyboard_data:  in std_ulogic           := '0';
-		ps2_keyboard_clk:   in std_ulogic           := '0';
+--		ps2_keyboard_data:  in std_ulogic           := '0';
+--		ps2_keyboard_clk:   in std_ulogic           := '0';
 
 		-- Memory Interface
-		ram_cs:    out   std_ulogic := '1';
-		mem_oe:    out   std_ulogic := '0'; -- negative logic
-		mem_wr:    out   std_ulogic := '0'; -- negative logic
-		mem_adv:   out   std_ulogic := '0'; -- negative logic
-		mem_wait:  out   std_ulogic := '0'; -- positive logic!
-		flash_cs:  out   std_ulogic := '0';
-		flash_rp:  out   std_ulogic := '1';
-		mem_addr:  out   std_ulogic_vector(26 downto 1) := (others => '0');
-		mem_data:  inout std_logic_vector(15 downto 0)  := (others => 'Z'));
+--		ram_cs:    out   std_ulogic := '1';
+--		mem_oe:    out   std_ulogic := '0'; -- negative logic
+--		mem_wr:    out   std_ulogic := '0'; -- negative logic
+--		mem_adv:   out   std_ulogic := '0'; -- negative logic
+--		mem_wait:  out   std_ulogic := '0'; -- positive logic!
+--		flash_cs:  out   std_ulogic := '0';
+--		flash_rp:  out   std_ulogic := '1';
+--		mem_addr:  out   std_ulogic_vector(26 downto 1) := (others => '0');
+--		mem_data:  inout std_logic_vector(15 downto 0)  := (others => 'Z')
+		);
 end;
 
 architecture behav of top is
@@ -183,7 +184,7 @@ begin
 	generic map (g => g, number_of_interrupts => number_of_interrupts)
 	port map (
 -- synthesis translate_off
-		debug            => debug,
+	debug            => debug,
 -- synthesis translate_on
 		clk              => clk,
 		rst              => rst,
@@ -366,83 +367,83 @@ begin
 	--- Timer ---------------------------------------------------------
 
 	--- VGA -----------------------------------------------------------
-	vga_selector: block
-		constant use_vt100: boolean := true;
-	begin
-		gen_vt100_0: if use_vt100 generate
-		vt100_0: work.vga_pkg.vt100
-			generic map (g => g)
-			port map (
-				clk         =>  clk,
-				clk25MHz    =>  clk25MHz,
-				rst         =>  rst,
-				we          =>  vga_data_we,
-				char        =>  vga_data,
-				busy        =>  vga_data_busy,
-				o_vga       =>  o_vga);
-		end generate;
+--	vga_selector: block
+--		constant use_vt100: boolean := true;
+--	begin
+--		gen_vt100_0: if use_vt100 generate
+--		vt100_0: work.vga_pkg.vt100
+--			generic map (g => g)
+--			port map (
+--				clk         =>  clk,
+--				clk25MHz    =>  clk25MHz,
+--				rst         =>  rst,
+--				we          =>  vga_data_we,
+--				char        =>  vga_data,
+--				busy        =>  vga_data_busy,
+--				o_vga       =>  o_vga);
+--		end generate;
 	
-		-- Test code
-		-- NOTE: Timing is not the best, VGA monitor loses synchronization
-		-- every so often with this module.
-		vga_gen_c1: if not use_vt100 generate
-		vga_c1: block 
-			signal row, column: integer := 0;
-			signal h_blank, v_blank, draw: std_ulogic := '0';
-		begin
-			draw <= not h_blank and not v_blank;
-			vga_c: work.util.vga_controller
-			generic map (
-				g => g,
-				pixel_clock_frequency => 25_000_000,
-				cfg => work.util.vga_640x480)
-			port map (
-				clk    => clk25MHz,
-				rst    => rst,
-				row    => row,
-				column => column,
-				h_blank => h_blank,
-				v_blank => v_blank,
-				h_sync => o_vga.hsync,
-				v_sync => o_vga.vsync);
-			o_vga.red   <= "111" when draw = '1' else "000";
-			o_vga.green <= "111" when (draw = '1' and row < 100 and column < 100) else "000";
-			o_vga.blue  <= "11";
-		end block;
-		end generate;
-	end block;
+--		-- Test code
+--		-- NOTE: Timing is not the best, VGA monitor loses synchronization
+--		-- every so often with this module.
+--		vga_gen_c1: if not use_vt100 generate
+--		vga_c1: block 
+--			signal row, column: integer := 0;
+--			signal h_blank, v_blank, draw: std_ulogic := '0';
+--		begin
+--			draw <= not h_blank and not v_blank;
+--			vga_c: work.util.vga_controller
+--			generic map (
+--				g => g,
+--				pixel_clock_frequency => 25_000_000,
+--				cfg => work.util.vga_640x480)
+--			port map (
+--				clk    => clk25MHz,
+--				rst    => rst,
+--				row    => row,
+--				column => column,
+--				h_blank => h_blank,
+--				v_blank => v_blank,
+--				h_sync => o_vga.hsync,
+--				v_sync => o_vga.vsync);
+--			o_vga.red   <= "111" when draw = '1' else "000";
+--			o_vga.green <= "111" when (draw = '1' and row < 100 and column < 100) else "000";
+--			o_vga.blue  <= "11";
+--		end block;
+--		end generate;
+--	end block;
 	--- VGA -----------------------------------------------------------
 
 	--- Keyboard ------------------------------------------------------
-	keyboard_0: work.kbd_pkg.keyboard
-	generic map (g => g, ps2_debounce_counter_size => 8)
-	port map (
-		clk              => clk,
-		rst              => rst,
+--	keyboard_0: work.kbd_pkg.keyboard
+--	generic map (g => g, ps2_debounce_counter_size => 8)
+--	port map (
+--		clk              => clk,
+--		rst              => rst,
 
-		ps2_clk          => ps2_keyboard_clk,
-		ps2_data         => ps2_keyboard_data,
+--		ps2_clk          => ps2_keyboard_clk,
+--		ps2_data         => ps2_keyboard_data,
 
-		kbd_char_re      => kbd_char_re,
-		kbd_char_buf_new => kbd_char_buf_new,
-		kbd_char_buf     => kbd_char_buf);
+--		kbd_char_re      => kbd_char_re,
+--		kbd_char_buf_new => kbd_char_buf_new,
+--		kbd_char_buf     => kbd_char_buf);
 	--- Keyboard ------------------------------------------------------
 
 	--- LED 8 Segment display -----------------------------------------
-	ledseg_0: entity work.led_7_segment_display
-	generic map (
-		g                      => g,
-		number_of_led_displays => number_of_led_displays,
-		use_bcd_not_hex        => false)
-	port map (
-		clk        => clk,
-		rst        => rst,
+--	ledseg_0: entity work.led_7_segment_display
+--	generic map (
+--		g                      => g,
+--		number_of_led_displays => number_of_led_displays,
+--		use_bcd_not_hex        => false)
+--	port map (
+--		clk        => clk,
+--		rst        => rst,
 
-		leds_we    => leds_reg_we,
-		leds       => io_dout,
+--		leds_we    => leds_reg_we,
+--		leds       => io_dout,
 
-		an         => an,
-		ka         => ka);
+--		an         => an,
+--		ka         => ka);
 	--- LED 8 Segment display -----------------------------------------
 
 	--- Buttons -------------------------------------------------------
@@ -511,16 +512,17 @@ begin
 		mem_control_we    =>  mem_control_we,
 		mem_data_i        =>  io_dout,
 		mem_data_i_we     =>  mem_data_i_we,
-		mem_data_o        =>  mem_data_o,
-		ram_cs            =>  ram_cs,
-		mem_oe            =>  mem_oe,
-		mem_wr            =>  mem_wr,
-		mem_adv           =>  mem_adv,
-		mem_wait          =>  mem_wait,
-		flash_cs          =>  flash_cs,
-		flash_rp          =>  flash_rp,
-		mem_addr          =>  mem_addr,
-		mem_data          =>  mem_data);
+		mem_data_o        =>  mem_data_o
+--		ram_cs            =>  ram_cs,
+--		mem_oe            =>  mem_oe,
+--		mem_wr            =>  mem_wr,
+--		mem_adv           =>  mem_adv,
+--		mem_wait          =>  mem_wait,
+--		flash_cs          =>  flash_cs,
+--		flash_rp          =>  flash_rp,
+--		mem_addr          =>  mem_addr,
+--		mem_data          =>  mem_data
+		);
 	--- Memory Interface ----------------------------------------------
 
 -------------------------------------------------------------------------------

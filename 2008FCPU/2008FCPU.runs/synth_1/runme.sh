@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Denis Kurka/Desktop/FCPU/2008FCPU/2008FCPU.runs/synth_1'
+HD_PWD='D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sat Feb 15 17:58:33 2020
+| Date             : Sun Feb 16 20:52:07 2020
 | Host             : KomaroKomp running 64-bit major release  (build 9200)
 | Command          : report_power -file oled_ctrl_power_routed.rpt -pb oled_ctrl_power_summary_routed.pb -rpx oled_ctrl_power_routed.rpx
 | Design           : oled_ctrl
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.145        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
+| Dynamic (W)              | 0.007        |
 | Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 99.5         |
@@ -52,7 +52,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
+| Clocks         |     0.002 |        3 |       --- |             --- |
 | Slice Logic    |    <0.001 |      458 |       --- |             --- |
 |   LUT as Logic |    <0.001 |      166 |    133800 |            0.12 |
 |   Register     |    <0.001 |      195 |    267600 |            0.07 |
@@ -142,9 +142,10 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| oled_ctrl         |     0.006 |
+| oled_ctrl         |     0.007 |
 |   Example         |     0.003 |
 |     char_lib_comp |     0.001 |
+|   Initialize      |     0.001 |
 +-------------------+-----------+
 
 

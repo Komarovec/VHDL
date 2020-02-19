@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-3" LaunchTime="1581785744">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-3" LaunchTime="1581882529">
   <File Type="PA-TCL" Name="oled_ctrl.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="oled_ctrl_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="oled_ctrl_reports.tcl"/>
@@ -86,9 +86,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

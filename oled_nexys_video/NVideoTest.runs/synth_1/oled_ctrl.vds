@@ -2,12 +2,12 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Feb 15 17:55:48 2020
-# Process ID: 8264
-# Current directory: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1
+# Start of session at: Sun Feb 16 20:48:57 2020
+# Process ID: 8148
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/synth_1
 # Command line: vivado.exe -log oled_ctrl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source oled_ctrl.tcl
-# Log file: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1/oled_ctrl.vds
-# Journal file: C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1\vivado.jou
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/synth_1/oled_ctrl.vds
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source oled_ctrl.tcl -notrace
 Command: synth_design -top oled_ctrl -part xc7a200tsbg484-3
@@ -16,33 +16,33 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-3
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17928 
+INFO: Helper process launched with PID 7528 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1027.781 ; gain = 234.504
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1028.742 ; gain = 235.344
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'oled_ctrl' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:24]
-INFO: [Synth 8-3491] module 'oled_init' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:13' bound to instance 'Initialize' of component 'oled_init' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'oled_init' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:26]
-INFO: [Synth 8-3491] module 'spi_ctrl' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:14' bound to instance 'spi_comp' of component 'spi_ctrl' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:92]
-INFO: [Synth 8-638] synthesizing module 'spi_ctrl' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'spi_ctrl' (1#1) [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:24]
-INFO: [Synth 8-3491] module 'delay' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:13' bound to instance 'delay_comp' of component 'delay' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'delay' (2#1) [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'oled_init' (3#1) [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:26]
-INFO: [Synth 8-3491] module 'oled_ex' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:14' bound to instance 'Example' of component 'oled_ex' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:78]
-INFO: [Synth 8-638] synthesizing module 'oled_ex' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:24]
-INFO: [Synth 8-3491] module 'spi_ctrl' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:14' bound to instance 'spi_comp' of component 'spi_ctrl' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:149]
-INFO: [Synth 8-3491] module 'delay' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:13' bound to instance 'delay_comp' of component 'delay' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:158]
-INFO: [Synth 8-3491] module 'ascii_rom' declared at 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd:12' bound to instance 'char_lib_comp' of component 'ascii_rom' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:165]
-INFO: [Synth 8-638] synthesizing module 'ascii_rom' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'ascii_rom' (4#1) [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'oled_ex' (5#1) [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:24]
-INFO: [Synth 8-226] default block is never used [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:103]
-INFO: [Synth 8-256] done synthesizing module 'oled_ctrl' (6#1) [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'oled_ctrl' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:24]
+INFO: [Synth 8-3491] module 'oled_init' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:13' bound to instance 'Initialize' of component 'oled_init' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'oled_init' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:26]
+INFO: [Synth 8-3491] module 'spi_ctrl' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:14' bound to instance 'spi_comp' of component 'spi_ctrl' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'spi_ctrl' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'spi_ctrl' (1#1) [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:24]
+INFO: [Synth 8-3491] module 'delay' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:13' bound to instance 'delay_comp' of component 'delay' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'delay' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'delay' (2#1) [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'oled_init' (3#1) [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd:26]
+INFO: [Synth 8-3491] module 'oled_ex' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:14' bound to instance 'Example' of component 'oled_ex' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'oled_ex' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:24]
+INFO: [Synth 8-3491] module 'spi_ctrl' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd:14' bound to instance 'spi_comp' of component 'spi_ctrl' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:149]
+INFO: [Synth 8-3491] module 'delay' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd:13' bound to instance 'delay_comp' of component 'delay' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:158]
+INFO: [Synth 8-3491] module 'ascii_rom' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd:12' bound to instance 'char_lib_comp' of component 'ascii_rom' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'ascii_rom' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'ascii_rom' (4#1) [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'oled_ex' (5#1) [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:24]
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:103]
+INFO: [Synth 8-256] done synthesizing module 'oled_ctrl' (6#1) [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd:24]
 WARNING: [Synth 8-3331] design ascii_rom has unconnected port addr[10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1102.352 ; gain = 309.074
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.465 ; gain = 308.066
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -55,46 +55,46 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1102.352 ; gain = 309.074
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.465 ; gain = 308.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1102.352 ; gain = 309.074
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.465 ; gain = 308.066
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1102.352 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1101.465 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]
-Finished Parsing XDC File [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/oled_ctrl_propImpl.xdc].
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/oled_ctrl_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/oled_ctrl_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1229.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1233.051 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1229.438 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1233.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'spi_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'delay'
-INFO: [Synth 8-4471] merging register 'current_screen_reg[3,15][7:0]' into 'current_screen_reg[3,14][7:0]' [C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:182]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,15][7:0]' into 'current_screen_reg[3,14][7:0]' [D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd:182]
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'oled_ctrl'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -126,7 +126,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'oled_ctrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -377,7 +377,7 @@ WARNING: [Synth 8-3332] Sequential element (Initialize/delay_comp/FSM_onehot_cur
 WARNING: [Synth 8-3332] Sequential element (Example/spi_comp/FSM_onehot_current_state_reg[3]) is unused and will be removed from module oled_ctrl.
 WARNING: [Synth 8-3332] Sequential element (Example/delay_comp/FSM_onehot_current_state_reg[3]) is unused and will be removed from module oled_ctrl.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -415,13 +415,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,7 +434,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7053] The timing for the instance Example/char_lib_comp/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -458,13 +458,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -483,25 +483,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -548,28 +548,28 @@ Report Instance Areas:
 |8     |    spi_comp      |spi_ctrl   |    49|
 +------+------------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1229.438 ; gain = 309.074
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1229.438 ; gain = 436.160
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1233.051 ; gain = 308.066
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.051 ; gain = 439.652
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1235.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1236.020 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1239.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1236.020 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 147 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1239.402 ; gain = 788.484
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1239.402 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 1236.020 ; gain = 784.328
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1236.020 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.runs/synth_1/oled_ctrl.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.runs/synth_1/oled_ctrl.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file oled_ctrl_utilization_synth.rpt -pb oled_ctrl_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Feb 15 17:56:37 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 16 20:49:59 2020...

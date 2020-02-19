@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc} rfile:../../../NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc rfile:../../../NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_34 Sch=sysclk
 set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]

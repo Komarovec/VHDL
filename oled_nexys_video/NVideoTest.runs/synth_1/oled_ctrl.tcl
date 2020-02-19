@@ -24,19 +24,19 @@ create_project -in_memory -part xc7a200tsbg484-3
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.xpr} [current_project]
+set_property webtalk.parent_dir D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.cache/wt [current_project]
+set_property parent.project_path D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {c:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.cache/ip} [current_project]
+set_property ip_output_repo d:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd}
-  {C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd}
+  D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/ascii_rom.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/delay.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ex.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_init.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/spi_ctrl.vhd
+  D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/sources_1/imports/rtl/oled_ctrl.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -46,8 +46,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Denis Kurka/Desktop/FCPU/NVideoTest/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc}}]
+read_xdc D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc
+set_property used_in_implementation false [get_files D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

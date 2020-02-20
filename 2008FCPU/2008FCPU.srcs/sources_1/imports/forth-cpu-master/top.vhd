@@ -160,7 +160,6 @@ begin
 -------------------------------------------------------------------------------
 -- The Main components
 -------------------------------------------------------------------------------
-
 	cpu_wait   <= btnc_d; -- temporary testing measure only!
 
 	system_reset: work.util.reset_generator
@@ -352,7 +351,11 @@ begin
 			we  => ld_we,
 			di  => io_dout(ld'range),
 			do  => ld);
+	led_test: block
+	begin
+	end block;
 	--- LED Output ----------------------------------------------------
+
 
 	--- Timer ---------------------------------------------------------
 	timer_0: entity work.timer

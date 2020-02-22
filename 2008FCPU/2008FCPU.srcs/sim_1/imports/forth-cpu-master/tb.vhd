@@ -33,7 +33,7 @@ end tb;
 
 architecture testing of tb is
 	constant g: common_generics := (
-		clock_frequency    => 100_000_000,
+		clock_frequency    => 10_000_000,
 		asynchronous_reset => true,
 		delay              => 0 ns);
 

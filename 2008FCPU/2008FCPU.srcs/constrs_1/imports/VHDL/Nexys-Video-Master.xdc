@@ -6,7 +6,7 @@
 
 ## Clock Signal
 set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_34 Sch=sysclk
-create_clock -add -name sys_clk_pin -period 20.00 -waveform {0 5} [get_ports clk]
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 
 ## FMC Transceiver clocks (Must be set to value provided by Mezzanine card, currently set to 156.25 MHz)
 ## Note: This clock is attached to a MGTREFCLK pin
@@ -150,8 +150,8 @@ set_property -dict { PACKAGE_PIN M17  IOSTANDARD LVCMOS12 } [get_ports { sw[7] }
 
 
 ## UART
-set_property -dict { PACKAGE_PIN AA19  IOSTANDARD LVCMOS33 } [get_ports { rx }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=uart_rx_out
-set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports { tx }]; #IO_L14P_T2_SRCC_14 Sch=uart_tx_in
+set_property -dict { PACKAGE_PIN AA19  IOSTANDARD LVCMOS33 } [get_ports { tx }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=uart_rx_out
+set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports { rx }]; #IO_L14P_T2_SRCC_14 Sch=uart_tx_in
 
 
 ## Ethernet

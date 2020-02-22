@@ -58,7 +58,7 @@ entity top is
 --		ps2_keyboard_data:  in std_ulogic           := '0';
 --		ps2_keyboard_clk:   in std_ulogic           := '0';
 
-		-- Memory Interface
+		-- Memory Interface -- EXTERNAL MEMORY
 --		ram_cs:    out   std_ulogic := '1';
 --		mem_oe:    out   std_ulogic := '0'; -- negative logic
 --		mem_wr:    out   std_ulogic := '0'; -- negative logic
@@ -343,17 +343,14 @@ begin
 	--- UART ----------------------------------------------------------
 
 	--- LED Output ----------------------------------------------------
-	led_output_reg_0: entity work.reg
-		generic map (g => g, N => ld'length)
-		port map (
-			clk => clk,
-			rst => rst,
-			we  => ld_we,
-			di  => io_dout(ld'range),
-			do  => ld);
-	led_test: block
-	begin
-	end block;
+--	led_output_reg_0: entity work.reg
+--		generic map (g => g, N => ld'length)
+--		port map (
+--			clk => clk,
+--			rst => rst,
+--			we  => ld_we,
+--			di  => io_dout(ld'range),
+--			do  => ld);
 	--- LED Output ----------------------------------------------------
 
 
@@ -432,8 +429,8 @@ begin
 --		kbd_char_buf     => kbd_char_buf);
 	--- Keyboard ------------------------------------------------------
 
-	--- LED 8 Segment display -----------------------------------------
---	ledseg_0: entity work.led_7_segment_display
+	--- LED 8 Segment display --- MAINLY FOR DEBUGING !!!
+--	ledseg_0: entity work.led_indicator 
 --	generic map (
 --		g                      => g,
 --		number_of_led_displays => number_of_led_displays,
@@ -445,8 +442,7 @@ begin
 --		leds_we    => leds_reg_we,
 --		leds       => io_dout,
 
---		an         => an,
---		ka         => ka);
+--		ld => ld);
 	--- LED 8 Segment display -----------------------------------------
 
 	--- Buttons -------------------------------------------------------
@@ -516,7 +512,7 @@ begin
 		mem_data_i        =>  io_dout,
 		mem_data_i_we     =>  mem_data_i_we,
 		mem_data_o        =>  mem_data_o
---		ram_cs            =>  ram_cs,
+--		ram_cs            =>  ram_cs, EXTERNAL MEMORY PINS
 --		mem_oe            =>  mem_oe,
 --		mem_wr            =>  mem_wr,
 --		mem_adv           =>  mem_adv,

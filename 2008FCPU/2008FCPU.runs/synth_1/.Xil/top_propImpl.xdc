@@ -44,6 +44,6 @@ set_property -dict { PACKAGE_PIN K13  IOSTANDARD LVCMOS12 } [get_ports { sw[6] }
 set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M17  IOSTANDARD LVCMOS12 } [get_ports { sw[7] }]; #IO_25_15 Sch=sw[7]
 set_property src_info {type:XDC file:1 line:153 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN AA19  IOSTANDARD LVCMOS33 } [get_ports { rx }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=uart_rx_out
+set_property -dict { PACKAGE_PIN AA19  IOSTANDARD LVCMOS33 } [get_ports { tx }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=uart_rx_out
 set_property src_info {type:XDC file:1 line:154 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports { tx }]; #IO_L14P_T2_SRCC_14 Sch=uart_tx_in
+set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports { rx }]; #IO_L14P_T2_SRCC_14 Sch=uart_tx_in

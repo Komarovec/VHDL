@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-3" LaunchTime="1582378509">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-3" LaunchTime="1582643022">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -15,12 +15,6 @@
       <FileInfo SFType="VHDL2008">
         <Attr Name="ImportPath" Val="$PPRDIR/../forth-cpu-master/util.vhd"/>
         <Attr Name="ImportTime" Val="1579271538"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/led_indicator.vhd">
-      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -85,6 +79,13 @@
       <FileInfo SFType="VHDL2008">
         <Attr Name="ImportPath" Val="$PPRDIR/../forth-cpu-master/top.vhd"/>
         <Attr Name="ImportTime" Val="1579271538"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/led_indicator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

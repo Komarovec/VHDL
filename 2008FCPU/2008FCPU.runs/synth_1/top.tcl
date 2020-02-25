@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a200tsbg484-3
 
 set_param project.singleFileAddWarning.threshold 0
@@ -41,7 +39,6 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd
 }
-read_vhdl -library xil_defaultlib D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/new/led_indicator.vhd
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

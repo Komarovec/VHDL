@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Feb 22 14:37:11 2020
+| Date         : Tue Feb 25 16:05:49 2020
 | Host         : KomaroKomp running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 | Design       : top
@@ -24,19 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
-+-------------+----------+-------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                 | Violations |
-+-------------+----------+-------------------------------------------------------------+------------+
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-+-------------+----------+-------------------------------------------------------------+------------+
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT ledseg_0/timer/c_c[24]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
-ledseg_0/ld_reg[0], ledseg_0/ld_reg[1], ledseg_0/ld_reg[2], ledseg_0/ld_reg[3], ledseg_0/ld_reg[4], ledseg_0/ld_reg[5], ledseg_0/ld_reg[6], ledseg_0/ld_reg[7]
-Related violations: <none>
-
 

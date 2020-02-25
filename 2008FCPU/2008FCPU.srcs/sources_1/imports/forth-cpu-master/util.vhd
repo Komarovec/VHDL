@@ -2108,11 +2108,8 @@ architecture behav of dual_port_block_ram is
 					read(input_line, tmp);
 					ram_data(i) := std_ulogic_vector(to_stdlogicvector(tmp));
 				elsif the_file_type = FILE_HEX then
-				-- !!! Synthesis cannot be done !!!
-				    --ram_data(i):=(others => '0');
-				    read(input_line, tmp); -- Read only two bytes
-					ram_data(i) := std_ulogic_vector(to_stdlogicvector(tmp));
-					
+				-- !!! Synthesis cannot be done !!! ONLY BINARY FILES!
+				    ram_data(i):=(others => '0');
 --					assert (data_length mod 4) = 0 report "(data_length%4)!=0" severity failure;
 					
 --					for j in 1 to (data_length/4) loop

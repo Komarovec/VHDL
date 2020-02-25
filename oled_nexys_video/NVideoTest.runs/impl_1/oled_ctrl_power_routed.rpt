@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Feb 16 20:52:07 2020
+| Date             : Sun Feb 23 19:09:46 2020
 | Host             : KomaroKomp running 64-bit major release  (build 9200)
 | Command          : report_power -file oled_ctrl_power_routed.rpt -pb oled_ctrl_power_summary_routed.pb -rpx oled_ctrl_power_routed.rpx
 | Design           : oled_ctrl
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      458 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      166 |    133800 |            0.12 |
-|   Register     |    <0.001 |      195 |    267600 |            0.07 |
+| Slice Logic    |    <0.001 |      408 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      140 |    133800 |            0.10 |
+|   Register     |    <0.001 |      189 |    267600 |            0.07 |
 |   CARRY4       |    <0.001 |       18 |     33450 |            0.05 |
-|   F7/F8 Muxes  |    <0.001 |       13 |    133800 |           <0.01 |
+|   F7/F8 Muxes  |    <0.001 |        2 |    133800 |           <0.01 |
 |   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      298 |       --- |             --- |
+| Signals        |    <0.001 |      276 |       --- |             --- |
 | Block RAM      |     0.001 |      0.5 |       365 |            0.14 |
 | I/O            |     0.002 |        8 |       285 |            2.81 |
 | Static Power   |     0.138 |          |           |                 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.034 |       0.004 |      0.030 |
+| Vccint    |       1.000 |     0.035 |       0.004 |      0.030 |
 | Vccaux    |       1.800 |     0.031 |       0.000 |      0.031 |
 | Vcco33    |       3.300 |     0.006 |       0.001 |      0.005 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

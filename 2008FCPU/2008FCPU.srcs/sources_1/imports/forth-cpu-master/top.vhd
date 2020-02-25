@@ -72,10 +72,10 @@ entity top is
 end;
 
 architecture behav of top is
-	constant timer_length:           positive := 16;
-	constant number_of_interrupts:   positive := 8;
-	constant number_of_led_displays: positive := 4;
-	constant timer_period_us:        positive := 20000;
+	constant timer_length:           positive := 16; -- Def: 16
+	constant number_of_interrupts:   positive := 8; -- Def: 8
+	constant number_of_led_displays: positive := 4; -- Def: 4
+	constant timer_period_us:        positive := 20000; -- Def: 20000
 	constant use_sine:               boolean  := false;
 
 	-- Signals
@@ -84,9 +84,9 @@ architecture behav of top is
 	signal cpu_wait: std_ulogic := '0';
 	signal io_wr:    std_ulogic := '0';
 	signal io_re:    std_ulogic := '0';
-	signal io_din:   std_ulogic_vector(15 downto 0) := (others => '0');
-	signal io_dout:  std_ulogic_vector(15 downto 0) := (others => '0');
-	signal io_daddr: std_ulogic_vector(15 downto 0) := (others => '0');
+	signal io_din:   std_ulogic_vector(15 downto 0) := (others => '0'); -- Def: 15, 0
+	signal io_dout:  std_ulogic_vector(15 downto 0) := (others => '0'); -- Def: 15, 0
+	signal io_daddr: std_ulogic_vector(15 downto 0) := (others => '0'); -- Def: 15, 0
 
 	-- CPU H2 Interrupts
 	signal cpu_irc:         std_ulogic_vector(number_of_interrupts - 1 downto 0) := (others => '0');
@@ -343,14 +343,14 @@ begin
 	--- UART ----------------------------------------------------------
 
 	--- LED Output ----------------------------------------------------
---	led_output_reg_0: entity work.reg
---		generic map (g => g, N => ld'length)
---		port map (
---			clk => clk,
---			rst => rst,
---			we  => ld_we,
---			di  => io_dout(ld'range),
---			do  => ld);
+	led_output_reg_0: entity work.reg
+		generic map (g => g, N => ld'length)
+		port map (
+			clk => clk,
+			rst => rst,
+			we  => ld_we,
+			di  => io_dout(ld'range),
+			do  => ld);
 	--- LED Output ----------------------------------------------------
 
 

@@ -1,8 +1,8 @@
 set_property SRC_FILE_INFO {cfile:D:/Entertaiment/Programy/VHDL/VHDL/oled_nexys_video/NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc rfile:../../../NVideoTest.srcs/constrs_1/imports/NVideoTest/Nexys-Video-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_34 Sch=sysclk
-set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN G4  IOSTANDARD LVCMOS15 } [get_port { rst }]; #IO_L12N_T1_MRCC_35 Sch=cpu_resetn
+set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E22  IOSTANDARD LVCMOS12 } [get_ports { rst }]; #IO_L22P_T3_16 Sch=sw[0]
 set_property src_info {type:XDC file:1 line:53 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W22   IOSTANDARD LVCMOS33 } [get_ports { oled_dc }]; #IO_L7N_T1_D10_14 Sch=oled_dc
 set_property src_info {type:XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]

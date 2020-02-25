@@ -80,7 +80,7 @@ use work.h2_pkg.all;
 use work.util.n_bits;
 use work.util.common_generics;
 use work.util.file_format;
-use work.util.file_hex;
+use work.util.file_binary;
 use work.util.or_reduce;
 
 entity core is
@@ -110,7 +110,7 @@ end;
 architecture structural of core is
 	constant interrupt_address_length: natural     := n_bits(number_of_interrupts);
 	constant file_name:                string      := "h2.bin";
-	constant file_type:                file_format := file_hex;
+	constant file_type:                file_format := file_binary;
 	signal pc:    address    := (others => '0'); -- Program counter
 	signal insn:  word       := (others => '0'); -- Instruction issued by program counter
 	signal dwe:   std_ulogic := '0'; -- Write enable

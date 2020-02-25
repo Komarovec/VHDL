@@ -12,7 +12,7 @@ use ieee.std_logic_unsigned.all;
 
 entity oled_ctrl is
     port (  clk         : in std_logic;
-            rst         : in std_logic;
+            rst         : in std_logic := '0';
             oled_sdin   : out std_logic;
             oled_sclk   : out std_logic;
             oled_dc     : out std_logic;

@@ -15,6 +15,7 @@ entity oled_ex is
     port (  clk         : in std_logic; -- System clock
             rst         : in std_logic; -- Global synchronous reset
             en          : in std_logic; -- Block enable pin
+            temp        : in integer := 0;
             sdout       : out std_logic; -- SPI data out
             oled_sclk   : out std_logic; -- SPI clock
             oled_dc     : out std_logic; -- Data/Command controller
@@ -99,10 +100,22 @@ architecture behavioral of oled_ex is
                                             (x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20"));
 
     -- Constant that holds "Hello world!"
-    constant hello_world_screen : oled_mem := ( (x"48", x"65", x"6c", x"6c", x"6f", x"20", x"77", x"6f", x"72", x"6c", x"64", x"21", x"20", x"20", x"20", x"20"),
+    constant hello_world_screen : oled_mem := ((x"48", x"65", x"6c", x"6c", x"6f", x"20", x"77", x"6f", x"72", x"6c", x"64", x"21", x"20", x"20", x"20", x"20"),
                                                 (x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20"),
                                                 (x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20"),
                                                 (x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20"));
+    
+        -- Constant that fills the screen with blank (spaces) entries 
+    -- TEMP: 0
+    -- PC: 0000 0000
+    shared variable def_screen : oled_mem := (
+                                       (x"54", x"45", x"4D", x"50", x"3A", x"20", x"30", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20"),
+                                       (x"50", x"43", x"3A", x"20", x"30", x"30", x"30", x"30", x"20", x"30", x"30", x"30", x"30", x"20", x"20", x"20"),
+                                       (x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20"),
+                                       (x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20")
+                                                );
+
+
 
     -- Current overall state of the state machine
     signal current_state : states := Idle;
@@ -137,9 +150,7 @@ architecture behavioral of oled_ex is
     signal temp_dout : std_logic_vector (7 downto 0); -- Contains byte outputted from memory
     signal temp_page : std_logic_vector (1 downto 0) := (others => '0'); -- Current page
     signal temp_index : integer range 0 to 15 := 0; -- Current character on page
-
 begin
-
     oled_dc <= temp_dc;
 
     -- "Example" finish flag only high when in done state
@@ -173,29 +184,24 @@ begin
                 -- Idle until en pulled high than intialize Page to 0 and go to state alphabet afterwards
                 when Idle =>
                     if en = '1' then
+                        -- Prepare values
+                        
+                    
                         current_state <= ClearDC;
-                        after_page_state <= HelloWorldScreen;
+                        after_page_state <= Alphabet;
                         temp_page <= "00";
                     end if;
-                    
-                -- Set current_screen to constant alphabet_screen and update the screen; go to state Wait1 afterwards
                 when Alphabet =>
-                    current_screen <= alphabet_screen;
-                    after_update_state <= Done;
+                    current_screen <= def_screen;
                     current_state <= UpdateScreen;
-                    
+                    after_update_state <= Done;
+
                 when ClearScreen =>
                     current_screen <= clear_screen;
-                    after_update_state <= Done;
+                    after_update_state <= Wait2;
                     current_state <= UpdateScreen;
-                    
-                when HelloWorldScreen =>
-                    current_screen <= hello_world_screen;
-                    after_update_state <= Done;
-                    current_state <= UpdateScreen;
-                -- Do nothing until en is deassertted and then current_state is Idle
-                
-                when Done            =>
+
+                when Done =>
                     if en = '0' then
                         current_state <= Idle;
                     end if;
@@ -302,40 +308,27 @@ begin
                 -- 1. Set en to 1
                 -- 2. Waits for spi_ctrl to finish
                 -- 3. Goes to clear state (Transition5)
---                when Transition1 =>
---                    temp_spi_en <= '1';
---                    current_state <= Transition2;
---                when Transition2 =>
---                    if temp_spi_fin = '1' then
---                        current_state <= Transition5;
---                    end if;
+                when Transition1 =>
+                    temp_spi_en <= '1';
+                    current_state <= Transition2;
+                when Transition2 =>
+                    if temp_spi_fin = '1' then
+                        current_state <= Transition5;
+                    end if;
                 -- End SPI transitions
 
                 -- Delay transitions
                 -- 1. Set delay_en to 1
                 -- 2. Waits for delay to finish
                 -- 3. Goes to Clear state (Transition5)
---                when Transition3 =>
---                    temp_delay_en <= '1';
---                    current_state <= Transition4;
---                when Transition4 =>
---                    if temp_delay_fin = '1' then
---                        current_state <= Transition5;
---                    end if;
+                when Transition3 =>
+                    temp_delay_en <= '1';
+                    current_state <= Transition4;
+                when Transition4 =>
+                    if temp_delay_fin = '1' then
+                        current_state <= Transition5;
+                    end if;
                 -- End Delay transitions
-
-                -- Wait 1ms and go to HelloWorldScreen
---                when Wait2 =>
---                    temp_delay_ms <= "001111101000"; -- 1000
---                    after_state <= HelloWorldScreen;
---                    current_state <= Transition3; -- Transition3 = delay transition states
-                -- Set currentScreen to constant hello_world_screen and update the screen; go to state Done afterwards
-                 -- Wait 4ms and go to ClearScreen
---                when Wait1 =>
---                    temp_delay_ms <= "111110100000"; -- 4000
---                    after_state <= ClearScreen;
---                    current_state <= Transition3; -- Transition3 = delay transition states
---                -- Set current_screen to constant clear_screen and update the screen; go to state Wait2 afterwards
 
                 -- Clear transition
                 -- 1. Sets both delay_en and en to 0

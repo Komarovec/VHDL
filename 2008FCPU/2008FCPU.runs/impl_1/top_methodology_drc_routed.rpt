@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Feb 22 14:42:09 2020
+| Date         : Tue Feb 25 16:10:31 2020
 | Host         : KomaroKomp running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -24,60 +24,19 @@ Table of Contents
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 1048
-+-----------+------------------+-----------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                               | Violations |
-+-----------+------------------+-----------------------------------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                               | 8          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                              | 1          |
-| SYNTH-5   | Warning          | Mapped onto distributed RAM because of timing constraints | 1024       |
-| TIMING-18 | Warning          | Missing input or output delay                             | 15         |
-+-----------+------------------+-----------------------------------------------------------+------------+
++-----------+----------+-----------------------------------------------------------+------------+
+| Rule      | Severity | Description                                               | Violations |
++-----------+----------+-----------------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                              | 1          |
+| SYNTH-5   | Warning  | Mapped onto distributed RAM because of timing constraints | 1024       |
+| TIMING-18 | Warning  | Missing input or output delay                             | 23         |
++-----------+----------+-----------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-17#1 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#2 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#3 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#4 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#5 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#6 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#7 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#8 Critical Warning
-Non-clocked sequential cell  
-The clock pin ledseg_0/ld_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell system_reset/tos_c[15]_i_8, with 2 or more inputs, drives asynchronous preset/clear pin(s) core_0/edges/changes[0].d_instance/sin_0_reg/CLR, core_0/edges/changes[0].d_instance/sin_1_reg/CLR, core_0/edges/changes[1].d_instance/sin_0_reg/CLR, core_0/edges/changes[1].d_instance/sin_1_reg/CLR, core_0/edges/changes[2].d_instance/sin_0_reg/CLR, core_0/edges/changes[2].d_instance/sin_1_reg/CLR, core_0/edges/changes[3].d_instance/sin_0_reg/CLR, core_0/edges/changes[3].d_instance/sin_1_reg/CLR, core_0/edges/changes[4].d_instance/sin_0_reg/CLR, core_0/edges/changes[4].d_instance/sin_1_reg/CLR, core_0/edges/changes[6].d_instance/sin_0_reg/CLR, core_0/edges/changes[6].d_instance/sin_1_reg/CLR, core_0/edges/changes[7].d_instance/sin_0_reg/CLR, core_0/edges/changes[7].d_instance/sin_1_reg/CLR, core_0/h2_0/irq_addr_c_reg[0]/CLR (the first 15 of 319 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell system_reset/tos_c[15]_i_8, with 2 or more inputs, drives asynchronous preset/clear pin(s) core_0/edges/changes[0].d_instance/sin_0_reg/CLR, core_0/edges/changes[0].d_instance/sin_1_reg/CLR, core_0/edges/changes[1].d_instance/sin_0_reg/CLR, core_0/edges/changes[1].d_instance/sin_1_reg/CLR, core_0/edges/changes[2].d_instance/sin_0_reg/CLR, core_0/edges/changes[2].d_instance/sin_1_reg/CLR, core_0/edges/changes[3].d_instance/sin_0_reg/CLR, core_0/edges/changes[3].d_instance/sin_1_reg/CLR, core_0/edges/changes[4].d_instance/sin_0_reg/CLR, core_0/edges/changes[4].d_instance/sin_1_reg/CLR, core_0/edges/changes[6].d_instance/sin_0_reg/CLR, core_0/edges/changes[6].d_instance/sin_1_reg/CLR, core_0/edges/changes[7].d_instance/sin_0_reg/CLR, core_0/edges/changes[7].d_instance/sin_1_reg/CLR, core_0/h2_0/irq_addr_c_reg[0]/CLR (the first 15 of 301 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 SYNTH-5#1 Warning
@@ -5271,6 +5230,46 @@ An input delay is missing on sw[7] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on ld[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on ld[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on ld[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on ld[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on ld[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on ld[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on ld[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on ld[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
 Missing input or output delay  
 An output delay is missing on tx relative to clock(s) sys_clk_pin
 Related violations: <none>

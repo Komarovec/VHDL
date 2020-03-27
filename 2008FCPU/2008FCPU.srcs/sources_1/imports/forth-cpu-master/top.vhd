@@ -19,6 +19,7 @@ use work.vga_pkg.all;
 use work.kbd_pkg.ps2_kbd_top;
 use work.util.all;
 use work.uart_pkg.all;
+use work.ble_uart;
 
 entity top is
 	generic(
@@ -49,9 +50,15 @@ entity top is
 
 		-- UART
 		rx:       in  std_ulogic                    := 'X';  -- uart rx
-		tx:       out std_ulogic                    := '0'  -- uart tx
+		tx:       out std_ulogic                    := '0';  -- uart tx
 
-		-- VGA
+        -- JA PMOD - BLE
+        pmod_rx : out std_logic;
+        pmod_tx : in std_logic;
+        pmod_rst_n : out std_logic;
+        pmod_conf : out std_logic
+
+    -- VGA
 --		o_vga:    out vga_physical_interface;
 
 		-- PS/2 Interface
@@ -77,6 +84,19 @@ architecture behav of top is
 	constant number_of_led_displays: positive := 4; -- Def: 4
 	constant timer_period_us:        positive := 20000; -- Def: 20000
 	constant use_sine:               boolean  := false;
+
+    -- Components
+    component ble_uart
+        port (
+            clk : in std_logic;
+            uart_rx_out : out std_logic;
+            uart_tx_in : in std_logic;  
+            pmod_rx : out std_logic;
+            pmod_tx : in std_logic;
+            pmod_rst_n : out std_logic;
+            pmod_conf : out std_logic
+        );
+    end component;
 
 	-- Signals
 	signal rst:      std_ulogic := '0';
@@ -156,12 +176,15 @@ architecture behav of top is
 	signal sine_we: std_ulogic := '0';
 	signal sine: std_ulogic_vector(15 downto 0) := (others => '0');
 
+    -- RX of UART (BLE or PC)
+    signal ble_rx: std_logic := 'X';
+    signal rx_cpu: std_logic := '1';
 begin
 -------------------------------------------------------------------------------
 -- The Main components
 -------------------------------------------------------------------------------
 	cpu_wait   <= btnc_d; -- temporary testing measure only!
-
+	
 	system_reset: work.util.reset_generator
 	generic map (g => g, reset_period_us => reset_period_us)
 	port map (
@@ -179,21 +202,35 @@ begin
 	cpu_irc(6) <= timer_irq;
 	cpu_irc(7) <= button_changed;
 
+    -- Bluetooth uart
+    ble_uart_0: ble_uart port map (
+        clk => clk,
+        uart_rx_out => ble_rx,
+        uart_tx_in => tx, 
+        pmod_rx => pmod_rx,
+        pmod_tx => pmod_tx,
+        pmod_rst_n => pmod_rst_n,
+        pmod_conf => pmod_conf
+    );
+    
+    -- PC UART RX or BLE RX
+    rx_cpu <= ble_rx and rx;
+
 	core_0: entity work.core
 	generic map (g => g, number_of_interrupts => number_of_interrupts)
 	port map (
 -- synthesis translate_off
 	debug            => debug,
 -- synthesis translate_on
-		clk              => clk,
-		rst              => rst,
-		stop             => cpu_wait,
-		io_wr            => io_wr,
-		io_re            => io_re,
-		io_din           => io_din,
-		io_dout          => io_dout,
-		io_daddr         => io_daddr,
-		cpu_irc          => cpu_irc,
+		clk              => clk, -- clock
+		rst              => rst, -- reset
+		stop             => cpu_wait, -- stop?
+		io_wr            => io_wr, -- IO Write
+		io_re            => io_re, -- IO Read
+		io_din           => io_din, -- Data in
+		io_dout          => io_dout, -- Data out
+		io_daddr         => io_daddr, -- Data address
+		cpu_irc          => cpu_irc, -- Interrupts
 		cpu_irc_mask     => io_dout(number_of_interrupts - 1 downto 0),
 		cpu_irc_mask_we  => cpu_irc_mask_we);
 
@@ -330,7 +367,8 @@ begin
 			tx_fifo_we    => tx_data_we,
 			tx_fifo_data  => io_dout(7 downto 0),
 
-			rx            => rx,
+            -- Data rx
+			rx            => rx_cpu,
 			rx_fifo_re    => rx_data_re,
 			rx_fifo_data  => rx_data,
 			rx_fifo_full  => rx_fifo_full,

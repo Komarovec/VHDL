@@ -1,4 +1,0 @@
-v 4
-file . "cc.vhd" "ceaeb5f8b7dc2b9412ecaa699fefdc85015604a4" "20191121200840.856":
-  entity logic_op at 1( 0) + 0 on 11;
-  architecture example of logic_op at 5( 81) + 0 on 12;

@@ -1,4 +1,0 @@
-v 4
-file . ".\major.vhd" "30d3252928fe591bf47f5f8d82de1695e28f176c" "20191118133025.307":
-  entity major at 1( 0) + 0 on 13;
-  architecture behaviour of major at 13( 206) + 0 on 14;

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1584213632">
+  <File Type="BITSTR-BMM" Name="ble_uart_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ble_uart_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="ble_uart_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="ble_uart_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ble_uart.tcl"/>
+  <File Type="OPT-TIMING" Name="ble_uart_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ble_uart_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="ble_uart_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ble_uart_reports.tcl"/>
+  <File Type="OPT-DRC" Name="ble_uart_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ble_uart.hwdef"/>
+  <File Type="PWROPT-DCP" Name="ble_uart_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="ble_uart_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="ble_uart_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ble_uart_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ble_uart_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ble_uart_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ble_uart_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ble_uart_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ble_uart_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ble_uart_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ble_uart_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="ble_uart_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ble_uart_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="ble_uart.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ble_uart_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ble_uart_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ble_uart_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="ble_uart.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="ble_uart_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ble_uart_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ble_uart_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ble_uart_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ble_uart_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ble_uart_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="ble_uart_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="ble_uart.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ble_uart_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ble_uart_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ble_uart_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ble_uart_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ble_uart_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ble_uart_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ble_uart_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ble_uart_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ble_uart_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="ble_uart_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ble_uart_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ble_uart_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ble_uart_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ble_uart_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ble_uart_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ble_uart_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ble_uart_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ble_uart_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ble_uart_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ble_uart_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ble_uart_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="ble_uart.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ble_uart_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="ble_uart.rbt"/>
+  <File Type="BITSTR-NKY" Name="ble_uart.nky"/>
+  <File Type="PDI-FILE" Name="ble_uart.pdi"/>
+  <File Type="RCFI_FILE" Name="ble_uart.rcfi"/>
+  <File Type="CFI_FILE" Name="ble_uart.cfi"/>
+  <File Type="RNPI_FILE" Name="ble_uart.rnpi"/>
+  <File Type="NPI_FILE" Name="ble_uart.npi"/>
+  <File Type="RBD_FILE" Name="ble_uart.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ble_uart.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ble_uart.sysdef"/>
+  <File Type="BG-BGN" Name="ble_uart.bgn"/>
+  <File Type="BG-DRC" Name="ble_uart.drc"/>
+  <File Type="RDI-RDI" Name="ble_uart.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/uart.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ble_uart"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Desktop/Nexys-Video-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Denis Kurka/Desktop/Nexys-Video-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1584194859"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

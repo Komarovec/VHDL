@@ -386,7 +386,6 @@ begin
 			cr     => rx_cr,
 			sample => rx_sample,
 			baud   => rx_baud);
-
 	tx_0: work.uart_pkg.uart_tx
 		generic map(g => g, N => N, format => format)
 		port map(
@@ -767,7 +766,7 @@ begin
 			di_n     <= (others => '0') after g.delay;
 		when idle   =>
 			count_n  <= 0 after g.delay;
-			if ctr_we = '1' then -- NB. We can either lose data, or control writes
+			if ctr_we = '1' then -- NB.
 				ctr_n <= ctr after g.delay;
 			elsif we = '1' then
 				di_n    <= di after g.delay;
@@ -856,7 +855,7 @@ end architecture;
 --		end loop;
 --		wait;
 --	end process;
-
+--
 --	-- TODO: Assert what we receive is what we sent, also, introduce
 --	-- framing and parity errors and make sure we catch them.
 --	stimulus: process 

@@ -1,7 +1,0 @@
-v 4
-file . "fulladder.vhd" "a1f6801141c36d469b6818ac6b5826d6cc25fed4" "20191129130230.010":
-  entity fulladder at 1( 0) + 0 on 11;
-  architecture behaviour of fulladder at 11( 201) + 0 on 12;
-file . "fulladder_testbench.vhd" "3f993909c35d34df88f95fe242ada73c3eb19b68" "20191129130618.352":
-  entity fulladder_testbench at 1( 0) + 0 on 15;
-  architecture behaviour of fulladder_testbench at 7( 106) + 0 on 16;

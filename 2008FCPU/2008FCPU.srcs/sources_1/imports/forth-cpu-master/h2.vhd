@@ -17,8 +17,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 package h2_pkg is
-	subtype word    is std_ulogic_vector(15 downto 0);
-	subtype address is std_ulogic_vector(12 downto 0);
+	subtype word    is std_ulogic_vector(19 downto 0); -- default 15 0
+	subtype address is std_ulogic_vector(16 downto 0); -- default 12 0
 
 	constant hardware_cpu_id: word   := X"0666";
 	constant simulation_cpu_id: word := X"1984";
@@ -39,7 +39,6 @@ package h2_pkg is
 			rst:      in  std_ulogic; -- active high reset, configurable async/sync
 			stop:     in  std_ulogic; -- Assert high to halt the H2 core
 
-			-- IO interface
 			io_wr:    out std_ulogic; -- Output Write Enable
 			io_re:    out std_ulogic; -- Input  Read  Enable
 			io_din:   in  word;       -- Data Input from register

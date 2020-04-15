@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1584213631">
   <File Type="PA-TCL" Name="ble_uart.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ble_uart_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ble_uart_reports.tcl"/>
   <File Type="RDS-RDS" Name="ble_uart.vds"/>
   <File Type="RDS-UTIL" Name="ble_uart_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ble_uart_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="ble_uart.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ble_uart_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ble_uart_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/uart.vhd">

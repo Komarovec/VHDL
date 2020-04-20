@@ -33,7 +33,7 @@ end tb;
 
 architecture testing of tb is
 	constant g: common_generics := (
-		clock_frequency    => 10_000_000,
+		clock_frequency    => 50_000_000,
 		asynchronous_reset => true,
 		delay              => 0 ns);
 
@@ -137,6 +137,7 @@ architecture testing of tb is
 	signal flash_rp:   std_ulogic := 'X';
 	signal mem_addr:   std_ulogic_vector(26 downto 1) := (others => 'X');
 	signal mem_data:   std_logic_vector(15 downto 0)  := (others => 'X');
+	signal pmod_rx: std_ulogic := '0';
 
 begin
 ---- Units under test ----------------------------------------------------------
@@ -150,7 +151,7 @@ begin
 		uart_baud  => uart_baud)
 	port map(
 		debug       => dbgi,
-		clk         => clk,
+		clk_in         => clk,
 		-- rst      => rst,
 		btnu        => btnu,
 		btnd        => btnd,
@@ -162,7 +163,8 @@ begin
 		--ka          => ka,
 		ld          => ld,
 		rx          => rx,
-		tx          => tx
+		tx          => tx,
+		pmod_rx => pmod_rx
 		--o_vga       => o_vga,
 
 		--ps2_keyboard_data => ps2_keyboard_data,

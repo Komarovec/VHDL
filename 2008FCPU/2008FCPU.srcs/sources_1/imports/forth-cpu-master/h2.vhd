@@ -17,8 +17,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 package h2_pkg is
-	subtype word    is std_ulogic_vector(19 downto 0); -- default 15 0
-	subtype address is std_ulogic_vector(16 downto 0); -- default 12 0
+	subtype word    is std_ulogic_vector(15 downto 0); -- default 15 0
+	subtype address is std_ulogic_vector(12 downto 0); -- default 12 0
 
 	constant hardware_cpu_id: word   := X"0666";
 	constant simulation_cpu_id: word := X"1984";

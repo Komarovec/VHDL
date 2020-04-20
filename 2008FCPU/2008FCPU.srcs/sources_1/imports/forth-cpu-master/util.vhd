@@ -44,8 +44,8 @@ package util is
 	end record;
 
 	constant default_settings: common_generics := (
-		clock_frequency    => 100_000_000,
-		delay              => 10 ns,
+		clock_frequency    => 25_000_000,
+		delay              => 0 ns,
 		asynchronous_reset => true
 	);
 

@@ -20,6 +20,7 @@ use work.kbd_pkg.ps2_kbd_top;
 use work.util.all;
 use work.uart_pkg.all;
 use work.ble_uart;
+use work.clock_gen_wrapper;
 
 entity top is
 	generic(
@@ -33,7 +34,7 @@ entity top is
 		debug:    out cpu_debug_interface;
 		-- synthesis translate_on
 
-		clk:      in  std_ulogic                    := 'X';  -- clock
+		clk_in:      in  std_ulogic                    := 'X';  -- clock
 		-- Buttons
 		btnu:     in  std_ulogic                    := 'X';  -- button up
 		btnd:     in  std_ulogic                    := 'X';  -- button down
@@ -50,13 +51,15 @@ entity top is
 
 		-- UART
 		rx:       in  std_ulogic                    := 'X';  -- uart rx
-		tx:       out std_ulogic                    := '0';  -- uart tx
+		tx:       out std_ulogic                    := '0'; -- uart tx
+
+        debug_rx: out std_logic := '0'
 
         -- JA PMOD - BLE
-        pmod_rx : out std_logic;
-        pmod_tx : in std_logic;
-        pmod_rst_n : out std_logic;
-        pmod_conf : out std_logic
+--        pmod_rx : out std_logic := '0'
+--        pmod_tx : in std_logic
+--        pmod_rst_n : out std_logic;
+--        pmod_conf : out std_logic
 
     -- VGA
 --		o_vga:    out vga_physical_interface;
@@ -86,17 +89,26 @@ architecture behav of top is
 	constant use_sine:               boolean  := false;
 
     -- Components
-    component ble_uart
-        port (
-            clk : in std_logic;
-            uart_rx_out : out std_logic;
-            uart_tx_in : in std_logic;  
-            pmod_rx : out std_logic;
-            pmod_tx : in std_logic;
-            pmod_rst_n : out std_logic;
-            pmod_conf : out std_logic
-        );
+--    component ble_uart
+--        port (
+--            clk : in std_logic;
+--            uart_rx_out : out std_logic;
+--            uart_tx_in : in std_logic;  
+--            pmod_rx : out std_logic;
+--            pmod_tx : in std_logic;
+--            pmod_rst_n : out std_logic;
+--            pmod_conf : out std_logic
+--        );
+--    end component;
+
+    component clock_gen_wrapper
+      port (
+        clk_100MHz : in std_logic;
+        clk_out : out std_logic;
+        reset_rtl_0 : in std_logic := '0'
+      );
     end component;
+
 
 	-- Signals
 	signal rst:      std_ulogic := '0';
@@ -179,7 +191,19 @@ architecture behav of top is
     -- RX of UART (BLE or PC)
     signal ble_rx: std_logic := 'X';
     signal rx_cpu: std_logic := '1';
+    
+    -- Signal clk
+    signal clk: std_ulogic := 'X';
+    
 begin
+-- Clocking
+    clock_manager: clock_gen_wrapper
+    port map (
+        clk_100MHz => clk_in,
+        clk_out => clk
+    );
+    debug_rx <= clk;
+
 -------------------------------------------------------------------------------
 -- The Main components
 -------------------------------------------------------------------------------
@@ -203,15 +227,15 @@ begin
 	cpu_irc(7) <= button_changed;
 
     -- Bluetooth uart
-    ble_uart_0: ble_uart port map (
-        clk => clk,
-        uart_rx_out => ble_rx,
-        uart_tx_in => tx, 
-        pmod_rx => pmod_rx,
-        pmod_tx => pmod_tx,
-        pmod_rst_n => pmod_rst_n,
-        pmod_conf => pmod_conf
-    );
+--    ble_uart_0: ble_uart port map (
+--        clk => clk,
+--        uart_rx_out => ble_rx,
+--        uart_tx_in => tx, 
+--        pmod_rx => pmod_rx,
+--        pmod_tx => pmod_tx,
+--        pmod_rst_n => pmod_rst_n,
+--        pmod_conf => pmod_conf
+--    );
     
     -- PC UART RX or BLE RX
     rx_cpu <= ble_rx and rx;
@@ -381,14 +405,14 @@ begin
 	--- UART ----------------------------------------------------------
 
 	--- LED Output ----------------------------------------------------
-	led_output_reg_0: entity work.reg
-		generic map (g => g, N => ld'length)
-		port map (
-			clk => clk,
-			rst => rst,
-			we  => ld_we,
-			di  => io_dout(ld'range),
-			do  => ld);
+--	led_output_reg_0: entity work.reg
+--		generic map (g => g, N => ld'length)
+--		port map (
+--			clk => clk,
+--			rst => rst,
+--			we  => ld_we,
+--			di  => io_dout(ld'range),
+--			do  => ld);
 	--- LED Output ----------------------------------------------------
 
 
@@ -468,19 +492,19 @@ begin
 	--- Keyboard ------------------------------------------------------
 
 	--- LED 8 Segment display --- MAINLY FOR DEBUGING !!!
---	ledseg_0: entity work.led_indicator 
---	generic map (
---		g                      => g,
---		number_of_led_displays => number_of_led_displays,
---		use_bcd_not_hex        => false)
---	port map (
---		clk        => clk,
---		rst        => rst,
+	ledseg_0: entity work.led_indicator 
+	generic map (
+		g                      => g,
+		number_of_led_displays => number_of_led_displays,
+		use_bcd_not_hex        => false)
+	port map (
+		clk        => clk,
+		rst        => rst,
 
---		leds_we    => leds_reg_we,
---		leds       => io_dout,
+		leds_we    => leds_reg_we,
+		leds       => io_dout,
 
---		ld => ld);
+		ld => ld);
 	--- LED 8 Segment display -----------------------------------------
 
 	--- Buttons -------------------------------------------------------

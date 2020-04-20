@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/clock_gen/ip/clock_gen_clk_wiz_0_0/clock_gen_clk_wiz_0_0_sim_netlist.vhdl" \
+"../../../bd/clock_gen/sim/clock_gen.vhd" \
+
+nosort

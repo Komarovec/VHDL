@@ -316,7 +316,7 @@ entity uart_core is
 end entity;
 
 architecture structural of uart_core is
-	constant tx_init: integer  := g.clock_frequency / (baud * 16); -- 54 = 115200 @ 100 MHz
+	constant tx_init: integer  := g.clock_frequency / (baud * 16); -- 54 = 115200 @ 100 MHz g.clock_frequency / (baud * 8)
 	constant rx_init: positive := tx_init - 1; -- 50 = 115200 @ 100 MHz + Fudge Factor
 	constant N: positive := 8;
 	signal tx_sample, tx_baud, tx_cr: std_ulogic;
@@ -371,7 +371,7 @@ begin
 			clk    => clk,
 			rst    => rst,
 			we     => clock_reg_tx_we,
-			cnt    => reg,  -- 0x32/50 is 152000 @ 100MHz clk
+			cnt    => reg,  -- 0x32/50 is 115200 @ 100MHz clk
 			cr     => tx_cr,
 			sample => tx_sample,
 			baud   => tx_baud);

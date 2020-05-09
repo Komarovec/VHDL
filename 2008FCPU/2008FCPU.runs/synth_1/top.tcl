@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a200tsbg484-3
 
 set_param project.singleFileAddWarning.threshold 0
@@ -42,7 +41,6 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/h2.vhd
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/kbd.vhd
-  D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/ram.vhd
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/vga.vhd
   D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd

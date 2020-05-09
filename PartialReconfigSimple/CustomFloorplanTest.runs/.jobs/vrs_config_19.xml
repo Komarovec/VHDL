@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="light_count_mod_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/CustomFloorplanTest/CustomFloorplanTest.runs/light_count_mod_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="light_count_up_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/CustomFloorplanTest/CustomFloorplanTest.runs/light_count_up_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="light_count_shift_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/CustomFloorplanTest/CustomFloorplanTest.runs/light_count_shift_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/CustomFloorplanTest/CustomFloorplanTest.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="light_count_mod_synth_1"/>
+		<Parent Id="light_count_up_synth_1"/>
+		<Parent Id="light_count_shift_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

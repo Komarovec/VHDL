@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="light_count_shift_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1589018705">
+  <File Type="PA-TCL" Name="light_count_shift.tcl"/>
+  <File Type="REPORTS-TCL" Name="light_count_shift_reports.tcl"/>
+  <File Type="RDS-RDS" Name="light_count_shift.vds"/>
+  <File Type="RDS-UTIL" Name="light_count_shift_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="light_count_shift_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="light_count_shift.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/light_count_shift">
+    <File Path="$PSRCDIR/light_count_shift/imports/new/light_count_shift.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/light_count_shift.vhd"/>
+        <Attr Name="ImportTime" Val="1588950509"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="light_count_shift"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/light_count_shift">
+    <File Path="$PSRCDIR/light_count_shift/imports/new/light_count_shift.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/light_count_shift.vhd"/>
+        <Attr Name="ImportTime" Val="1588950509"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="light_count_shift"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

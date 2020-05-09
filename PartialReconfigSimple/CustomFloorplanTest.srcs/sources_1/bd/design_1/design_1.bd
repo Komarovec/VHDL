@@ -1,0 +1,30 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a200tsbg484-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "prc_0": ""
+    },
+    "components": {
+      "prc_0": {
+        "vlnv": "xilinx.com:ip:prc:1.3",
+        "xci_name": "design_1_prc_0_0"
+      }
+    },
+    "addressing": {
+      "/prc_0": {
+        "address_spaces": {
+          "Data": {
+            "range": "4G",
+            "width": "32"
+          }
+        }
+      }
+    }
+  }
+}

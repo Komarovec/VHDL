@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Mon Apr 20 18:03:12 2020
+| Date             : Sat Apr 25 11:55:34 2020
 | Host             : KomaroKomp running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.288        |
+| Total On-Chip Power (W)  | 0.289        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.137        |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.003 |        8 |       --- |             --- |
-| Slice Logic              |     0.002 |     9336 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1612 |    133800 |            1.20 |
-|   CARRY4                 |    <0.001 |      113 |     33450 |            0.34 |
-|   Register               |    <0.001 |      667 |    267600 |            0.25 |
+| Slice Logic              |     0.003 |     9375 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1547 |    133800 |            1.16 |
 |   LUT as Distributed RAM |    <0.001 |     4160 |     46200 |            9.00 |
-|   F7/F8 Muxes            |    <0.001 |     2282 |    133800 |            1.71 |
-|   Others                 |     0.000 |       92 |       --- |             --- |
-| Signals                  |     0.012 |     4396 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |     2385 |    133800 |            1.78 |
+|   CARRY4                 |    <0.001 |      113 |     33450 |            0.34 |
+|   Register               |    <0.001 |      649 |    267600 |            0.24 |
+|   Others                 |     0.000 |       93 |       --- |             --- |
+| Signals                  |     0.014 |     4236 |       --- |             --- |
 | MMCM                     |     0.116 |        1 |        10 |           10.00 |
-| I/O                      |     0.003 |       25 |       285 |            8.77 |
+| I/O                      |    <0.001 |       28 |       285 |            9.82 |
 | Static Power             |     0.152 |          |           |                 |
-| Total                    |     0.288 |          |           |                 |
+| Total                    |     0.289 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.049 |       0.018 |      0.031 |
+| Vccint    |       1.000 |     0.052 |       0.021 |      0.031 |
 | Vccaux    |       1.800 |     0.095 |       0.064 |      0.031 |
-| Vcco33    |       3.300 |     0.006 |       0.001 |      0.005 |
+| Vcco33    |       3.300 |     0.005 |       0.000 |      0.005 |
 | Vcco25    |       2.500 |     0.005 |       0.000 |      0.005 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -152,9 +152,9 @@ Table of Contents
 |   clock_manager |     0.117 |
 |     clock_gen_i |     0.117 |
 |       clk_wiz_0 |     0.117 |
-|   core_0        |     0.016 |
-|     h2_0        |     0.012 |
-|     mem_h2_0    |     0.003 |
+|   core_0        |     0.019 |
+|     h2_0        |     0.013 |
+|     mem_h2_0    |     0.005 |
 +-----------------+-----------+
 
 

@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../CustomFloorplanTest.srcs/sources_1/new/clock_generator.vhd" \
+"../../../../CustomFloorplanTest.srcs/sources_1/new/switches.vhd" \
+"../../../../CustomFloorplanTest.srcs/sources_1/new/top.vhd" \
+"../../../../CustomFloorplanTest.srcs/sim_1/new/top_tb.vhd" \
+
+# Do not sort compile order
+nosort

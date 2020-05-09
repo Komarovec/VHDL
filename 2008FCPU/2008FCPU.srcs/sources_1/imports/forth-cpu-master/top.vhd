@@ -53,31 +53,11 @@ entity top is
 		rx:       in  std_ulogic                    := 'X';  -- uart rx
 		tx:       out std_ulogic                    := '0'; -- uart tx
 
-        debug_rx: out std_logic := '0'
-
         -- JA PMOD - BLE
---        pmod_rx : out std_logic := '0'
---        pmod_tx : in std_logic
---        pmod_rst_n : out std_logic;
---        pmod_conf : out std_logic
-
-    -- VGA
---		o_vga:    out vga_physical_interface;
-
-		-- PS/2 Interface
---		ps2_keyboard_data:  in std_ulogic           := '0';
---		ps2_keyboard_clk:   in std_ulogic           := '0';
-
-		-- Memory Interface -- EXTERNAL MEMORY
---		ram_cs:    out   std_ulogic := '1';
---		mem_oe:    out   std_ulogic := '0'; -- negative logic
---		mem_wr:    out   std_ulogic := '0'; -- negative logic
---		mem_adv:   out   std_ulogic := '0'; -- negative logic
---		mem_wait:  out   std_ulogic := '0'; -- positive logic!
---		flash_cs:  out   std_ulogic := '0';
---		flash_rp:  out   std_ulogic := '1';
---		mem_addr:  out   std_ulogic_vector(26 downto 1) := (others => '0');
---		mem_data:  inout std_logic_vector(15 downto 0)  := (others => 'Z')
+        pmod_rx : out std_logic := '0';
+        pmod_tx : in std_logic;
+        pmod_rst_n : out std_logic;
+        pmod_conf : out std_logic
 		);
 end;
 
@@ -89,17 +69,17 @@ architecture behav of top is
 	constant use_sine:               boolean  := false;
 
     -- Components
---    component ble_uart
---        port (
---            clk : in std_logic;
---            uart_rx_out : out std_logic;
---            uart_tx_in : in std_logic;  
---            pmod_rx : out std_logic;
---            pmod_tx : in std_logic;
---            pmod_rst_n : out std_logic;
---            pmod_conf : out std_logic
---        );
---    end component;
+    component ble_uart
+        port (
+            clk : in std_logic;
+            uart_rx_out : out std_logic;
+            uart_tx_in : in std_logic;  
+            pmod_rx : out std_logic;
+            pmod_tx : in std_logic;
+            pmod_rst_n : out std_logic;
+            pmod_conf : out std_logic
+        );
+    end component;
 
     component clock_gen_wrapper
       port (
@@ -202,7 +182,6 @@ begin
         clk_100MHz => clk_in,
         clk_out => clk
     );
-    debug_rx <= clk;
 
 -------------------------------------------------------------------------------
 -- The Main components
@@ -227,15 +206,15 @@ begin
 	cpu_irc(7) <= button_changed;
 
     -- Bluetooth uart
---    ble_uart_0: ble_uart port map (
---        clk => clk,
---        uart_rx_out => ble_rx,
---        uart_tx_in => tx, 
---        pmod_rx => pmod_rx,
---        pmod_tx => pmod_tx,
---        pmod_rst_n => pmod_rst_n,
---        pmod_conf => pmod_conf
---    );
+    ble_uart_0: ble_uart port map (
+        clk => clk,
+        uart_rx_out => ble_rx,
+        uart_tx_in => tx, 
+        pmod_rx => pmod_rx,
+        pmod_tx => pmod_tx,
+        pmod_rst_n => pmod_rst_n,
+        pmod_conf => pmod_conf
+    );
     
     -- PC UART RX or BLE RX
     rx_cpu <= ble_rx and rx;
@@ -428,69 +407,6 @@ begin
 		irq       => timer_irq);
 	--- Timer ---------------------------------------------------------
 
-	--- VGA -----------------------------------------------------------
---	vga_selector: block
---		constant use_vt100: boolean := true;
---	begin
---		gen_vt100_0: if use_vt100 generate
---		vt100_0: work.vga_pkg.vt100
---			generic map (g => g)
---			port map (
---				clk         =>  clk,
---				clk25MHz    =>  clk25MHz,
---				rst         =>  rst,
---				we          =>  vga_data_we,
---				char        =>  vga_data,
---				busy        =>  vga_data_busy,
---				o_vga       =>  o_vga);
---		end generate;
-	
---		-- Test code
---		-- NOTE: Timing is not the best, VGA monitor loses synchronization
---		-- every so often with this module.
---		vga_gen_c1: if not use_vt100 generate
---		vga_c1: block 
---			signal row, column: integer := 0;
---			signal h_blank, v_blank, draw: std_ulogic := '0';
---		begin
---			draw <= not h_blank and not v_blank;
---			vga_c: work.util.vga_controller
---			generic map (
---				g => g,
---				pixel_clock_frequency => 25_000_000,
---				cfg => work.util.vga_640x480)
---			port map (
---				clk    => clk25MHz,
---				rst    => rst,
---				row    => row,
---				column => column,
---				h_blank => h_blank,
---				v_blank => v_blank,
---				h_sync => o_vga.hsync,
---				v_sync => o_vga.vsync);
---			o_vga.red   <= "111" when draw = '1' else "000";
---			o_vga.green <= "111" when (draw = '1' and row < 100 and column < 100) else "000";
---			o_vga.blue  <= "11";
---		end block;
---		end generate;
---	end block;
-	--- VGA -----------------------------------------------------------
-
-	--- Keyboard ------------------------------------------------------
---	keyboard_0: work.kbd_pkg.keyboard
---	generic map (g => g, ps2_debounce_counter_size => 8)
---	port map (
---		clk              => clk,
---		rst              => rst,
-
---		ps2_clk          => ps2_keyboard_clk,
---		ps2_data         => ps2_keyboard_data,
-
---		kbd_char_re      => kbd_char_re,
---		kbd_char_buf_new => kbd_char_buf_new,
---		kbd_char_buf     => kbd_char_buf);
-	--- Keyboard ------------------------------------------------------
-
 	--- LED 8 Segment display --- MAINLY FOR DEBUGING !!!
 	ledseg_0: entity work.led_indicator 
 	generic map (
@@ -558,33 +474,6 @@ begin
 		generic map (g => g, N => sw'length, timer_period_us => timer_period_us)
 		port map (clk => clk, di => sw, do => sw_d);
 	--- Switches ------------------------------------------------------
-
-	--- Memory Interface ----------------------------------------------
-	ram_interface_0: entity work.ram_interface
-	generic map (g => g)
-	port map (
-		clk               =>  clk,
-		rst               =>  rst,
-		mem_addr_16_1     =>  io_dout(io_dout'high downto 1),
-		mem_addr_16_1_we  =>  mem_addr_16_1_we,
-		mem_addr_26_17    =>  io_dout(9 downto 0),
-		mem_addr_26_17_we =>  mem_addr_26_17_we,
-		mem_control_i     =>  io_dout(15 downto 10),
-		mem_control_we    =>  mem_control_we,
-		mem_data_i        =>  io_dout,
-		mem_data_i_we     =>  mem_data_i_we,
-		mem_data_o        =>  mem_data_o
---		ram_cs            =>  ram_cs, EXTERNAL MEMORY PINS
---		mem_oe            =>  mem_oe,
---		mem_wr            =>  mem_wr,
---		mem_adv           =>  mem_adv,
---		mem_wait          =>  mem_wait,
---		flash_cs          =>  flash_cs,
---		flash_rp          =>  flash_rp,
---		mem_addr          =>  mem_addr,
---		mem_data          =>  mem_data
-		);
-	--- Memory Interface ----------------------------------------------
 
 -------------------------------------------------------------------------------
 end architecture;

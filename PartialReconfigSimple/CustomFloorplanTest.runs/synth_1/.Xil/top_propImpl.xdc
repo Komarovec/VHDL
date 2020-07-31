@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Entertaiment/Programy/VHDL/VHDL/CustomFloorplanTest/CustomFloorplanTest.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc rfile:../../../CustomFloorplanTest.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc rfile:../../../CustomFloorplanTest.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN R4 IOSTANDARD LVCMOS33} [get_ports clk]
 set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
@@ -25,14 +25,10 @@ set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ
 set_property -dict {PACKAGE_PIN K13 IOSTANDARD LVCMOS12} [get_ports {sw[6]}]
 set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN M17 IOSTANDARD LVCMOS12} [get_ports {sw[7]}]
-set_property src_info {type:XDC file:1 line:312 export:INPUT save:INPUT read:READ} [current_design]
-add_cells_to_pblock [get_pblocks pblock_switch_light] [get_cells -quiet [list switch_light]]
-set_property src_info {type:XDC file:1 line:314 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_empty_mod_light
-resize_pblock [get_pblocks pblock_empty_mod_light] -add {SLICE_X118Y101:SLICE_X143Y149}
-resize_pblock [get_pblocks pblock_empty_mod_light] -add {RAMB18_X7Y42:RAMB18_X7Y59}
-resize_pblock [get_pblocks pblock_empty_mod_light] -add {RAMB36_X7Y21:RAMB36_X7Y29}
-set_property RESET_AFTER_RECONFIG true [get_pblocks pblock_empty_mod_light]
-set_property SNAPPING_MODE ROUTING [get_pblocks pblock_empty_mod_light]
-set_property src_info {type:XDC file:1 line:315 export:INPUT save:INPUT read:READ} [current_design]
-add_cells_to_pblock [get_pblocks pblock_empty_mod_light] [get_cells -quiet [list empty_mod_light]]
+set_property src_info {type:XDC file:1 line:335 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_light_count
+add_cells_to_pblock [get_pblocks pblock_light_count] [get_cells -quiet [list light_count]]
+resize_pblock [get_pblocks pblock_light_count] -add {SLICE_X110Y100:SLICE_X135Y149}
+set_property RESET_AFTER_RECONFIG true [get_pblocks pblock_light_count]
+set_property SNAPPING_MODE ROUTING [get_pblocks pblock_light_count]
+set_property IS_SOFT FALSE [get_pblocks pblock_light_count]

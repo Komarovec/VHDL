@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl2008 ieee_proposed  \
+"../../../../TSKmodel.srcs/sources_1/new/fixed_pkg_2008.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../TSKmodel.srcs/sources_1/new/trimf.vhd" \
+"../../../../TSKmodel.srcs/sources_1/new/tsk_util.vhd" \
+"../../../../TSKmodel.srcs/sources_1/new/tsk.vhd" \
+"../../../../TSKmodel.srcs/sim_1/new/tsk_tb.vhd" \
+
+# Do not sort compile order
+nosort

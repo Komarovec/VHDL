@@ -24,33 +24,33 @@ package tsk_util is
     -- Default values
     constant MF_COEFS_DEFAULT: RAW_MF_COEF_ARRAY := (
         -- x2 high
-        std_logic_vector(to_sfixed(1, 23, -8)), -- c
+        std_logic_vector(to_sfixed(100, 23, -8)), -- c
         std_logic_vector(to_sfixed(0, 23, -8)), -- s2
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s1
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s1
               
         -- x2 avg
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- c
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s2
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s1
+        std_logic_vector(to_sfixed(50, 23, -8)), -- c
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s2
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s1
         
         -- x2 low
         std_logic_vector(to_sfixed(0, 23, -8)), -- c
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s2
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s2
         std_logic_vector(to_sfixed(0, 23, -8)), -- s1
         
         -- x1 high
-        std_logic_vector(to_sfixed(1, 23, -8)), -- c
+        std_logic_vector(to_sfixed(100, 23, -8)), -- c
         std_logic_vector(to_sfixed(0, 23, -8)), -- s2
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s1
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s1
         
         -- x1 avg
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- c
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s2
-        std_logic_vector(to_sfixed(0.5, 23, -8)), -- s1
+        std_logic_vector(to_sfixed(50, 23, -8)), -- c
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s2
+        std_logic_vector(to_sfixed(50, 23, -8)), -- s1
         
         -- x1 low
         std_logic_vector(to_sfixed(0, 23, -8)),-- c
-        std_logic_vector(to_sfixed(0.5, 23, -8)),-- s2
+        std_logic_vector(to_sfixed(50, 23, -8)),-- s2
         std_logic_vector(to_sfixed(0, 23, -8)) -- s1
     );
     

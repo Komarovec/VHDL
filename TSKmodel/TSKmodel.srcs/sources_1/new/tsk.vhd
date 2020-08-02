@@ -10,17 +10,17 @@ use work.tsk_util.all;
 
 entity tsk is
     Port ( 
-        --clk: in std_logic; -- Currently not needed
+        clk: in std_logic;
         
         x1_b, x2_b: in std_ulogic_vector(31 downto 0) := (others => '0'); -- Inputs
         y_star_b: out std_ulogic_vector(31 downto 0) := (others => '0'); -- Output
         
         raw_coefs: in RAW_COEF_ARRAY := COEFS_DEFAULT; -- LinReg coefs.
-        raw_mf_coefs: in RAW_MF_COEF_ARRAY := MF_COEFS_DEFAULT; -- Membership functions coefs.
+        raw_mf_coefs: in RAW_MF_COEF_ARRAY := MF_COEFS_DEFAULT -- Membership functions coefs.
         
         -- /Debug output/
-        x1_low_out, x1_avg_out, x1_high_out: out sfixed(1 downto -31); -- Debug mbfs vals
-        y1_out, y2_out, y3_out: out sfixed(23 downto -8) -- Debug p vals
+        --x1_low_out, x1_avg_out, x1_high_out: out sfixed(1 downto -31); -- Debug mbfs vals
+        --y1_out, y2_out, y3_out: out sfixed(23 downto -8) -- Debug p vals
         -- /Debug output/
     );
 end tsk;
@@ -43,18 +43,18 @@ architecture Behavioral of tsk is
     signal coefs: COEF_ARRAY;
     
     -- Output signal
-    signal weighted_sum : sfixed(47 downto -16);
-    signal weights_sum : sfixed(47 downto -16);
+    signal weighted_sum : sfixed(23 downto -8);
+    signal weights_sum : sfixed(23 downto -8);
     -- signal y_star: sfixed(24 downto -8) := (others => '0');
 begin
 -- /Debug output/
-x1_low_out <= x1_low;
-x1_avg_out <= x1_avg;
-x1_high_out <= x1_high;
+--x1_low_out <= x1_low;
+--x1_avg_out <= x1_avg;
+--x1_high_out <= x1_high;
 
-y1_out <= y_values(0);
-y2_out <= y_values(1);
-y3_out <= y_values(2);
+--y1_out <= y_values(0);
+--y2_out <= y_values(1);
+--y3_out <= y_values(2);
 -- /Debug output/
 
 -- Output y_star to std_logic_vector
@@ -88,29 +88,35 @@ end generate rules_generate;
 y_star <= resize(weighted_sum / weights_sum, y_star);
 
 -- Weighted sum y1 * w1 + y2 * w2 + ...
-process(rule_weights, y_values)
-  variable wsum : sfixed(47 downto -16);
+process(clk, rule_weights, y_values)
+  variable wsum : sfixed(23 downto -8);
 begin
-    wsum := (others => '0');
-    for ii in 0 to RULE_COUNT-1 loop
-        wsum := resize(wsum + (rule_weights(ii) * y_values(ii)), wsum);
-    end loop;
-    weighted_sum <= wsum;
+    if(rising_edge(clk)) then
+        wsum := (others => '0');
+        for ii in 0 to RULE_COUNT-1 loop
+            wsum := resize(wsum + (rule_weights(ii) * y_values(ii)), wsum);
+        end loop;
+        weighted_sum <= wsum;
+    end if;
 end process;
 
 -- Rule Weight sum w1 + w2 + w3 + ...
-process(rule_weights)
-  variable wsum: sfixed(47 downto -16);
+process(clk, rule_weights)
+  variable wsum: sfixed(23 downto -8);
 begin
-    wsum := (others => '0');
-    for ii in 0 to RULE_COUNT-1 loop
-        wsum := resize(wsum + rule_weights(ii), wsum);
-    end loop;
-    weights_sum <= wsum;
+    if(rising_edge(clk)) then
+        wsum := (others => '0');
+        for ii in 0 to RULE_COUNT-1 loop
+            wsum := resize(wsum + rule_weights(ii), wsum);
+        end loop;
+        weights_sum <= wsum;
+    end if;
 end process;
 
 -- X1 Membership functions
 trimf_x1_low: entity work.trimf port map(
+    clk => clk,
+
     x => x1,
     y => x1_low,
     s1 =>  mf_coefs(0),
@@ -119,6 +125,8 @@ trimf_x1_low: entity work.trimf port map(
 );
 
 trimf_x1_avg: entity work.trimf port map(
+    clk => clk,
+
     x => x1,
     y => x1_avg,
     s1 =>  mf_coefs(3),
@@ -127,6 +135,8 @@ trimf_x1_avg: entity work.trimf port map(
 );
 
 trimf_x1_high: entity work.trimf port map(
+    clk => clk,
+
     x => x1,
     y => x1_high,
     s1 =>  mf_coefs(6),
@@ -136,6 +146,8 @@ trimf_x1_high: entity work.trimf port map(
 
 -- X2 Membership functions
 trimf_x2_low: entity work.trimf port map(
+    clk => clk,
+
     x => x1,
     y => x2_low,
     s1 =>  mf_coefs(9),
@@ -144,6 +156,8 @@ trimf_x2_low: entity work.trimf port map(
 );
 
 trimf_x2_avg: entity work.trimf port map(
+    clk => clk,
+
     x => x1,
     y => x2_avg,
     s1 =>  mf_coefs(12),
@@ -152,6 +166,8 @@ trimf_x2_avg: entity work.trimf port map(
 );
 
 trimf_x2_high: entity work.trimf port map(
+    clk => clk,
+
     x => x1,
     y => x2_high,
     s1 =>  mf_coefs(15),

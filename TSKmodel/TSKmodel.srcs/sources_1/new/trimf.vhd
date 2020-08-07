@@ -23,6 +23,7 @@ begin
 y <= y_buf(1 downto -31);
 
 process(x, c, s1, s2)
+    variable x_p, c_p, s1_p, s2_p : sfixed(23 downto -8);
 begin
     --if(rising_edge(clk)) then
       if(c - s1 < x and x <= c) then

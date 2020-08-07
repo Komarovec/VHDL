@@ -23,7 +23,7 @@ x1(7 downto 0) <= (others => '0');
 led <= y_star(15 downto 8);
 
 tsk_reg: entity work.tsk port map(
-    clk => clk,
+    clk_in => clk,
     x1_b => x1,
     x2_b => (others => '0'),
     y_star_b => y_star

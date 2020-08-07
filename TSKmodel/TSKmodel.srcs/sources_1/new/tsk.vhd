@@ -10,7 +10,7 @@ use work.tsk_util.all;
 
 entity tsk is
     Port ( 
-        clk: in std_logic;
+        clk_in: in std_logic;
         
         x1_b, x2_b: in std_ulogic_vector(31 downto 0) := (others => '0'); -- Inputs
         y_star_b: out std_ulogic_vector(31 downto 0) := (others => '0'); -- Output
@@ -26,6 +26,9 @@ entity tsk is
 end tsk;
 
 architecture Behavioral of tsk is
+    signal clk: std_logic := '0';
+    signal clk_divider: integer := 0;
+
     -- Transfer signal
     signal x1, x2: sfixed(23 downto -8) := (others => '0'); -- Inputs
     signal y_star: sfixed(23 downto -8) := (others => '0'); -- Output
@@ -43,10 +46,14 @@ architecture Behavioral of tsk is
     signal coefs: COEF_ARRAY;
     
     -- Output signal
-    signal weighted_sum : sfixed(23 downto -8);
-    signal weights_sum : sfixed(23 downto -8);
+    signal weighted_sum: sfixed(15 downto -2);
+    signal weights_sum:  sfixed(15 downto -2);
+    
+    signal y_mul_weight: Y_ARRAY;
     -- signal y_star: sfixed(24 downto -8) := (others => '0');
+    
 begin
+
 -- /Debug output/
 --x1_low_out <= x1_low;
 --x1_avg_out <= x1_avg;
@@ -56,6 +63,19 @@ begin
 --y2_out <= y_values(1);
 --y3_out <= y_values(2);
 -- /Debug output/
+
+-- Clock divider
+process(clk_in)
+begin
+    if(rising_edge(clk_in)) then
+        if(clk_divider = 3) then
+            clk_divider <= 0;
+            clk <= not clk;
+        else
+            clk_divider <= 1 + clk_divider;
+        end if;
+    end if;
+end process;
 
 -- Output y_star to std_logic_vector
 y_star_b <= std_logic_vector(y_star);
@@ -80,36 +100,55 @@ rule_weights(1) <= x1_avg;
 rule_weights(2) <= x1_high;
 
 -- Consequent
-rules_generate: for ii in 0 to RULE_COUNT-1 generate
-    y_values(ii) <= resize((coefs(2*ii) * x1) + (coefs(2*ii + 1) * x2), 23, -8);
-end generate rules_generate;
+process(clk, coefs, x1, x2)
+begin
+    if(rising_edge(clk)) then
+        for ii in 0 to RULE_COUNT-1 loop
+            y_values(ii) <= resize((coefs(2*ii) * x1) + (coefs(2*ii + 1) * x2), 23, -8);
+        end loop;
+    end if;
+end process;
 
--- Crisp output value Weighted sum / Weight sum
-y_star <= resize(weighted_sum / weights_sum, y_star);
+process(clk, rule_weights, y_values)
+begin
+    if(rising_edge(clk)) then
+        for ii in 0 to RULE_COUNT-1 loop
+            y_mul_weight(ii) <= resize(rule_weights(ii) * y_values(ii), y_mul_weight(ii));
+        end loop;
+    end if;
+end process;
 
 -- Weighted sum y1 * w1 + y2 * w2 + ...
-process(clk, rule_weights, y_values)
+process(clk, y_mul_weight)
   variable wsum : sfixed(23 downto -8);
 begin
     if(rising_edge(clk)) then
         wsum := (others => '0');
         for ii in 0 to RULE_COUNT-1 loop
-            wsum := resize(wsum + (rule_weights(ii) * y_values(ii)), wsum);
+            wsum := resize(wsum + y_mul_weight(ii), wsum);
         end loop;
-        weighted_sum <= wsum;
+        weighted_sum <= resize(wsum, weighted_sum);
     end if;
 end process;
 
 -- Rule Weight sum w1 + w2 + w3 + ...
 process(clk, rule_weights)
-  variable wsum: sfixed(23 downto -8);
+  variable wsum : sfixed(23 downto -8);
 begin
     if(rising_edge(clk)) then
         wsum := (others => '0');
         for ii in 0 to RULE_COUNT-1 loop
             wsum := resize(wsum + rule_weights(ii), wsum);
         end loop;
-        weights_sum <= wsum;
+        weights_sum <= resize(wsum, weights_sum);
+    end if;
+end process;
+
+-- Crisp output value Weighted sum / Weight sum
+process(clk, weighted_sum, weights_sum)
+begin
+    if(rising_edge(clk)) then
+        y_star <= resize(weighted_sum / weights_sum, y_star);
     end if;
 end process;
 

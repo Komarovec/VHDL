@@ -77,6 +77,7 @@ ENTITY dfx_controller_0 IS
     icap_rdwrb : OUT STD_LOGIC;
     icap_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     icap_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    vsm_VS_0_hw_triggers : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     vsm_VS_0_rm_shutdown_req : OUT STD_LOGIC;
     vsm_VS_0_rm_shutdown_ack : IN STD_LOGIC;
     vsm_VS_0_rm_decouple : OUT STD_LOGIC;
@@ -133,6 +134,7 @@ ARCHITECTURE dfx_controller_0_arch OF dfx_controller_0 IS
       icap_rdwrb : OUT STD_LOGIC;
       icap_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       icap_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      vsm_VS_0_hw_triggers : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       vsm_VS_0_rm_shutdown_req : OUT STD_LOGIC;
       vsm_VS_0_rm_shutdown_ack : IN STD_LOGIC;
       vsm_VS_0_rm_decouple : OUT STD_LOGIC;
@@ -240,6 +242,7 @@ BEGIN
       icap_rdwrb => icap_rdwrb,
       icap_i => icap_i,
       icap_o => icap_o,
+      vsm_VS_0_hw_triggers => vsm_VS_0_hw_triggers,
       vsm_VS_0_rm_shutdown_req => vsm_VS_0_rm_shutdown_req,
       vsm_VS_0_rm_shutdown_ack => vsm_VS_0_rm_shutdown_ack,
       vsm_VS_0_rm_decouple => vsm_VS_0_rm_decouple,

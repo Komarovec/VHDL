@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Jun 29 19:48:35 2020
+| Date         : Sat Oct  3 18:07:21 2020
 | Host         : KomaroKomp running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   11 |     0 |    134600 | <0.01 |
-|   LUT as Logic          |   11 |     0 |    134600 | <0.01 |
+| Slice LUTs*             |  134 |     0 |    134600 |  0.10 |
+|   LUT as Logic          |  134 |     0 |    134600 |  0.10 |
 |   LUT as Memory         |    0 |     0 |     46200 |  0.00 |
 | Slice Registers         |   34 |     0 |    269200 |  0.01 |
 |   Register as Flip Flop |   34 |     0 |    269200 |  0.01 |
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    9 |     0 |       285 |  3.16 |
+| Bonded IOB                  |    7 |     0 |       285 |  2.46 |
 | Bonded IPADs                |    0 |     0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        10 |  0.00 |
@@ -136,7 +136,7 @@ Table of Contents
 | DNA_PORT    |    0 |     0 |         1 |  0.00 |
 | EFUSE_USR   |    0 |     0 |         1 |  0.00 |
 | FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
-| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| ICAPE2      |    1 |     0 |         2 | 50.00 |
 | PCIE_2_1    |    0 |     0 |         1 |  0.00 |
 | STARTUPE2   |    0 |     0 |         1 |  0.00 |
 | XADC        |    0 |     0 |         1 |  0.00 |
@@ -149,13 +149,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT1     |  123 |                 LUT |
 | FDRE     |   34 |        Flop & Latch |
 | CARRY4   |    8 |          CarryLogic |
 | LUT4     |    7 |                 LUT |
-| IBUF     |    5 |                  IO |
-| OBUF     |    4 |                  IO |
+| OBUFT    |    4 |                  IO |
 | LUT5     |    3 |                 LUT |
+| IBUF     |    3 |                  IO |
 | LUT6     |    2 |                 LUT |
+| ICAPE2   |    1 |              Others |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
@@ -163,11 +165,18 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+-----------------+------+
-|     Ref Name    | Used |
-+-----------------+------+
-| light_count_mod |    1 |
-+-----------------+------+
++------------------------------------------+------+
+|                 Ref Name                 | Used |
++------------------------------------------+------+
+| light_count_mod                          |    1 |
+| dfx_controller_setup_s00_data_fifo_0     |    1 |
+| dfx_controller_setup_rst_sys_clock_50M_0 |    1 |
+| dfx_controller_setup_ila_1_0             |    1 |
+| dfx_controller_setup_ila_0_1             |    1 |
+| dfx_controller_setup_dfx_controller_0_0  |    1 |
+| dfx_controller_setup_blk_mem_gen_0_0     |    1 |
+| dfx_controller_setup_axi_bram_ctrl_0_0   |    1 |
++------------------------------------------+------+
 
 
 9. Instantiated Netlists

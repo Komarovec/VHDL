@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Oct  3 18:15:34 2020
+# Process ID: 1688
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/child_0_impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/child_0_impl_1/top.vdi
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/child_0_impl_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Jan 23 17:53:14 2021
+# Process ID: 1852
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/ila_0_synth_1
+# Command line: vivado.exe -log ila_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ila_0.tcl
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/ila_0_synth_1/ila_0.vds
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/ila_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ila_0.tcl -notrace

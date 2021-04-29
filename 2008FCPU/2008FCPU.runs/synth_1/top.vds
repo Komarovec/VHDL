@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2019.2 (64-bit)
-# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Apr 25 11:50:36 2020
-# Process ID: 13476
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jan 24 01:07:15 2021
+# Process ID: 16256
 # Current directory: D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/top.vds
@@ -12,87 +12,90 @@
 source top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'clock_gen.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+clock_gen_clk_wiz_0_0
+
 Command: synth_design -top top -part xc7a200tsbg484-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-3
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16968 
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24864
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1060.773 ; gain = 235.031
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1010.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-4747] shared variables must be of a protected type [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2132]
 WARNING: [Synth 8-4747] shared variables must be of a protected type [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2226]
 INFO: [Synth 8-638] synthesizing module 'top' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:64]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter reset_period_us bound to: 100 - type: integer 
 	Parameter uart_baud bound to: 115200 - type: integer 
 	Parameter uart_fifo_depth bound to: 8 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* buffer_type = "BUFG" *) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:107]
-INFO: [Synth 8-5534] Detected attribute (* buffer_type = "BUFG" *) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:108]
 INFO: [Synth 8-3491] module 'clock_gen_wrapper' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/hdl/clock_gen_wrapper.vhd:14' bound to instance 'clock_manager' of component 'clock_gen_wrapper' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:180]
 INFO: [Synth 8-638] synthesizing module 'clock_gen_wrapper' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/hdl/clock_gen_wrapper.vhd:22]
 INFO: [Synth 8-3491] module 'clock_gen' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/synth/clock_gen.vhd:14' bound to instance 'clock_gen_i' of component 'clock_gen' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/hdl/clock_gen_wrapper.vhd:31]
 INFO: [Synth 8-638] synthesizing module 'clock_gen' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/synth/clock_gen.vhd:26]
-INFO: [Synth 8-3491] module 'clock_gen_clk_wiz_0_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/.Xil/Vivado-13476-KomaroKomp/realtime/clock_gen_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'clock_gen_clk_wiz_0_0' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/synth/clock_gen.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'clock_gen_clk_wiz_0_0' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/.Xil/Vivado-13476-KomaroKomp/realtime/clock_gen_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'clock_gen_clk_wiz_0_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/.Xil/Vivado-16256-KomaroKomp/realtime/clock_gen_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'clock_gen_clk_wiz_0_0' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/synth/clock_gen.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'clock_gen_clk_wiz_0_0' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/.Xil/Vivado-16256-KomaroKomp/realtime/clock_gen_clk_wiz_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'clock_gen' (1#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/synth/clock_gen.vhd:26]
 INFO: [Synth 8-256] done synthesizing module 'clock_gen_wrapper' (2#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/hdl/clock_gen_wrapper.vhd:22]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter reset_period_us bound to: 100 - type: integer 
 INFO: [Synth 8-3491] module 'reset_generator' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2845' bound to instance 'system_reset' of component 'reset_generator' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:191]
 INFO: [Synth 8-638] synthesizing module 'reset_generator' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2852]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter reset_period_us bound to: 100 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'reset_generator' (3#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2852]
 INFO: [Synth 8-3491] module 'ble_uart' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/Desktop/ble_uart.vhd:5' bound to instance 'ble_uart_0' of component 'ble_uart' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:209]
 INFO: [Synth 8-638] synthesizing module 'ble_uart' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/Desktop/ble_uart.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'ble_uart' (4#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/Desktop/ble_uart.vhd:17]
 INFO: [Synth 8-638] synthesizing module 'core' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:110]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter number_of_interrupts bound to: 8 - type: integer 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 INFO: [Synth 8-3491] module 'rising_edge_detectors' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1358' bound to instance 'edges' of component 'rising_edge_detectors' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:137]
 INFO: [Synth 8-638] synthesizing module 'rising_edge_detectors' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1367]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
 INFO: [Synth 8-638] synthesizing module 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1288]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-256] done synthesizing module 'rising_edge_detector' (5#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1288]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1370]
 INFO: [Synth 8-256] done synthesizing module 'rising_edge_detectors' (6#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1367]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter number_of_interrupts bound to: 8 - type: integer 
 	Parameter lowest_interrupt_first bound to: 1 - type: bool 
 INFO: [Synth 8-3491] module 'interrupt_request_handler' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:241' bound to instance 'irqh_0' of component 'interrupt_request_handler' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:147]
 INFO: [Synth 8-638] synthesizing module 'interrupt_request_handler' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:260]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter number_of_interrupts bound to: 8 - type: integer 
 	Parameter lowest_interrupt_first bound to: 1 - type: bool 
 INFO: [Synth 8-638] synthesizing module '\reg ' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1061]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module '\reg ' (7#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1061]
 INFO: [Synth 8-638] synthesizing module 'reg__parameterized0' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1061]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'reg__parameterized0' (7#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1061]
 INFO: [Synth 8-256] done synthesizing module 'interrupt_request_handler' (8#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:260]
@@ -114,239 +117,220 @@ INFO: [Synth 8-638] synthesizing module 'h2' [D:/Entertaiment/Programy/VHDL/VHDL
 	Parameter use_interrupts bound to: 1 - type: bool 
 INFO: [Synth 8-256] done synthesizing module 'h2' (9#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/h2.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'dual_port_block_ram' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2089]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter addr_length bound to: 13 - type: integer 
 	Parameter data_length bound to: 16 - type: integer 
 	Parameter file_name bound to: h2.bin - type: string 
 	Parameter file_type bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'dual_port_block_ram' (10#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2089]
 INFO: [Synth 8-256] done synthesizing module 'core' (11#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/core.vhd:110]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter baud bound to: 115200 - type: integer 
 	Parameter format bound to: 8'b10000100 
 	Parameter use_fifo bound to: 1 - type: bool 
 INFO: [Synth 8-3491] module 'uart_top' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:186' bound to instance 'uart_fifo_0' of component 'uart_top' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:361]
 INFO: [Synth 8-638] synthesizing module 'uart_top' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:214]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter baud bound to: 115200 - type: integer 
 	Parameter format bound to: 8'b10000100 
 	Parameter use_fifo bound to: 1 - type: bool 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter baud bound to: 115200 - type: integer 
 	Parameter format bound to: 8'b10000100 
 INFO: [Synth 8-3491] module 'uart_core' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:292' bound to instance 'uart_core_0' of component 'uart_core' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:222]
 INFO: [Synth 8-638] synthesizing module 'uart_core' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:318]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter baud bound to: 115200 - type: integer 
 	Parameter format bound to: 8'b10000100 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
-	Parameter init bound to: 32'sb00000000000000000000000000001101 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011011 
 	Parameter N bound to: 16 - type: integer 
 	Parameter D bound to: 3 - type: integer 
 INFO: [Synth 8-3491] module 'uart_baud' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:430' bound to instance 'baud_tx' of component 'uart_baud' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:368]
 INFO: [Synth 8-638] synthesizing module 'uart_baud' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:444]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
-	Parameter init bound to: 32'sb00000000000000000000000000001101 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011011 
 	Parameter N bound to: 16 - type: integer 
 	Parameter D bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'uart_baud' (12#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:444]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
-	Parameter init bound to: 32'sb00000000000000000000000000001100 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011010 
 	Parameter N bound to: 16 - type: integer 
 	Parameter D bound to: 3 - type: integer 
 INFO: [Synth 8-3491] module 'uart_baud' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:430' bound to instance 'baud_rx' of component 'uart_baud' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:379]
 INFO: [Synth 8-638] synthesizing module 'uart_baud__parameterized1' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:444]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
-	Parameter init bound to: 32'sb00000000000000000000000000001100 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011010 
 	Parameter N bound to: 16 - type: integer 
 	Parameter D bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'uart_baud__parameterized1' (12#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:444]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 	Parameter format bound to: 8'b10000100 
 INFO: [Synth 8-3491] module 'uart_tx' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:693' bound to instance 'tx_0' of component 'uart_tx' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:389]
 INFO: [Synth 8-638] synthesizing module 'uart_tx' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:708]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 	Parameter format bound to: 8'b10000100 
 INFO: [Synth 8-256] done synthesizing module 'uart_tx' (13#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:708]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 	Parameter D bound to: 3 - type: integer 
 	Parameter format bound to: 8'b10000100 
 INFO: [Synth 8-3491] module 'uart_rx' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:517' bound to instance 'rx_0' of component 'uart_rx' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:404]
 INFO: [Synth 8-638] synthesizing module 'uart_rx' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:536]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 	Parameter D bound to: 3 - type: integer 
 	Parameter format bound to: 8'b10000100 
 INFO: [Synth 8-256] done synthesizing module 'uart_rx' (14#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:536]
-WARNING: [Synth 8-6014] Unused sequential element do_c_reg was removed.  [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:338]
 INFO: [Synth 8-256] done synthesizing module 'uart_core' (15#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:318]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter fifo_depth bound to: 8 - type: integer 
 	Parameter read_first bound to: 1 - type: bool 
 INFO: [Synth 8-3491] module 'fifo' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1493' bound to instance 'uart_fifo_tx_0' of component 'fifo' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:259]
 INFO: [Synth 8-638] synthesizing module 'fifo' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1511]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter fifo_depth bound to: 8 - type: integer 
 	Parameter read_first bound to: 1 - type: bool 
 INFO: [Synth 8-256] done synthesizing module 'fifo' (16#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1511]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter fifo_depth bound to: 8 - type: integer 
 	Parameter read_first bound to: 0 - type: bool 
 INFO: [Synth 8-3491] module 'fifo' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1493' bound to instance 'uart_fifo_rx_0' of component 'fifo' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:272]
 INFO: [Synth 8-638] synthesizing module 'fifo__parameterized1' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1511]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter fifo_depth bound to: 8 - type: integer 
 	Parameter read_first bound to: 0 - type: bool 
 INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized1' (16#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1511]
 INFO: [Synth 8-256] done synthesizing module 'uart_top' (17#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/uart.vhd:214]
 INFO: [Synth 8-638] synthesizing module 'timer' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd:43]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_length bound to: 16 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'timer' (18#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/timer.vhd:43]
 INFO: [Synth 8-638] synthesizing module 'led_indicator' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/new/led_indicator.vhd:46]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter use_bcd_not_hex bound to: 0 - type: bool 
 	Parameter refresh_rate_us bound to: 250000 - type: integer 
 	Parameter number_of_led_displays bound to: 4 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'timer_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1208]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 250000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'timer_us' (19#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1208]
 INFO: [Synth 8-256] done synthesizing module 'led_indicator' (20#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/new/led_indicator.vhd:46]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 5 - type: integer 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_block_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2751' bound to instance 'button_debouncer' of component 'debounce_block_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:427]
 INFO: [Synth 8-638] synthesizing module 'debounce_block_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2759]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 5 - type: integer 
 	Parameter timer_period_us bound to: 20000 - type: integer 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
 INFO: [Synth 8-638] synthesizing module 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2680]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'timer_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1200' bound to instance 'timer' of component 'timer_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2684]
 INFO: [Synth 8-638] synthesizing module 'timer_us__parameterized1' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1208]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'timer_us__parameterized1' (20#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1208]
 INFO: [Synth 8-256] done synthesizing module 'debounce_us' (21#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2680]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
 INFO: [Synth 8-256] done synthesizing module 'debounce_block_us' (22#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2759]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 5 - type: integer 
 INFO: [Synth 8-3491] module 'state_block_changed' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2818' bound to instance 'state_changed' of component 'state_block_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:446]
 INFO: [Synth 8-638] synthesizing module 'state_block_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2827]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 5 - type: integer 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2830]
 INFO: [Synth 8-638] synthesizing module 'state_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2785]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-256] done synthesizing module 'state_changed' (23#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2785]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2830]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2830]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2830]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2830]
 INFO: [Synth 8-256] done synthesizing module 'state_block_changed' (24#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2827]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'reg' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1051' bound to instance 'state_changed_reg' of component 'reg' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:460]
 INFO: [Synth 8-638] synthesizing module 'reg__parameterized2' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1061]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'reg__parameterized2' (24#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1061]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_block_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2751' bound to instance 'sw_debouncer' of component 'debounce_block_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:473]
 INFO: [Synth 8-638] synthesizing module 'debounce_block_us__parameterized1' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2759]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter N bound to: 8 - type: integer 
 	Parameter timer_period_us bound to: 20000 - type: integer 
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
-	Parameter g bound to: 96'b000000101111101011110000100000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000000000000000000000000000001 
 	Parameter timer_period_us bound to: 20000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2762]
 INFO: [Synth 8-256] done synthesizing module 'debounce_block_us__parameterized1' (24#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:2759]
-WARNING: [Synth 8-6014] Unused sequential element clk50MHz_reg was removed.  [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:255]
 INFO: [Synth 8-256] done synthesizing module 'top' (25#1) [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/top.vhd:64]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds_we
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[15]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[14]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[13]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[12]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[11]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[10]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[9]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[8]
-WARNING: [Synth 8-3331] design ble_uart has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1161.719 ; gain = 335.977
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1010.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1161.719 ; gain = 335.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1010.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1161.719 ; gain = 335.977
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1010.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1161.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1010.648 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -361,35 +345,32 @@ Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synt
 Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1258.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1130.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1258.238 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1130.938 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1258.238 ; gain = 432.496
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1130.938 ; gain = 120.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1258.238 ; gain = 432.496
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1130.938 ; gain = 120.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property IO_BUFFER_TYPE = NONE for clk_in. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/ip/clock_gen_clk_wiz_0_0/clock_gen_clk_wiz_0_0/clock_gen_clk_wiz_0_0_in_context.xdc, line 3).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/bd/clock_gen/ip/clock_gen_clk_wiz_0_0/clock_gen_clk_wiz_0_0/clock_gen_clk_wiz_0_0_in_context.xdc, line 4).
-Applied set_property DONT_TOUCH = true for clock_manager/clock_gen_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for clock_manager/clock_gen_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property KEEP_HIERARCHY = SOFT for clock_manager/clock_gen_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for clock_manager/clock_gen_i/clk_wiz_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1258.238 ; gain = 432.496
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1130.938 ; gain = 120.289
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/h2.vhd:279]
 INFO: [Synth 8-802] inferred FSM for state register 'state_c_reg' in module 'uart_tx'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1548]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.srcs/sources_1/imports/forth-cpu-master/util.vhd:1548]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -402,38 +383,30 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_c_reg' using encoding 'sequential' in module 'uart_tx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1258.238 ; gain = 432.496
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1130.938 ; gain = 120.289
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     23 Bit       Adders := 1     
-	   2 Input     19 Bit       Adders := 13    
-	   2 Input     16 Bit       Adders := 3     
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 2     
-	   2 Input      5 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 5     
-	   2 Input      3 Bit       Adders := 5     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 13    
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input   13 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 5     
 +---XORs : 
 	   2 Input     16 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 22    
 	   9 Input      1 Bit         XORs := 2     
 +---Registers : 
-	               23 Bit    Registers := 1     
-	               19 Bit    Registers := 13    
+	               24 Bit    Registers := 1     
+	               20 Bit    Registers := 13    
 	               16 Bit    Registers := 7     
-	               13 Bit    Registers := 1     
-	               12 Bit    Registers := 1     
+	               13 Bit    Registers := 2     
 	                8 Bit    Registers := 7     
 	                6 Bit    Registers := 2     
 	                4 Bit    Registers := 5     
@@ -441,250 +414,37 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 20    
 	                1 Bit    Registers := 52    
 +---RAMs : 
-	             128K Bit         RAMs := 1     
-	             1024 Bit         RAMs := 1     
-	               64 Bit         RAMs := 2     
+	             128K Bit	(8192 X 16 bit)          RAMs := 1     
+	             1024 Bit	(64 X 16 bit)          RAMs := 1     
+	               64 Bit	(8 X 8 bit)          RAMs := 2     
 +---Muxes : 
-	   2 Input     23 Bit        Muxes := 1     
-	   2 Input     19 Bit        Muxes := 13    
-	   2 Input     16 Bit        Muxes := 17    
-	  23 Input     16 Bit        Muxes := 1     
-	   7 Input     16 Bit        Muxes := 1     
-	   2 Input     13 Bit        Muxes := 3     
-	   6 Input      8 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 5     
-	   8 Input      8 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 4     
-	   6 Input      4 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 3     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 8     
-	  11 Input      3 Bit        Muxes := 1     
-	  10 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
-	   8 Input      2 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 26    
-	  23 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 7     
-	   9 Input      1 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 13    
+	   2 Input   16 Bit        Muxes := 43    
+	  23 Input   16 Bit        Muxes := 1     
+	   7 Input   16 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 4     
+	   6 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 5     
+	   8 Input    8 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 4     
+	   6 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	  11 Input    3 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   8 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 27    
+	  23 Input    1 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 7     
+	   9 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module top 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   7 Input     16 Bit        Muxes := 1     
-Module reset_generator 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     12 Bit       Adders := 1     
-+---Registers : 
-	               12 Bit    Registers := 1     
-Module rising_edge_detector 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 2     
-Module reg 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-Module reg__parameterized0 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 1     
-Module interrupt_request_handler 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   8 Input      3 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 1     
-Module h2 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 2     
-+---XORs : 
-	   2 Input     16 Bit         XORs := 1     
-+---Registers : 
-	               13 Bit    Registers := 1     
-	                6 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---RAMs : 
-	             1024 Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 6     
-	  23 Input     16 Bit        Muxes := 1     
-	   2 Input     13 Bit        Muxes := 3     
-	   2 Input      6 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 6     
-	  23 Input      1 Bit        Muxes := 2     
-Module dual_port_block_ram 
-Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 2     
-+---RAMs : 
-	             128K Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 4     
-Module uart_baud 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 2     
-+---Registers : 
-	               16 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 1     
-Module uart_baud__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 2     
-+---Registers : 
-	               16 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 1     
-Module uart_tx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
-+---XORs : 
-	   9 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                8 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   6 Input      8 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 2     
-	   6 Input      4 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 1     
-Module uart_rx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---XORs : 
-	   9 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                8 Bit    Registers := 2     
-	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 5     
-	   8 Input      8 Bit        Muxes := 2     
-	   8 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 3     
-	  11 Input      3 Bit        Muxes := 1     
-	  10 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   8 Input      2 Bit        Muxes := 1     
-	   9 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 11    
-Module uart_core 
-Detailed RTL Component Info : 
-+---Registers : 
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module fifo 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 2     
-+---Registers : 
-	                4 Bit    Registers := 1     
-+---RAMs : 
-	               64 Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-Module fifo__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 2     
-+---Registers : 
-	                4 Bit    Registers := 1     
-+---RAMs : 
-	               64 Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-Module timer 
-Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module timer_us 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     23 Bit       Adders := 1     
-+---Registers : 
-	               23 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     23 Bit        Muxes := 1     
-Module led_indicator 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 1     
-Module timer_us__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     19 Bit       Adders := 1     
-+---Registers : 
-	               19 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     19 Bit        Muxes := 1     
-Module debounce_us 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-Module state_changed 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                2 Bit    Registers := 1     
-Module reg__parameterized2 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -698,99 +458,64 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3917] design top has port pmod_rst_n driven by constant 1
-WARNING: [Synth 8-3917] design top has port pmod_conf driven by constant 1
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds_we
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[15]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[14]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[13]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[12]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[11]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[10]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[9]
-WARNING: [Synth 8-3331] design led_indicator has unconnected port leds[8]
-WARNING: [Synth 8-6014] Unused sequential element core_0/mem_h2_0/ram_reg was removed. 
-INFO: [Synth 8-3886] merging instance 'dpad_changed.state_changed/changes[0].d_instance/state_c_reg[1]' (FDC) to 'core_0/edges/changes[0].d_instance/sin_0_reg'
-INFO: [Synth 8-3886] merging instance 'dpad_changed.state_changed/changes[0].d_instance/state_c_reg[0]' (FDC) to 'core_0/edges/changes[0].d_instance/sin_1_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\core_0/edges/changes[5].d_instance/sin_0_reg )
-INFO: [Synth 8-3886] merging instance 'core_0/edges/changes[5].d_instance/sin_1_reg' (FDC) to 'core_0/edges/changes[5].d_instance/sin_0_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1258.238 ; gain = 432.496
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1130.938 ; gain = 120.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
-+------------+-------------------------------------------+-----------+----------------------+-------------------+
-|Module Name | RTL Object                                | Inference | Size (Depth x Width) | Primitives        | 
-+------------+-------------------------------------------+-----------+----------------------+-------------------+
-|top         | core_0/h2_0/vstk_ram_reg                  | Implied   | 64 x 16              | RAM64M x 6	       | 
-|top         | core_0/h2_0/rstk_ram_reg                  | Implied   | 64 x 16              | RAM64M x 6	       | 
-|top         | core_0/mem_h2_0/ram_reg                   | Implied   | 8 K x 16             | RAM128X1D x 1024	 | 
-|top         | uart_fifo_0/ugen1.uart_fifo_tx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	       | 
-|top         | uart_fifo_0/ugen1.uart_fifo_rx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	       | 
-+------------+-------------------------------------------+-----------+----------------------+-------------------+
++------------+-------------------------------------------+-----------+----------------------+--------------------------+
+|Module Name | RTL Object                                | Inference | Size (Depth x Width) | Primitives               | 
++------------+-------------------------------------------+-----------+----------------------+--------------------------+
+|top         | core_0/h2_0/vstk_ram_reg                  | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|top         | core_0/h2_0/rstk_ram_reg                  | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|top         | core_0/mem_h2_0/ram_reg                   | Implied   | 8 K x 16             | RAM128X1D x 1024	        | 
+|top         | uart_fifo_0/ugen1.uart_fifo_tx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
+|top         | uart_fifo_0/ugen1.uart_fifo_rx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
++------------+-------------------------------------------+-----------+----------------------+--------------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1258.238 ; gain = 432.496
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1130.938 ; gain = 120.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1328.781 ; gain = 503.039
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1174.520 ; gain = 163.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping	Report
-+------------+-------------------------------------------+-----------+----------------------+-------------------+
-|Module Name | RTL Object                                | Inference | Size (Depth x Width) | Primitives        | 
-+------------+-------------------------------------------+-----------+----------------------+-------------------+
-|top         | core_0/h2_0/vstk_ram_reg                  | Implied   | 64 x 16              | RAM64M x 6	       | 
-|top         | core_0/h2_0/rstk_ram_reg                  | Implied   | 64 x 16              | RAM64M x 6	       | 
-|top         | core_0/mem_h2_0/ram_reg                   | Implied   | 8 K x 16             | RAM128X1D x 1024	 | 
-|top         | uart_fifo_0/ugen1.uart_fifo_tx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	       | 
-|top         | uart_fifo_0/ugen1.uart_fifo_rx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	       | 
-+------------+-------------------------------------------+-----------+----------------------+-------------------+
++------------+-------------------------------------------+-----------+----------------------+--------------------------+
+|Module Name | RTL Object                                | Inference | Size (Depth x Width) | Primitives               | 
++------------+-------------------------------------------+-----------+----------------------+--------------------------+
+|top         | core_0/h2_0/vstk_ram_reg                  | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|top         | core_0/h2_0/rstk_ram_reg                  | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|top         | core_0/mem_h2_0/ram_reg                   | Implied   | 8 K x 16             | RAM128X1D x 1024	        | 
+|top         | uart_fifo_0/ugen1.uart_fifo_tx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
+|top         | uart_fifo_0/ugen1.uart_fifo_rx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
++------------+-------------------------------------------+-----------+----------------------+--------------------------+
 
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -807,50 +532,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -864,124 +576,53 @@ Report BlackBoxes:
 +------+----------------------+----------+
 
 Report Cell Usage: 
-+------+-----------------------------+------+
-|      |Cell                         |Count |
-+------+-----------------------------+------+
-|1     |clock_gen_clk_wiz_0_0_bbox_0 |     1|
-|2     |CARRY4                       |   113|
-|3     |LUT1                         |    19|
-|4     |LUT2                         |   336|
-|5     |LUT3                         |   319|
-|6     |LUT4                         |   166|
-|7     |LUT5                         |   242|
-|8     |LUT6                         |   879|
-|9     |MUXF7                        |   271|
-|10    |MUXF8                        |    66|
-|11    |RAM128X1D                    |  1024|
-|12    |RAM32M                       |     4|
-|13    |RAM64M                       |    12|
-|14    |FDCE                         |   536|
-|15    |FDPE                         |     9|
-|16    |FDRE                         |   104|
-|17    |IBUF                         |    15|
-|18    |OBUF                         |    12|
-+------+-----------------------------+------+
-
-Report Instance Areas: 
-+------+-----------------------------------+----------------------------------+------+
-|      |Instance                           |Module                            |Cells |
-+------+-----------------------------------+----------------------------------+------+
-|1     |top                                |                                  |  4129|
-|2     |  ledseg_0                         |led_indicator                     |    66|
-|3     |    timer                          |timer_us                          |    58|
-|4     |  button_debouncer                 |debounce_block_us                 |   270|
-|5     |    \debouncer[0].d_instance       |debounce_us_24                    |    54|
-|6     |      timer                        |timer_us__parameterized1_33       |    50|
-|7     |    \debouncer[1].d_instance       |debounce_us_25                    |    54|
-|8     |      timer                        |timer_us__parameterized1_32       |    50|
-|9     |    \debouncer[2].d_instance       |debounce_us_26                    |    54|
-|10    |      timer                        |timer_us__parameterized1_31       |    50|
-|11    |    \debouncer[3].d_instance       |debounce_us_27                    |    54|
-|12    |      timer                        |timer_us__parameterized1_30       |    50|
-|13    |    \debouncer[4].d_instance       |debounce_us_28                    |    54|
-|14    |      timer                        |timer_us__parameterized1_29       |    50|
-|15    |  clock_manager                    |clock_gen_wrapper                 |     2|
-|16    |    clock_gen_i                    |clock_gen                         |     2|
-|17    |  core_0                           |core                              |  2894|
-|18    |    edges                          |rising_edge_detectors             |    24|
-|19    |      \changes[0].d_instance       |rising_edge_detector              |     3|
-|20    |      \changes[1].d_instance       |rising_edge_detector_18           |     4|
-|21    |      \changes[2].d_instance       |rising_edge_detector_19           |     3|
-|22    |      \changes[3].d_instance       |rising_edge_detector_20           |     3|
-|23    |      \changes[4].d_instance       |rising_edge_detector_21           |     4|
-|24    |      \changes[6].d_instance       |rising_edge_detector_22           |     3|
-|25    |      \changes[7].d_instance       |rising_edge_detector_23           |     4|
-|26    |    h2_0                           |h2                                |   898|
-|27    |    irqh_0                         |interrupt_request_handler         |    27|
-|28    |      irc_in                       |reg__parameterized0               |    16|
-|29    |      irc_mask                     |reg__parameterized0_17            |    10|
-|30    |      irq_in                       |\reg                              |     1|
-|31    |    mem_h2_0                       |dual_port_block_ram               |  1945|
-|32    |  \dpad_changed.state_changed      |state_block_changed               |    10|
-|33    |    \changes[1].d_instance         |state_changed                     |     3|
-|34    |    \changes[2].d_instance         |state_changed_14                  |     2|
-|35    |    \changes[3].d_instance         |state_changed_15                  |     3|
-|36    |    \changes[4].d_instance         |state_changed_16                  |     2|
-|37    |  \dpad_changed.state_changed_reg  |reg__parameterized2               |     1|
-|38    |  sw_debouncer                     |debounce_block_us__parameterized1 |   432|
-|39    |    \debouncer[0].d_instance       |debounce_us                       |    54|
-|40    |      timer                        |timer_us__parameterized1_13       |    50|
-|41    |    \debouncer[1].d_instance       |debounce_us_0                     |    54|
-|42    |      timer                        |timer_us__parameterized1_12       |    50|
-|43    |    \debouncer[2].d_instance       |debounce_us_1                     |    54|
-|44    |      timer                        |timer_us__parameterized1_11       |    50|
-|45    |    \debouncer[3].d_instance       |debounce_us_2                     |    54|
-|46    |      timer                        |timer_us__parameterized1_10       |    50|
-|47    |    \debouncer[4].d_instance       |debounce_us_3                     |    54|
-|48    |      timer                        |timer_us__parameterized1_9        |    50|
-|49    |    \debouncer[5].d_instance       |debounce_us_4                     |    54|
-|50    |      timer                        |timer_us__parameterized1_8        |    50|
-|51    |    \debouncer[6].d_instance       |debounce_us_5                     |    54|
-|52    |      timer                        |timer_us__parameterized1_7        |    50|
-|53    |    \debouncer[7].d_instance       |debounce_us_6                     |    54|
-|54    |      timer                        |timer_us__parameterized1          |    50|
-|55    |  system_reset                     |reset_generator                   |    20|
-|56    |  timer_0                          |timer                             |    56|
-|57    |  uart_fifo_0                      |uart_top                          |   350|
-|58    |    uart_core_0                    |uart_core                         |   295|
-|59    |      baud_rx                      |uart_baud__parameterized1         |    70|
-|60    |      baud_tx                      |uart_baud                         |    72|
-|61    |      rx_0                         |uart_rx                           |    87|
-|62    |      tx_0                         |uart_tx                           |    58|
-|63    |    \ugen1.uart_fifo_rx_0          |fifo__parameterized1              |    27|
-|64    |    \ugen1.uart_fifo_tx_0          |fifo                              |    28|
-+------+-----------------------------------+----------------------------------+------+
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |clock_gen_clk_wiz_0_0_bbox |     1|
+|2     |CARRY4                     |   114|
+|3     |LUT1                       |    18|
+|4     |LUT2                       |   351|
+|5     |LUT3                       |   320|
+|6     |LUT4                       |   177|
+|7     |LUT5                       |   216|
+|8     |LUT6                       |   906|
+|9     |MUXF7                      |   266|
+|10    |MUXF8                      |    65|
+|11    |RAM128X1D                  |  1024|
+|12    |RAM32M                     |     4|
+|13    |RAM64M                     |    10|
+|14    |RAM64X1D                   |     2|
+|15    |FDCE                       |   548|
+|16    |FDPE                       |    11|
+|17    |FDRE                       |   105|
+|18    |IBUF                       |    15|
+|19    |OBUF                       |    12|
++------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1184.547 ; gain = 173.898
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:50 . Memory (MB): peak = 1329.684 ; gain = 407.422
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1329.684 ; gain = 503.941
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1184.547 ; gain = 53.609
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1184.547 ; gain = 173.898
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1341.570 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1490 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1187.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1485 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1341.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1187.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1040 instances were transformed.
   RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
-  RAM64M => RAM64M (RAMD64E(x4)): 12 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 10 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-136 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+130 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 1341.570 ; gain = 835.727
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1341.570 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 1187.418 ; gain = 176.770
 INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/2008FCPU/2008FCPU.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 25 11:51:48 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 24 01:08:31 2021...

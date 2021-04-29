@@ -1,0 +1,840 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Oct  3 18:07:30 2020
+# Process ID: 23272
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top.vdi
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.1/data/ip'.
+Command: link_design -top top -part xc7a200tsbg484-1 -reconfig_partitions light_count
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-454] Reading design checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/light_count_up_synth_1/light_count_up.dcp' for cell 'light_count'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_axi_bram_ctrl_0_0/dfx_controller_setup_axi_bram_ctrl_0_0.dcp' for cell 'dfx/dfx_controller_setup_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_blk_mem_gen_0_0/dfx_controller_setup_blk_mem_gen_0_0.dcp' for cell 'dfx/dfx_controller_setup_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_dfx_controller_0_0/dfx_controller_setup_dfx_controller_0_0.dcp' for cell 'dfx/dfx_controller_setup_i/dfx_controller_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_0_1/dfx_controller_setup_ila_0_1.dcp' for cell 'dfx/dfx_controller_setup_i/ila_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_1_0/dfx_controller_setup_ila_1_0.dcp' for cell 'dfx/dfx_controller_setup_i/ila_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_rst_sys_clock_50M_0/dfx_controller_setup_rst_sys_clock_50M_0.dcp' for cell 'dfx/dfx_controller_setup_i/rst_sys_clock_50M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_s00_data_fifo_0/dfx_controller_setup_s00_data_fifo_0.dcp' for cell 'dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.548 . Memory (MB): peak = 1023.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1402 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
+INFO: [Chipscope 16-324] Core: dfx/dfx_controller_setup_i/ila_1 UUID: 53b12478-2e6e-5a9f-8b01-7ecf58a04b3e 
+INFO: [Chipscope 16-324] Core: dfx/dfx_controller_setup_i/ila_2 UUID: 4bfd5ae0-bf95-5cbb-a751-829758b71610 
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_dfx_controller_0_0/dfx_controller_setup_dfx_controller_0_0.xdc] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_dfx_controller_0_0/dfx_controller_setup_dfx_controller_0_0.xdc] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_rst_sys_clock_50M_0/dfx_controller_setup_rst_sys_clock_50M_0_board.xdc] for cell 'dfx/dfx_controller_setup_i/rst_sys_clock_50M/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_rst_sys_clock_50M_0/dfx_controller_setup_rst_sys_clock_50M_0_board.xdc] for cell 'dfx/dfx_controller_setup_i/rst_sys_clock_50M/U0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_rst_sys_clock_50M_0/dfx_controller_setup_rst_sys_clock_50M_0.xdc] for cell 'dfx/dfx_controller_setup_i/rst_sys_clock_50M/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_rst_sys_clock_50M_0/dfx_controller_setup_rst_sys_clock_50M_0.xdc] for cell 'dfx/dfx_controller_setup_i/rst_sys_clock_50M/U0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_0_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'dfx/dfx_controller_setup_i/ila_1/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_0_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'dfx/dfx_controller_setup_i/ila_1/U0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_0_1/ila_v6_2/constraints/ila.xdc] for cell 'dfx/dfx_controller_setup_i/ila_1/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_0_1/ila_v6_2/constraints/ila.xdc] for cell 'dfx/dfx_controller_setup_i/ila_1/U0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_1_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'dfx/dfx_controller_setup_i/ila_2/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_1_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'dfx/dfx_controller_setup_i/ila_2/U0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_1_0/ila_v6_2/constraints/ila.xdc] for cell 'dfx/dfx_controller_setup_i/ila_2/U0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_ila_1_0/ila_v6_2/constraints/ila.xdc] for cell 'dfx/dfx_controller_setup_i/ila_2/U0'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_0'. The XDC file d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/ip/ila_0_1/ila_v6_2/constraints/ila_impl.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_0'. The XDC file d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/ip/ila_0_1/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_s00_data_fifo_0/dfx_controller_setup_s00_data_fifo_0_clocks.xdc] for cell 'dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter (NAME=~*gen_fifo.fifo_gen_inst/inst_fifo_gen/reset_gen_cc.rstblk_cc/gaxi_full_lite.gread_ch.gaxi_pkt_fifo_rd.gaxi_mm_cc_pkt_rd.rd_fifo_free_space*)'. [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_s00_data_fifo_0/dfx_controller_setup_s00_data_fifo_0_clocks.xdc:6]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical * -filter {(NAME=~*gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.gaxi_pkt_fifo_rd.gaxi_mm_cc_pkt_rd.rd_fifo_free_space_reg*/CLR) || (NAME=~*gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.gaxi_pkt_fifo_rd.gaxi_mm_cc_pkt_rd.rd_fifo_free_space_reg*/PRE)}'. [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_s00_data_fifo_0/dfx_controller_setup_s00_data_fifo_0_clocks.xdc:6]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_s00_data_fifo_0/dfx_controller_setup_s00_data_fifo_0_clocks.xdc:6]
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.srcs/sources_1/bd/dfx_controller_setup/ip/dfx_controller_setup_s00_data_fifo_0/dfx_controller_setup_s00_data_fifo_0_clocks.xdc] for cell 'dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'design_1' [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'design_1' [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'design_1' [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'design_1' [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.data_out_fifo'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.data_out_fifo'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.flags_out_fifo'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.flags_out_fifo'
+Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/blk_id_fifo.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/blk_id_fifo.xpm_fifo_sync_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1549.152 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 353 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 320 instances
+  RAM16X1S => RAM32X1S (RAMS32): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 32 instances
+
+25 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1549.152 ; gain = 525.707
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1549.152 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 21ad684ef
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1549.152 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = 36f533c2e17758f2.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1751.590 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 183d7506b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1751.590 ; gain = 35.926
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 514 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 1dab45dd4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1751.590 ; gain = 35.926
+INFO: [Opt 31-389] Phase Retarget created 133 cells and removed 171 cells
+INFO: [Opt 31-1021] In phase Retarget, 253 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: 1b418ce64
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1751.590 ; gain = 35.926
+INFO: [Opt 31-389] Phase Constant propagation created 46 cells and removed 264 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 216 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 19dd93e76
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1751.590 ; gain = 35.926
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1249 cells
+INFO: [Opt 31-1021] In phase Sweep, 1547 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clock_gen_1hz/clk_1hz_BUFG_inst to drive 37 load(s) on clock net clock_gen_1hz/clk_1hz_BUFG
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 5 BUFG optimization | Checksum: 1d8193bb3
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1751.590 ; gain = 35.926
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 6 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 6 Shift Register Optimization | Checksum: 1d8193bb3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1751.590 ; gain = 35.926
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 1d8193bb3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1751.590 ; gain = 35.926
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 229 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             133  |             171  |                                            253  |
+|  Constant propagation         |              46  |             264  |                                            216  |
+|  Sweep                        |               0  |            1249  |                                           1547  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            229  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1751.590 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 240203af8
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1751.590 ; gain = 35.926
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 271 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 15 newly gated: 0 Total Ports: 542
+Ending PowerOpt Patch Enables Task | Checksum: 2ab241c5a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 2ab241c5a
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:01:02 . Memory (MB): peak = 2424.070 ; gain = 672.480
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 2ab241c5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1e7b1be9c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+60 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 2424.070 ; gain = 874.918
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.095 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1d6e566ef
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ebc4065e
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 15e630b0d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 15e630b0d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 15e630b0d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 172742cd8
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 740 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 0, total 1, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 329 nets or cells. Created 1 new cell, deleted 328 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            1  |            328  |                   329  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            1  |            328  |                   329  |           0  |           8  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: e9f2ac07
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:27 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: c25f9810
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:32 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 2 Global Placement | Checksum: c25f9810
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:32 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 14c115171
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:33 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 11310eccd
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:36 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 11a350d25
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:36 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 11a350d25
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:36 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 148f162b3
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+
+Phase 3.6.1 Place Remaining
+Phase 3.6.1 Place Remaining | Checksum: 13fa81389
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:44 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 3.6 Small Shape Detail Placement | Checksum: 13fa81389
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:44 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 18852e4e6
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:45 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 18852e4e6
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:45 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 19e062368
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:49 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 19e062368
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:49 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 100dfbace
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.139 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 66c1340c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: c8c0df46
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 100dfbace
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:56 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.480. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 10de333d1
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:59 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 10de333d1
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:59 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 10de333d1
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:59 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 10de333d1
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:59 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 190fbf8b7
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:59 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 190fbf8b7
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:00 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Ending Placer Task | Checksum: 17f22f99c
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:00 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+101 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:02 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+110 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: ef008b8c ConstDB: 0 ShapeSum: 90226e10 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 12e2d7e67
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:00 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 2b66f12c NumContArr: 8c1a6bae Constraints: 76ac218d Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 12e2d7e67
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:01 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 12e2d7e67
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:01 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 12e2d7e67
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:01 . Memory (MB): peak = 2424.070 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 224820861
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:09 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.598  | TNS=0.000  | WHS=-0.244 | THS=-350.690|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 201faa4ea
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:14 . Memory (MB): peak = 2424.070 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.598  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 24fb0b205
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:14 . Memory (MB): peak = 2424.070 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 24ef6cac4
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:14 . Memory (MB): peak = 2424.070 ; gain = 0.000
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.04899e-05 %
+  Global Horizontal Routing Utilization  = 6.60939e-05 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 14578
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 14574
+  Number of Partially Routed Nets     = 4
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1ae09fd79
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:22 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1621
+ Number of Nodes with overlaps = 227
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.337  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1db479d17
+
+Time (s): cpu = 00:02:42 ; elapsed = 00:01:42 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.337  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2576a9790
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:44 . Memory (MB): peak = 2433.660 ; gain = 9.590
+Phase 4 Rip-up And Reroute | Checksum: 2576a9790
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:44 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 2794ce392
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:46 . Memory (MB): peak = 2433.660 ; gain = 9.590
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.344  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 2af6da6f6
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:46 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2af6da6f6
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:46 . Memory (MB): peak = 2433.660 ; gain = 9.590
+Phase 5 Delay and Skew Optimization | Checksum: 2af6da6f6
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:46 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 2f2c34365
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:48 . Memory (MB): peak = 2433.660 ; gain = 9.590
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.344  | TNS=0.000  | WHS=0.016  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 2b808689f
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:48 . Memory (MB): peak = 2433.660 ; gain = 9.590
+Phase 6 Post Hold Fix | Checksum: 2b808689f
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:48 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.99911 %
+  Global Horizontal Routing Utilization  = 2.38913 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 315ab834e
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:48 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 315ab834e
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:48 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2f5f727f0
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:50 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.344  | TNS=0.000  | WHS=0.016  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 2f5f727f0
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:50 . Memory (MB): peak = 2433.660 ; gain = 9.590
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:54 . Memory (MB): peak = 2433.660 ; gain = 9.590
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+127 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:00 ; elapsed = 00:01:57 . Memory (MB): peak = 2433.660 ; gain = 9.590
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 2433.660 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 2433.660 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 2433.660 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+139 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2433.660 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file top_route_status.rpt -pb top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.247 . Memory (MB): peak = 2433.660 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/light_count_light_count_up_routed.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.flags_out_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.flags_out_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.data_out_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_decompress_0/GEN_1.i_decompress_collar/GEN_1.i_decompress/blk_output_fifos.data_out_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/i_bs_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/blk_id_fifo.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_cp0/blk_id_fifo.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+Command: write_bitstream -force -no_partial_bitfile top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC RTSTAT-10] No routable loads: 76 net(s) have no routable loads. The problem bus(es) and/or net(s) are dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_vsm_VS_0/axi_write_complete, dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_vsm_VS_0/axi_write_complete__0, dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_vsm_VS_0/axi_write_complete__1, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 70 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Partition "pblock_light_count" Reconfigurable Module "light_count"
+INFO: [Vivado 12-4752] Design contains reconfigurable partitions, but no partial bit files will be generated since -no_partial_bitfile option was specified.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Oct  3 18:14:41 2020. For additional details about this file, please refer to the WebTalk help file at E:/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+165 Infos, 10 Warnings, 2 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:14 ; elapsed = 00:00:58 . Memory (MB): peak = 2860.988 ; gain = 427.328
+Command: write_bitstream -force -cell light_count light_count_light_count_up_partial.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC RTSTAT-10] No routable loads: 76 net(s) have no routable loads. The problem bus(es) and/or net(s) are dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_vsm_VS_0/axi_write_complete, dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_vsm_VS_0/axi_write_complete__0, dfx/dfx_controller_setup_i/dfx_controller_0/U0/i_vsm_VS_0/axi_write_complete__1, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, dfx/dfx_controller_setup_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 70 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Partition "pblock_light_count" Reconfigurable Module "light_count"
+INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
+Process Partition "pblock_light_count"
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Partition "pblock_light_count" has RESET_AFTER_RECONFIG = TRUE.
+Creating bitmap...
+Creating bitstream...
+Partial bitstream contains 4547296 bits.
+Writing bitstream ./light_count_light_count_up_partial.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Oct  3 18:15:12 2020. For additional details about this file, please refer to the WebTalk help file at E:/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+176 Infos, 12 Warnings, 2 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 2864.422 ; gain = 3.434
+INFO: [Designutils 20-2277] Running 'update_design -black_box' on cell light_count. The cell has HD.RECONFIGURABLE property set to true and it will be turned into a black-box cell after this command.
+Locking Netlist...
+Locking Placement...
+Locking Routing...
+lock_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2864.422 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 2864.422 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1/top_routed_bb.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2864.422 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  3 18:15:26 2020...

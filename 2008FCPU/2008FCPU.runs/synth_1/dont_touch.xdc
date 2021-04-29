@@ -4,9 +4,9 @@
 # XDC: imports/VHDL/Nexys-Video-Master.xdc
 
 # Block Designs: bd/clock_gen/clock_gen.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clock_gen || ORIG_REF_NAME==clock_gen} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==clock_gen || ORIG_REF_NAME==clock_gen} -quiet] -quiet
 
 # IP: bd/clock_gen/ip/clock_gen_clk_wiz_0_0/clock_gen_clk_wiz_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clock_gen_clk_wiz_0_0 || ORIG_REF_NAME==clock_gen_clk_wiz_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==clock_gen_clk_wiz_0_0 || ORIG_REF_NAME==clock_gen_clk_wiz_0_0} -quiet] -quiet
 
 # XDC: bd/clock_gen/clock_gen_ooc.xdc

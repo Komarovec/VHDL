@@ -1,7 +1,7 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Apr 25 11:55:09 2020
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Jan 24 01:11:32 2021
 | Host         : KomaroKomp running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
@@ -36,13 +36,15 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net ledseg_0/timer/c_c_reg[0]_0 is a gated clock net sourced by a combinational pin ledseg_0/timer/c_c[22]_i_2/O, cell ledseg_0/timer/c_c[22]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net ledseg_0/timer/c_c_reg[1]_0 is a gated clock net sourced by a combinational pin ledseg_0/timer/c_c[23]_i_2/O, cell ledseg_0/timer/c_c[23]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT ledseg_0/timer/c_c[22]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
-ledseg_0/ld_reg[0], ledseg_0/ld_reg[1], ledseg_0/ld_reg[2], ledseg_0/ld_reg[3], ledseg_0/ld_reg[4], ledseg_0/ld_reg[5], ledseg_0/ld_reg[6], ledseg_0/ld_reg[7]
+A LUT ledseg_0/timer/c_c[23]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+ledseg_0/ld_reg[0], ledseg_0/ld_reg[1], ledseg_0/ld_reg[2],
+ledseg_0/ld_reg[3], ledseg_0/ld_reg[4], ledseg_0/ld_reg[5],
+ledseg_0/ld_reg[6], ledseg_0/ld_reg[7]
 Related violations: <none>
 
 

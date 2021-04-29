@@ -1,0 +1,6 @@
+xpm_cdc.sv,systemverilog,xpm,E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../ip/ila_0/hdl/verilog"
+xpm_fifo.sv,systemverilog,xpm,E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv,incdir="../../../ip/ila_0/hdl/verilog"
+xpm_memory.sv,systemverilog,xpm,E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../ip/ila_0/hdl/verilog"
+xpm_VCOMP.vhd,vhdl,xpm,E:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../ip/ila_0/hdl/verilog"
+ila_0.vhd,vhdl,xil_defaultlib,../../../ip/ila_0_1/sim/ila_0.vhd,incdir="../../../ip/ila_0/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

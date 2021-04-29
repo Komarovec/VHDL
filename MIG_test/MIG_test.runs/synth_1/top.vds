@@ -1,0 +1,404 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Jan 23 18:47:33 2021
+# Process ID: 10244
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/top.vds
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a200tsbg484-1
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'mig_7series_0' is locked:
+* This IP has board specific outputs. Current project board 'digilentinc.com:nexys_video:part0:1.1' and the board 'unset' used to customize the IP 'mig_7series_0' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9556
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1006.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:57]
+INFO: [Synth 8-3491] module 'main_cont' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/main_cont.vhd:34' bound to instance 'main_controller' of component 'main_cont' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'main_cont' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/main_cont.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'main_cont' (1#1) [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/main_cont.vhd:72]
+INFO: [Synth 8-3491] module 'ila_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/.Xil/Vivado-10244-KomaroKomp/realtime/ila_0_stub.vhdl:5' bound to instance 'debug_core' of component 'ila_0' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/.Xil/Vivado-10244-KomaroKomp/realtime/ila_0_stub.vhdl:29]
+INFO: [Synth 8-3491] module 'memory_control' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/memory_control.vhd:35' bound to instance 'mem_cont' of component 'memory_control' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:318]
+INFO: [Synth 8-638] synthesizing module 'memory_control' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/memory_control.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'memory_control' (2#1) [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/memory_control.vhd:72]
+INFO: [Synth 8-3491] module 'DDRcontrol' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/DDRcontrol.vhd:27' bound to instance 'ddr_controller' of component 'DDRcontrol' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:354]
+INFO: [Synth 8-638] synthesizing module 'DDRcontrol' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/DDRcontrol.vhd:60]
+WARNING: [Synth 8-5640] Port 'device_temp' is missing in component declaration [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/DDRcontrol.vhd:65]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/.Xil/Vivado-10244-KomaroKomp/realtime/mig_7series_0_stub.vhdl:5' bound to instance 'Inst_DDR' of component 'mig_7series_0' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/DDRcontrol.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/.Xil/Vivado-10244-KomaroKomp/realtime/mig_7series_0_stub.vhdl:49]
+INFO: [Synth 8-256] done synthesizing module 'DDRcontrol' (3#1) [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/DDRcontrol.vhd:60]
+WARNING: [Synth 8-5640] Port 'reset' is missing in component declaration [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:192]
+WARNING: [Synth 8-5640] Port 'locked' is missing in component declaration [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:192]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/.Xil/Vivado-10244-KomaroKomp/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'ddr_clock' of component 'clk_wiz_0' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:386]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/.Xil/Vivado-10244-KomaroKomp/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'main_controller'. This will prevent further optimization [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:251]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mem_cont'. This will prevent further optimization [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:318]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ddr_controller'. This will prevent further optimization [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:354]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/new/top.vhd:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1006.586 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'ddr_controller/Inst_DDR'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'ddr_controller/Inst_DDR'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'debug_core'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'debug_core'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'ddr_clock'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'ddr_clock'
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1138.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1138.336 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.srcs/sources_1/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for ddr_controller/Inst_DDR. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_core. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ddr_clock. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'pstate_reg' in module 'main_cont'
+INFO: [Synth 8-802] inferred FSM for state register 'cState_reg' in module 'DDRcontrol'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               10
+                   write |                              010 |                               01
+                    read |                              100 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pstate_reg' using encoding 'one-hot' in module 'main_cont'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                           000001 |                              000
+                stpreset |                           000010 |                              001
+              stsenddata |                           000100 |                              010
+              stsetcmdwr |                           001000 |                              100
+              stsetcmdrd |                           010000 |                              011
+               stwaitcen |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cState_reg' using encoding 'one-hot' in module 'DDRcontrol'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 2     
+	               29 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 1     
+	  13 Input   22 Bit        Muxes := 1     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	  13 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 11    
+	   3 Input    1 Bit        Muxes := 3     
+	  14 Input    1 Bit        Muxes := 1     
+	  13 Input    1 Bit        Muxes := 15    
+	   6 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr_clock has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |mig_7series_0 |         1|
+|2     |ila_0         |         1|
+|3     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |clk_wiz_0_bbox     |     1|
+|2     |ila_0_bbox         |     1|
+|3     |mig_7series_0_bbox |     1|
+|4     |CARRY4             |    30|
+|5     |LUT1               |    97|
+|6     |LUT2               |    55|
+|7     |LUT3               |    25|
+|8     |LUT4               |    72|
+|9     |LUT5               |    45|
+|10    |LUT6               |    50|
+|11    |MUXF7              |     4|
+|12    |MUXF8              |     2|
+|13    |FDRE               |   329|
+|14    |FDSE               |     2|
+|15    |IBUF               |     3|
+|16    |OBUFT              |     8|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.336 ; gain = 131.750
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1138.336 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.336 ; gain = 131.750
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1138.336 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1139.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1139.844 ; gain = 133.258
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/MIG_test/MIG_test.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 23 18:48:28 2021...

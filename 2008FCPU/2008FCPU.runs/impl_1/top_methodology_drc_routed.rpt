@@ -1,7 +1,7 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Apr 25 11:55:29 2020
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Jan 24 01:11:49 2021
 | Host         : KomaroKomp running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,15 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1035
-+-----------+------------------+-----------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                               | Violations |
-+-----------+------------------+-----------------------------------------------------------+------------+
-| TIMING-6  | Critical Warning | No common primary clock between related clocks            | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                               | 8          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                              | 1          |
-| SYNTH-5   | Warning          | Mapped onto distributed RAM because of timing constraints | 1024       |
-+-----------+------------------+-----------------------------------------------------------+------------+
+             Violations found: 1037
++-----------+------------------+------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                      | Violations |
++-----------+------------------+------------------------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks                   | 2          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 8          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 1          |
+| SYNTH-5   | Warning          | Mapped onto distributed RAM because of timing constraints        | 1024       |
+| TIMING-56 | Warning          | Missing logically or physically excluded clock groups constraint | 2          |
++-----------+------------------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -87,7 +88,14 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell system_reset/tos_c[15]_i_7, with 2 or more inputs, drives asynchronous preset/clear pin(s) core_0/edges/changes[0].d_instance/sin_0_reg/CLR, core_0/edges/changes[0].d_instance/sin_1_reg/CLR, core_0/edges/changes[1].d_instance/sin_0_reg/CLR, core_0/edges/changes[1].d_instance/sin_1_reg/CLR, core_0/edges/changes[2].d_instance/sin_0_reg/CLR, core_0/edges/changes[2].d_instance/sin_1_reg/CLR, core_0/edges/changes[3].d_instance/sin_0_reg/CLR, core_0/edges/changes[3].d_instance/sin_1_reg/CLR, core_0/edges/changes[4].d_instance/sin_0_reg/CLR, core_0/edges/changes[4].d_instance/sin_1_reg/CLR, core_0/edges/changes[6].d_instance/sin_0_reg/CLR, core_0/edges/changes[6].d_instance/sin_1_reg/CLR, core_0/edges/changes[7].d_instance/sin_0_reg/CLR, core_0/edges/changes[7].d_instance/sin_1_reg/CLR, core_0/h2_0/irq_addr_c_reg[0]/CLR (the first 15 of 298 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell system_reset/tos_c[15]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) ledseg_0/timer/c_c_reg[0]/CLR, ledseg_0/timer/c_c_reg[10]/CLR,
+ledseg_0/timer/c_c_reg[11]/CLR, ledseg_0/timer/c_c_reg[12]/CLR,
+ledseg_0/timer/c_c_reg[13]/CLR, ledseg_0/timer/c_c_reg[14]/CLR,
+ledseg_0/timer/c_c_reg[15]/CLR, ledseg_0/timer/c_c_reg[16]/CLR,
+ledseg_0/timer/c_c_reg[17]/CLR, ledseg_0/timer/c_c_reg[18]/CLR,
+ledseg_0/timer/c_c_reg[19]/CLR, ledseg_0/timer/c_c_reg[1]/CLR,
+ledseg_0/timer/c_c_reg[20]/CLR, ledseg_0/timer/c_c_reg[21]/CLR,
+ledseg_0/timer/c_c_reg[22]/CLR (the first 15 of 299 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 SYNTH-5#1 Warning
@@ -5208,6 +5216,16 @@ Related violations: <none>
 SYNTH-5#1024 Warning
 Mapped onto distributed RAM because of timing constraints  
 The instance core_0/mem_h2_0/ram_reg_896_1023_9_9 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+TIMING-56#1 Warning
+Missing logically or physically excluded clock groups constraint  
+Multiple clocks are user generated or auto-derived on the source pin clock_manager/clock_gen_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: clkfbout_clock_gen_clk_wiz_0_0, clkfbout_clock_gen_clk_wiz_0_0_1
+Related violations: <none>
+
+TIMING-56#2 Warning
+Missing logically or physically excluded clock groups constraint  
+Multiple clocks are user generated or auto-derived on the source pin clock_manager/clock_gen_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0 but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: clk_out1_clock_gen_clk_wiz_0_0, clk_out1_clock_gen_clk_wiz_0_0_1
 Related violations: <none>
 
 

@@ -1,7 +1,7 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Apr 25 11:53:24 2020
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Jan 24 01:09:54 2021
 | Host         : KomaroKomp running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    97 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    95 |
+| Unused register locations in slices containing registers |    80 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              76 |           42 |
-| No           | No                    | Yes                    |             442 |          147 |
+| No           | No                    | No                     |              76 |           38 |
+| No           | No                    | Yes                    |             456 |          143 |
 | No           | Yes                   | No                     |              16 |           16 |
-| Yes          | No                    | No                     |              12 |            3 |
+| Yes          | No                    | No                     |              13 |            4 |
 | Yes          | No                    | Yes                    |             103 |           33 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,106 +70,106 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------------------------+--------------------------------------------------------------+------------------------------------------------------+------------------+----------------+
-|                    Clock Signal                    |                         Enable Signal                        |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count |
-+----------------------------------------------------+--------------------------------------------------------------+------------------------------------------------------+------------------+----------------+
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/ugen1.uart_fifo_tx_0/count[3]_i_1_n_0            | system_reset/rst                                     |                2 |              4 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/ugen1.uart_fifo_rx_0/count[3]_i_1__0_n_0         | system_reset/rst                                     |                2 |              4 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/tx_0/count_n                         | system_reset/rst                                     |                2 |              4 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[2]_4[0]                                | system_reset/rst                                     |                2 |              7 |
-|  ledseg_0/timer/c_c_reg[0]_0                       |                                                              |                                                      |                6 |              8 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/rx_0/ctr_c[7]_i_1_n_0                | system_reset/rst                                     |                3 |              8 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/tx_0/ctr_n                           | system_reset/rst                                     |                2 |              8 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/tx_0/di_n_0                          | system_reset/rst                                     |                2 |              8 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | system_reset/rst                                             |                                                      |                3 |             12 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | timer_0/count[0]_i_1__1_n_0                                  | system_reset/rst                                     |                4 |             13 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[4]_0[0]                                | system_reset/rst                                     |                4 |             15 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/E[0]                                             | system_reset/rst                                     |                5 |             16 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/p_0_in                               |                                                      |                2 |             16 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | core_0/h2_0/tos_c_reg[15]_0                          |               16 |             16 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/ugen1.uart_fifo_tx_0/data_reg_0_7_0_5_i_1__0_n_0 |                                                      |                2 |             16 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[2]_3[0]                                | system_reset/rst                                     |                5 |             16 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[1].d_instance/rst_reg_n_0     |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[2].d_instance/rst_reg_n_0     |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[3].d_instance/rst_reg_n_0     |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[4].d_instance/rst_reg_n_0     |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[5].d_instance/rst_reg_n_0     |                4 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[6].d_instance/rst_reg_n_0     |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[7].d_instance/rst             |                6 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | button_debouncer/debouncer[0].d_instance/rst_reg_n_0 |                6 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | button_debouncer/debouncer[1].d_instance/rst_reg_n_0 |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | button_debouncer/debouncer[3].d_instance/rst_reg_n_0 |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | button_debouncer/debouncer[4].d_instance/rst         |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | sw_debouncer/debouncer[0].d_instance/rst_reg_n_0     |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | button_debouncer/debouncer[2].d_instance/rst_reg_n_0 |                5 |             19 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/mem_h2_0/dstk_we                                      |                                                      |                6 |             24 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/mem_h2_0/rstk_we                                      |                                                      |                6 |             24 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_8                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_0                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_2                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_3                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_4                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_5                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_7                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_1                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_3                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_2                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_1                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_4                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_6                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_7                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_4                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_6                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[14]_1                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_0                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_1                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_7                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_11                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_12                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_4                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_3                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_8                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_9                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_6                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_5                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_5                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_3                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_2                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_1                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_10                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_13                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_14                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[14]_0                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_15                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_2                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_2                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_3                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_4                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_7                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_8                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_8                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_5                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_6                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_7                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_3                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_4                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_1                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_11                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_2                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_5                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_10                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_5                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_9                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_6                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_0                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_9                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_6                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_9                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_0                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_1                                  |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_7                                   |                                                      |               16 |             64 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              |                                                      |               36 |             68 |
-|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                              | system_reset/rst                                     |               81 |            195 |
-+----------------------------------------------------+--------------------------------------------------------------+------------------------------------------------------+------------------+----------------+
++----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|                    Clock Signal                    |                     Enable Signal                    |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/tx_0/count_n                 | system_reset/rst                                     |                1 |              4 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/ugen1.uart_fifo_rx_0/count[3]_i_1__0_n_0 | system_reset/rst                                     |                2 |              4 |         2.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/ugen1.uart_fifo_tx_0/count[3]_i_1_n_0    | system_reset/rst                                     |                2 |              4 |         2.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[2]_3[0]                        | system_reset/rst                                     |                2 |              7 |         3.50 |
+|  ledseg_0/timer/c_c_reg[1]_0                       |                                                      |                                                      |                6 |              8 |         1.33 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/tx_0/di_n_0                  | system_reset/rst                                     |                2 |              8 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/tx_0/ctr_n                   | system_reset/rst                                     |                2 |              8 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | uart_fifo_0/uart_core_0/rx_0/ctr_c[7]_i_1__0_n_0     | system_reset/rst                                     |                3 |              8 |         2.67 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | timer_0/count[0]_i_1__1_n_0                          | system_reset/rst                                     |                4 |             13 |         3.25 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | system_reset/rst                                     |                                                      |                4 |             13 |         3.25 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/E[0]                                     | system_reset/rst                                     |                5 |             15 |         3.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | system_reset/p_0_in                                  |                                                      |                2 |             16 |         8.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | system_reset/c_c_reg[9]_0                            |                                                      |                2 |             16 |         8.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | core_0/h2_0/tos_c_reg[15]_2                          |               16 |             16 |         1.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[2]_5[0]                        | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[1]_1[0]                        | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[4].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | button_debouncer/debouncer[4].d_instance/rst         |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | button_debouncer/debouncer[3].d_instance/rst_reg_n_0 |                6 |             20 |         3.33 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | button_debouncer/debouncer[0].d_instance/rst_reg_n_0 |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | button_debouncer/debouncer[1].d_instance/rst_reg_n_0 |                4 |             20 |         5.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | button_debouncer/debouncer[2].d_instance/rst_reg_n_0 |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[0].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[1].d_instance/rst_reg_n_0     |                4 |             20 |         5.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[2].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[3].d_instance/rst_reg_n_0     |                4 |             20 |         5.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[5].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[6].d_instance/rst_reg_n_0     |                6 |             20 |         3.33 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | sw_debouncer/debouncer[7].d_instance/rst             |                5 |             20 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/mem_h2_0/dstk_we                              |                                                      |                6 |             22 |         3.67 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/rstk_we                                  |                                                      |                6 |             22 |         3.67 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_9                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_6                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_6                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_2                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_4                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_3                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_8                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_0                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_1                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_10                         |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_7                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_4                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_4                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_5                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_1                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_10                         |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_8                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_3                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_1                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_2                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_3                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_1                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_2                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[15]_4                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_3                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_8                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[15]_8                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_2                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_0                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_2                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[15]_3                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[15]_7                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_3                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_7                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_6                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_4                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_7                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_10                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_6                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_8                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_5                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_7                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_5                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[9]_4                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_0                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_1                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[13]_6                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_7                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[15]_5                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[15]_6                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_9                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[8]_5                           |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_5                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_3                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_8                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_7                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_6                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_5                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_0                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_4                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[12]_1                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_0                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[11]_2                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 | core_0/h2_0/tos_c_reg[10]_9                          |                                                      |               16 |             64 |         4.00 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      |                                                      |               32 |             68 |         2.13 |
+|  clock_manager/clock_gen_i/clk_wiz_0/inst/clk_out1 |                                                      | system_reset/rst                                     |               79 |            196 |         2.48 |
++----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
 
 

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="dfx_controller_setup_clk_wiz_4_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/dfx_controller_setup_clk_wiz_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dfx_controller_setup_rst_clk_wiz_100M_2_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/dfx_controller_setup_rst_clk_wiz_100M_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dfx_controller_setup_axi_protocol_convert_0_0_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/dfx_controller_setup_axi_protocol_convert_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dfx_controller_setup_axi_protocol_convert_1_0_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/dfx_controller_setup_axi_protocol_convert_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dfx_controller_setup_dfx_controller_0_0_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/dfx_controller_setup_dfx_controller_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="dfx_controller_setup_clk_wiz_4_synth_1"/>
+		<Parent Id="dfx_controller_setup_rst_clk_wiz_100M_2_synth_1"/>
+		<Parent Id="dfx_controller_setup_axi_protocol_convert_0_0_synth_1"/>
+		<Parent Id="dfx_controller_setup_axi_protocol_convert_1_0_synth_1"/>
+		<Parent Id="dfx_controller_setup_dfx_controller_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="dfx_controller_setup_clk_wiz_4_synth_1"/>
+		<Parent Id="dfx_controller_setup_rst_clk_wiz_100M_2_synth_1"/>
+		<Parent Id="dfx_controller_setup_axi_protocol_convert_0_0_synth_1"/>
+		<Parent Id="dfx_controller_setup_axi_protocol_convert_1_0_synth_1"/>
+		<Parent Id="dfx_controller_setup_dfx_controller_0_0_synth_1"/>
+	</Run>
+	<Run Id="child_0_impl_1" LaunchDir="D:/Entertaiment/Programy/VHDL/VHDL/PartialReconfigSimple/CustomFloorplanTest.runs/child_0_impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="impl_1"/>
+		<Parent Id="dfx_controller_setup_clk_wiz_4_synth_1"/>
+		<Parent Id="dfx_controller_setup_rst_clk_wiz_100M_2_synth_1"/>
+		<Parent Id="dfx_controller_setup_axi_protocol_convert_0_0_synth_1"/>
+		<Parent Id="dfx_controller_setup_axi_protocol_convert_1_0_synth_1"/>
+		<Parent Id="dfx_controller_setup_dfx_controller_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

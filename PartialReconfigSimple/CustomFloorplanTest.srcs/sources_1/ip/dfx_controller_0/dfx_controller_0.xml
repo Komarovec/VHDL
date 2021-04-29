@@ -1088,7 +1088,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d707bf49</spirit:value>
+            <spirit:value>9:65fafff7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1103,11 +1103,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:42 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:47 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27a6a8d7</spirit:value>
+            <spirit:value>9:0db1b9c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1164,11 +1164,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:53 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27a6a8d7</spirit:value>
+            <spirit:value>9:0db1b9c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1182,11 +1182,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:53 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27a6a8d7</spirit:value>
+            <spirit:value>9:0db1b9c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1202,11 +1202,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:53 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27a6a8d7</spirit:value>
+            <spirit:value>9:0db1b9c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1263,11 +1263,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:53 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a2b5d31a</spirit:value>
+            <spirit:value>9:288f4a4a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1283,11 +1283,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:53 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a2b5d31a</spirit:value>
+            <spirit:value>9:288f4a4a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1302,11 +1302,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:38:53 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:35:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27a6a8d7</spirit:value>
+            <spirit:value>9:0db1b9c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1320,11 +1320,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 29 17:40:20 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 06 19:37:24 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27a6a8d7</spirit:value>
+            <spirit:value>9:0db1b9c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1682,6 +1682,23 @@
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>vsm_VS_0_hw_triggers</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2714,7 +2731,7 @@
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>ALL_PARAMS</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ALL_PARAMS" spirit:order="1">HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {VS_0 {ID 0 NAME VS_0 RM {shift {ID 0 NAME shift BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}} count {ID 1 NAME count BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}}} POR_RM shift}} CP_FAMILY 7series DIRTY 0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ALL_PARAMS" spirit:order="1">HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {VS_0 {ID 0 NAME VS_0 RM {shift {ID 0 NAME shift BS {0 {ID 0 ADDR 17825792 SIZE 568532 CLEAR 0}}} count {ID 1 NAME count BS {0 {ID 0 ADDR 16777216 SIZE 568532 CLEAR 0}}}} POR_RM shift NUM_HW_TRIGGERS 2}} CP_FAMILY 7series DIRTY 0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -2778,7 +2795,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_NUM_HW_TRIGGERS</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_NUM_HW_TRIGGERS" spirit:order="7" spirit:minimum="0" spirit:maximum="512" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_NUM_HW_TRIGGERS" spirit:order="7" spirit:minimum="0" spirit:maximum="512" spirit:rangeType="long">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_SHUTDOWN_ON_ERROR</spirit:name>
@@ -2813,7 +2830,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_SELECT_RM</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_RM" spirit:choiceRef="choice_pairs_0e05a58f" spirit:order="2">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_RM" spirit:choiceRef="choice_pairs_0e05a58f" spirit:order="2">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_RM_NAME</spirit:name>
@@ -2828,7 +2845,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_RM_NEW_NAME</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_RM_NEW_NAME" spirit:order="3">count</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_RM_NEW_NAME" spirit:order="3">shift</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_RM_ID</spirit:name>
@@ -2866,11 +2883,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_BS_ADDRESS_0</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_BS_ADDRESS_0" spirit:order="4" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_BS_ADDRESS_0" spirit:order="4" spirit:bitStringLength="32">0x01100000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_BS_SIZE_0</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_BS_SIZE_0" spirit:order="4">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_BS_SIZE_0" spirit:order="4">568532</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_BS_CLEAR_0</spirit:name>
@@ -2993,10 +3010,13 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_REG.RUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_REG.WUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ALL_PARAMS" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_BS_ADDRESS_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_BS_SIZE_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_RM_NEW_NAME" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_RM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_TRIGGER_1" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_TRIGGER_3" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_NUM_HW_TRIGGERS" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

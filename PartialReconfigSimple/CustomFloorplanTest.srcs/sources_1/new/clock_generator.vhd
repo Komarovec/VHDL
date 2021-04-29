@@ -2,6 +2,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity clock_generator is
+    generic (
+        to_divide : integer
+    );
     port (
         clk_in : in std_logic;
         clk_out : out std_logic := '0'
@@ -9,7 +12,6 @@ entity clock_generator is
 end clock_generator;
 
 architecture Behavioral of clock_generator is
-    constant to_divide : integer := 50000000;
     signal divisions : integer := 0;
     signal clk_out_buf : std_logic := '0';
 begin

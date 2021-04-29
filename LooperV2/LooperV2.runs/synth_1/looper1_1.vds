@@ -1,0 +1,669 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jan 19 15:25:48 2021
+# Process ID: 25988
+# Current directory: D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1
+# Command line: vivado.exe -log looper1_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source looper1_1.tcl
+# Log file: D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/looper1_1.vds
+# Journal file: D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source looper1_1.tcl -notrace
+WARNING: [Vivado 12-9135] Ignoring repo path (C:/Users/Denis D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/Kurka/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store) because it contains no board files
+Command: synth_design -top looper1_1 -part xc7a200tsbg484-1
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/charLib/charLib.xci
+
+INFO: [IP_Flow 19-2162] IP 'charLib' is locked:
+* IP definition 'Block Memory Generator (8.3)' for IP 'charLib' (customized with software release 2015.3) has a newer minor version in the IP Catalog. * IP definition 'Block Memory Generator (8.3)' for IP 'charLib' (customized with software release 2015.3) has a different revision in the IP Catalog.
+INFO: [IP_Flow 19-2162] IP 'mig_7series_0' is locked:
+* This IP has board specific outputs. Current project board 'digilentinc.com:nexys_video:part0:1.1' and the board 'unset' used to customize the IP 'mig_7series_0' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29672
+WARNING: [Synth 8-6901] identifier 'lrclkD1' is used before its declaration [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:272]
+WARNING: [Synth 8-6901] identifier 'lrclkD2' is used before its declaration [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:272]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1005.148 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port s_axis_divisor_tdata is neither a static name nor a globally static expression [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:249]
+WARNING: [Synth 8-1565] actual for formal port s_axis_dividend_tdata is neither a static name nor a globally static expression [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:251]
+INFO: [Synth 8-6157] synthesizing module 'looper1_1' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:25]
+	Parameter tenhz bound to: 10000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/clk_wiz_0_stub.vhdl:18]
+WARNING: [Synth 8-7071] port 'reset' of module 'clk_wiz_0' is unconnected for instance 'clk_1' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:145]
+WARNING: [Synth 8-7023] instance 'clk_1' of module 'clk_wiz_0' has 7 connections declared, but only 6 given [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:145]
+INFO: [Synth 8-6157] synthesizing module 'audio_init' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/audio_init.v:24]
+	Parameter stRegAddr1 bound to: 4'b0000 
+	Parameter stRegAddr2 bound to: 4'b0001 
+	Parameter stData1 bound to: 4'b0010 
+	Parameter stData2 bound to: 4'b0011 
+	Parameter stError bound to: 4'b0100 
+	Parameter stDone bound to: 4'b0101 
+	Parameter stIdle bound to: 4'b0110 
+	Parameter stDelay bound to: 4'b0111 
+	Parameter stPLLsecond bound to: 4'b1111 
+	Parameter INIT_VECTORS bound to: 35 - type: integer 
+	Parameter IRD bound to: 1'b1 
+	Parameter IWR bound to: 1'b0 
+	Parameter delay bound to: 24000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/audio_init.v:51]
+INFO: [Synth 8-638] synthesizing module 'TWICtl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:119]
+	Parameter CLOCKFREQ bound to: 50 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:330]
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:363]
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:381]
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:399]
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:417]
+INFO: [Synth 8-256] done synthesizing module 'TWICtl' (1#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/TWICtl.vhd:119]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/audio_init.v:151]
+INFO: [Synth 8-6155] done synthesizing module 'audio_init' (2#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/audio_init.v:24]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/debounce.v:23]
+	Parameter dbTime bound to: 4000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'loop_ctrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/loop_ctrl.v:23]
+	Parameter DEFAULT bound to: 4'b0000 
+	Parameter PLAY bound to: 4'b0001 
+	Parameter RECORD bound to: 4'b0010 
+	Parameter DELETE bound to: 4'b0011 
+	Parameter STOP bound to: 4'b0100 
+	Parameter PBTNDB bound to: 4'b0101 
+	Parameter PDELBTNDB bound to: 4'b0110 
+	Parameter DELETEOTHERS bound to: 4'b0111 
+	Parameter DEFAULT_DB bound to: 4'b1000 
+	Parameter DELETE_DB bound to: 4'b1001 
+	Parameter count_max bound to: 150000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/loop_ctrl.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'loop_ctrl' (4#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/loop_ctrl.v:23]
+INFO: [Synth 8-638] synthesizing module 'DDRcontrol' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/DDRcontrol.vhd:60]
+WARNING: [Synth 8-5640] Port 'device_temp' is missing in component declaration [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/DDRcontrol.vhd:65]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/mig_7series_0_stub.vhdl:5' bound to instance 'Inst_DDR' of component 'mig_7series_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/DDRcontrol.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/mig_7series_0_stub.vhdl:49]
+INFO: [Synth 8-256] done synthesizing module 'DDRcontrol' (5#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/DDRcontrol.vhd:60]
+INFO: [Synth 8-6157] synthesizing module 'mem_ctrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/mem_ctrl.v:23]
+	Parameter BANK bound to: 4'b0000 
+	Parameter FLAG bound to: 4'b0001 
+	Parameter WRITE_ACK bound to: 4'b0010 
+	Parameter INC_BLOCK bound to: 4'b0011 
+	Parameter WAIT bound to: 4'b0100 
+	Parameter DELETE bound to: 4'b0101 
+	Parameter DELETE_ACK bound to: 4'b0110 
+	Parameter DELETE_INC bound to: 4'b0111 
+	Parameter ONECYCLE bound to: 4'b1000 
+	Parameter ENTERDELETE bound to: 4'b1001 
+	Parameter LEAVEDELETE bound to: 4'b1010 
+	Parameter READ_ACK bound to: 4'b1011 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/mem_ctrl.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'mem_ctrl' (6#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/mem_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mixer' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/mixer.v:23]
+	Parameter WAIT bound to: 1'b0 
+	Parameter ASSIGN bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/mixer.v:303]
+INFO: [Synth 8-6155] done synthesizing module 'mixer' (7#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/mixer.v:23]
+INFO: [Synth 8-638] synthesizing module 'i2s_ctl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/i2s_ctl.vhd:63]
+	Parameter C_DATA_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'i2s_ctl' (8#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/i2s_ctl.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'PmodOLEDCtrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/PmodOLEDCtrl.vhd:47]
+INFO: [Synth 8-3491] module 'OledInit' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledInit.vhd:19' bound to instance 'Init' of component 'OledInit' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/PmodOLEDCtrl.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledInit.vhd:33]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledInit.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/SpiCtrl.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (9#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/SpiCtrl.vhd:32]
+INFO: [Synth 8-3491] module 'Delay' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledInit.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'Delay' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (10#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (11#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledInit.vhd:33]
+INFO: [Synth 8-3491] module 'OledCon' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:25' bound to instance 'Control' of component 'OledCon' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/PmodOLEDCtrl.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'OledCon' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:53]
+INFO: [Synth 8-3491] module 'ila_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/ila_0_stub.vhdl:5' bound to instance 'debug_core' of component 'ila_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/ila_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'div_gen_0' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/div_gen_0_stub.vhdl:5' bound to instance 'Divider' of component 'div_gen_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/div_gen_0_stub.vhdl:18]
+WARNING: [Synth 8-153] case item 8'bxxxx0000 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+WARNING: [Synth 8-153] case item 8'bxxxx0001 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+WARNING: [Synth 8-153] case item 8'bxxxx0010 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+WARNING: [Synth 8-153] case item 8'bxxxx0011 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+WARNING: [Synth 8-153] case item 8'bxxxx0100 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+WARNING: [Synth 8-153] case item 8'bxxxx0101 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+WARNING: [Synth 8-153] case item 8'bxxxx0110 will never be executed [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:308]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:446]
+INFO: [Synth 8-3491] module 'Delay' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:457]
+INFO: [Synth 8-3491] module 'charLib' declared at 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/charLib_stub.vhdl:5' bound to instance 'CHAR_LIB_COMP' of component 'charLib' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:465]
+INFO: [Synth 8-638] synthesizing module 'charLib' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/.Xil/Vivado-25988-KomaroKomp/realtime/charLib_stub.vhdl:14]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'DELAY_COMP'. This will prevent further optimization [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:457]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SPI_COMP'. This will prevent further optimization [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:446]
+INFO: [Synth 8-256] done synthesizing module 'OledCon' (12#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/OledExample.vhd:53]
+INFO: [Synth 8-226] default block is never used [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/PmodOLEDCtrl.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'PmodOLEDCtrl' (13#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/PmodOLEDCtrl.vhd:47]
+WARNING: [Synth 8-689] width (32) of port connection 'bank_dig0' does not match port width (8) of module 'PmodOLEDCtrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:404]
+WARNING: [Synth 8-689] width (32) of port connection 'bank_dig1' does not match port width (8) of module 'PmodOLEDCtrl' [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:405]
+INFO: [Synth 8-6155] done synthesizing module 'looper1_1' (14#1) [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/hdl/looper1_1.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1050.598 ; gain = 45.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1050.598 ; gain = 45.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1050.598 ; gain = 45.449
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1050.598 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/charLib/charLib/charLib_in_context.xdc] for cell 'OLED/Control/CHAR_LIB_COMP'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/charLib/charLib/charLib_in_context.xdc] for cell 'OLED/Control/CHAR_LIB_COMP'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'Ram/Inst_DDR'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'Ram/Inst_DDR'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_1'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_1'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'OLED/Control/debug_core'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'OLED/Control/debug_core'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'OLED/Control/Divider'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'OLED/Control/Divider'
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/looper1_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/looper1_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1182.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1182.422 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'OLED/Control/CHAR_LIB_COMP' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'OLED/Control/Divider' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  d:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 7).
+Applied set_property KEEP_HIERARCHY = SOFT for OLED/Control/CHAR_LIB_COMP. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Ram/Inst_DDR. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for OLED/Control/debug_core. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for OLED/Control/Divider. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWICtl'
+INFO: [Synth 8-802] inferred FSM for state register 'cState_reg' in module 'DDRcontrol'
+INFO: [Synth 8-802] inferred FSM for state register 'mixer_state_reg' in module 'mixer'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Delay'
+INFO: [Synth 8-802] inferred FSM for state register 'progress_state_reg' in module 'OledCon'
+INFO: [Synth 8-802] inferred FSM for state register 'assignment_state_reg' in module 'OledCon'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'PmodOLEDCtrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                             0001 |                             0000
+                 ststart |                             0101 |                             0001
+                 stwrite |                             0000 |                             0011
+                  stsack |                             0011 |                             0110
+                  stread |                             0010 |                             0010
+            stmnackstart |                             0111 |                             1001
+                  stmack |                             0110 |                             0111
+             stmnackstop |                             0100 |                             1000
+                  ststop |                             1111 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWICtl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                           000001 |                              000
+                stpreset |                           000010 |                              001
+              stsenddata |                           000100 |                              010
+              stsetcmdwr |                           001000 |                              100
+              stsetcmdrd |                           010000 |                              011
+               stwaitcen |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cState_reg' using encoding 'one-hot' in module 'DDRcontrol'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mixer_state_reg' using encoding 'one-hot' in module 'mixer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    send |                              001 |                              001
+                   hold1 |                              010 |                              010
+                   hold2 |                              011 |                              011
+                   hold3 |                              100 |                              100
+                   hold4 |                              101 |                              101
+                    done |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                    hold |                             0010 |                               01
+                    done |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Delay'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             assign_idle |                             0001 |                              000
+             assign_bank |                             0010 |                              001
+            assign_track |                             0100 |                              010
+      assign_play_states |                             1000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'assignment_state_reg' using encoding 'one-hot' in module 'OledCon'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            wait_new_max |                              000 |                              000
+                  divide |                              001 |                              001
+                   check |                              010 |                              010
+   assign_full_character |                              011 |                              011
+   assign_part_character |                              100 |                              100
+               waitstate |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'progress_state_reg' using encoding 'sequential' in module 'OledCon'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+          oledinitialize |                              010 |                               01
+             oledexample |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'PmodOLEDCtrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	  17 Input   32 Bit       Adders := 2     
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 10    
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 23    
+	               31 Bit    Registers := 1     
+	               29 Bit    Registers := 2     
+	               26 Bit    Registers := 1     
+	               25 Bit    Registers := 16    
+	               24 Bit    Registers := 6     
+	               22 Bit    Registers := 2     
+	               16 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 96    
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 12    
+	                4 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 59    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 20    
+	   6 Input   29 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 16    
+	   2 Input   22 Bit        Muxes := 2     
+	  13 Input   22 Bit        Muxes := 1     
+	  11 Input   16 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 16    
+	   4 Input   16 Bit        Muxes := 2     
+	  31 Input   12 Bit        Muxes := 1     
+	  31 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 36    
+	  31 Input    8 Bit        Muxes := 42    
+	   6 Input    8 Bit        Muxes := 18    
+	   8 Input    8 Bit        Muxes := 15    
+	   4 Input    8 Bit        Muxes := 16    
+	   2 Input    7 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	  34 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   8 Input    5 Bit        Muxes := 2     
+	  31 Input    5 Bit        Muxes := 3     
+	  16 Input    5 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 1     
+	  21 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 21    
+	   4 Input    4 Bit        Muxes := 3     
+	  11 Input    4 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 2     
+	  31 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   8 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	  11 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	  31 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 118   
+	   4 Input    1 Bit        Muxes := 27    
+	   3 Input    1 Bit        Muxes := 11    
+	   9 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 4     
+	  11 Input    1 Bit        Muxes := 12    
+	  36 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 7     
+	  12 Input    1 Bit        Muxes := 1     
+	  13 Input    1 Bit        Muxes := 17    
+	  17 Input    1 Bit        Muxes := 16    
+	   8 Input    1 Bit        Muxes := 2     
+	  34 Input    1 Bit        Muxes := 9     
+	  31 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-------------+--------------------+---------------+----------------+
+|Module Name  | RTL Object         | Depth x Width | Implemented As | 
++-------------+--------------------+---------------+----------------+
+|OledInit     | after_state        | 64x1          | LUT            | 
+|OledInit     | after_state        | 64x6          | LUT            | 
+|OledInit     | temp_spi_data      | 64x1          | LUT            | 
+|OledInit     | temp_spi_data      | 64x8          | LUT            | 
+|OledCon      | after_state        | 32x1          | LUT            | 
+|OledCon      | temp_addr          | 32x1          | LUT            | 
+|OledCon      | after_state        | 32x1          | LUT            | 
+|OledCon      | temp_addr          | 32x1          | LUT            | 
+|PmodOLEDCtrl | Init/after_state   | 64x6          | LUT            | 
+|PmodOLEDCtrl | Init/after_state   | 64x1          | LUT            | 
+|PmodOLEDCtrl | Init/temp_spi_data | 64x1          | LUT            | 
++-------------+--------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_1 has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |ila_0         |         1|
+|3     |div_gen_0     |         1|
+|4     |charLib       |         1|
+|5     |mig_7series_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |charLib_bbox       |     1|
+|2     |clk_wiz_0_bbox     |     1|
+|3     |div_gen_0_bbox     |     1|
+|4     |ila_0_bbox         |     1|
+|5     |mig_7series_0_bbox |     1|
+|6     |CARRY4             |   212|
+|7     |LUT1               |    65|
+|8     |LUT2               |   259|
+|9     |LUT3               |   636|
+|10    |LUT4               |  1374|
+|11    |LUT5               |   193|
+|12    |LUT6               |   461|
+|13    |MUXF7              |    25|
+|14    |MUXF8              |     1|
+|15    |FDRE               |  2223|
+|16    |FDSE               |    27|
+|17    |IBUF               |     8|
+|18    |IOBUF              |     2|
+|19    |OBUF               |    10|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1191.551 ; gain = 45.449
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.551 ; gain = 186.402
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1191.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 240 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1191.551 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+89 Infos, 20 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 1191.551 ; gain = 186.402
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/VHDL/LooperV2/LooperV2.runs/synth_1/looper1_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file looper1_1_utilization_synth.rpt -pb looper1_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 19 15:26:58 2021...

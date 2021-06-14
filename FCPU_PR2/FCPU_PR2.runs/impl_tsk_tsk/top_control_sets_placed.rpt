@@ -1,0 +1,312 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Feb  2 20:37:06 2021
+| Host         : KomaroKomp running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a200t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   234 |
+|    Minimum number of control sets                        |   234 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    83 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   234 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |   223 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             131 |           65 |
+| No           | No                    | Yes                    |             439 |          140 |
+| No           | Yes                   | No                     |             255 |          111 |
+| Yes          | No                    | No                     |              13 |            4 |
+| Yes          | No                    | Yes                    |            2159 |          840 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                     Enable Signal                    |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  cm/inst/clk_out1    | uart_fifo_0/ugen1.uart_fifo_rx_0/count[3]_i_1_n_0    | system_reset/rst                                     |                1 |              4 |         4.00 |
+|  cm/inst/clk_out1    | uart_fifo_0/ugen1.uart_fifo_tx_0/count[3]_i_1__0_n_0 | system_reset/rst                                     |                1 |              4 |         4.00 |
+|  cm/inst/clk_out1    | uart_fifo_0/uart_core_0/tx_0/count_n                 | system_reset/rst                                     |                1 |              4 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_67[0]                       | system_reset/rst                                     |                3 |              7 |         2.33 |
+|  cm/inst/clk_out1    | uart_fifo_0/uart_core_0/tx_0/ctr_n                   | system_reset/rst                                     |                2 |              8 |         4.00 |
+|  cm/inst/clk_out1    | uart_fifo_0/uart_core_0/rx_0/ctr_c[7]_i_1_n_0        | system_reset/rst                                     |                3 |              8 |         2.67 |
+|  cm/inst/clk_out1    | uart_fifo_0/uart_core_0/tx_0/di_n_0                  | system_reset/rst                                     |                2 |              8 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[5]_3[0]                        | system_reset/rst                                     |                2 |              8 |         4.00 |
+|  cm/inst/clk_out1    | timer_0/count[0]_i_1__1_n_0                          | system_reset/rst                                     |                4 |             13 |         3.25 |
+|  cm/inst/clk_out1    | system_reset/rst                                     |                                                      |                4 |             13 |         3.25 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[5]_1[0]                        | system_reset/rst                                     |                6 |             15 |         2.50 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_30                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    |                                                      | core_0/h2_0/tos_c_reg[15]_11                         |               16 |             16 |         1.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_20                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_50                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_52                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_23                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_54                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_26                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_58                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_41                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_18                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_3                           | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_12                          | system_reset/rst                                     |                2 |             16 |         8.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_45                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_4                           | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_16                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_15                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep_3                       | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep__0_1                    | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep_0                       | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep_2                       | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep__0_0                    | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep__0_2                    | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[3]_rep_1                       | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_13                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/io_write.uart_clock_rx_we_reg            | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_17                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_21                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_10                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_34                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_22                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_31                          | system_reset/rst                                     |               11 |             16 |         1.45 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_32                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_11                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_33                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_1                           | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_36                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_34                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_37                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_39                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_40                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_41                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_19                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_43                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_46                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_27                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_48                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_49                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_26                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_38                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_5                           | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_42                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_25                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_14                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_2                           | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_23                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_24                          | system_reset/rst                                     |               11 |             16 |         1.45 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_29                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_44                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_47                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_28                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_30                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_20                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_35                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_55                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_50                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_51                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_56                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_53                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_9                           | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_52                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_6                           | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_54                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_8                           | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/E[0]                                     | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | system_reset/c_c_reg[0]_0                            |                                                      |                2 |             16 |         8.00 |
+|  cm/inst/clk_out1    | system_reset/p_0_in                                  |                                                      |                2 |             16 |         8.00 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/weights_sum[7]_i_1_n_0                       |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_10                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_0                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_11                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_12                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_13                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_14                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_15                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_17                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_18                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_16                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_6                           | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_27                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_43                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_21                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_59                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_62                          | system_reset/rst                                     |               10 |             16 |         1.60 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_25                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_28                          | system_reset/rst                                     |               12 |             16 |         1.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_64                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_5                           | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_44                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_9                           | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_37                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_3                           | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_38                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_36                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_48                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_51                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[2]_7                           | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_56                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_60                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_55                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_39                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_35                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_47                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_63                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_19                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_65                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_7                           | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_31                          | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_8                           | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_57                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_61                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_33                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_66                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_4                           | system_reset/rst                                     |                7 |             16 |         2.29 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_46                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_42                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_24                          | system_reset/rst                                     |                9 |             16 |         1.78 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_29                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_22                          | system_reset/rst                                     |                3 |             16 |         5.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_45                          | system_reset/rst                                     |                5 |             16 |         3.20 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_32                          | system_reset/rst                                     |                4 |             16 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_49                          | system_reset/rst                                     |               11 |             16 |         1.45 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_40                          | system_reset/rst                                     |                6 |             16 |         2.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[1]_53                          | system_reset/rst                                     |                8 |             16 |         2.00 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[5].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | button_debouncer/debouncer[0].d_instance/rst_reg_n_0 |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | button_debouncer/debouncer[1].d_instance/rst_reg_n_0 |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | button_debouncer/debouncer[2].d_instance/rst_reg_n_0 |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | button_debouncer/debouncer[3].d_instance/rst_reg_n_0 |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | button_debouncer/debouncer[4].d_instance/rst         |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[0].d_instance/rst_reg_n_0     |                6 |             20 |         3.33 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[1].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[2].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[3].d_instance/rst_reg_n_0     |                6 |             20 |         3.33 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[4].d_instance/rst_reg_n_0     |                5 |             20 |         4.00 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[6].d_instance/rst_reg_n_0     |                4 |             20 |         5.00 |
+|  cm/inst/clk_out1    |                                                      | sw_debouncer/debouncer[7].d_instance/rst             |                6 |             20 |         3.33 |
+|  cm/inst/clk_out1    | core_0/h2_0/rstk_we                                  |                                                      |                6 |             22 |         3.67 |
+|  cm/inst/clk_out1    | core_0/h2_0/dstk_we                                  |                                                      |                6 |             22 |         3.67 |
+|  cm/inst/clk_out1    |                                                      | tsk_reg/clk                                          |                8 |             31 |         3.88 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/y_values[0][23]_i_1_n_0                      |               12 |             32 |         2.67 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/weighted_sum[23]_i_1_n_0                     |                6 |             32 |         5.33 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/y_mul_weight[0][23]_i_1_n_0                  |               14 |             32 |         2.29 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/y_mul_weight[1][23]_i_1_n_0                  |               15 |             32 |         2.13 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/y_mul_weight[2][23]_i_1_n_0                  |               19 |             32 |         1.68 |
+|  tsk_reg/clk_reg_n_0 |                                                      | tsk_reg/y_star[23]_i_1_n_0                           |               14 |             32 |         2.29 |
+|  tsk_reg/clk_reg_n_0 |                                                      |                                                      |               27 |             61 |         2.26 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_0                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_5                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_7                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_8                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_9                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_1                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_3                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_14                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_10                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_12                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_8                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_15                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_10                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_17                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_2                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_5                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_6                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_12                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_11                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_13                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_1                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_1                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_14                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_0                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_9                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_18                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_10                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_11                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_4                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_16                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_7                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_12                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_7                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_9                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_4                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_6                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[13]_2                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[13]_3                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[13]_0                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_2                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_5                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_8                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[13]_1                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_9                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_6                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_10                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[8]_0                           |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_12                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[9]_0                           |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_1                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_4                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_5                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[12]_3                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_2                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_8                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_7                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_4                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_15                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[11]_3                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_11                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_13                         |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_2                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[10]_6                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    | core_0/h2_0/tos_c_reg[15]_3                          |                                                      |               16 |             64 |         4.00 |
+|  cm/inst/clk_out1    |                                                      |                                                      |               38 |             70 |         1.84 |
+|  cm/inst/clk_out1    |                                                      | system_reset/rst                                     |               73 |            179 |         2.45 |
++----------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+
+

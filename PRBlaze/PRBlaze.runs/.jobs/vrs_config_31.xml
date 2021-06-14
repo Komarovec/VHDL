@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="light_count_shift_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/light_count_shift_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="light_count_up_synth_1" LaunchDir="D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/light_count_up_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_2" LaunchDir="D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/impl_2" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="light_count_shift_synth_1"/>
+		<Parent Id="light_count_up_synth_1"/>
+	</Run>
+	<Run Id="impl_3" LaunchDir="D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/impl_3" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="impl_2"/>
+		<Parent Id="light_count_shift_synth_1"/>
+		<Parent Id="light_count_up_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

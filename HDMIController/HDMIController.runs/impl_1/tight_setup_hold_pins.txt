@@ -1,0 +1,24 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[3]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[7]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[6]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[4]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[1]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[4]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[7]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[9]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[2]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[0]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[0]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[1]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[5]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[6]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[8]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[5]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[2]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                          hdmi_inst/TMDSshiftBlue_reg[3]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[9]/D|
+|    clk_out1_clk_250MHz_1 |    clk_out1_clk_250MHz_1 |                                                                           hdmi_inst/TMDSshiftRed_reg[8]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

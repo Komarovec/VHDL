@@ -1,0 +1,617 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  2 20:24:51 2021
+# Process ID: 11828
+# Current directory: D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/top.vds
+# Journal file: D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a200tsbg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24520
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1009.625 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:67]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter reset_period_us bound to: 100 - type: integer 
+	Parameter uart_baud bound to: 115200 - type: integer 
+	Parameter uart_fifo_depth bound to: 8 - type: integer 
+	Parameter ext_count bound to: 128 - type: integer 
+INFO: [Synth 8-3491] module 'tsk_mod' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/.Xil/Vivado-11828-KomaroKomp/realtime/tsk_mod_stub.vhdl:5' bound to instance 'tsk_reg' of component 'tsk_mod' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'tsk_mod' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/.Xil/Vivado-11828-KomaroKomp/realtime/tsk_mod_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'custom_reg' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/new/custom_reg.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'custom_reg' (1#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/new/custom_reg.vhd:23]
+WARNING: [Synth 8-5640] Port 'locked' is missing in component declaration [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:142]
+INFO: [Synth 8-3491] module 'clock_manager' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/.Xil/Vivado-11828-KomaroKomp/realtime/clock_manager_stub.vhdl:5' bound to instance 'cm' of component 'clock_manager' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:363]
+INFO: [Synth 8-638] synthesizing module 'clock_manager' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/.Xil/Vivado-11828-KomaroKomp/realtime/clock_manager_stub.vhdl:15]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter reset_period_us bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'reset_generator' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2845' bound to instance 'system_reset' of component 'reset_generator' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:375]
+INFO: [Synth 8-638] synthesizing module 'reset_generator' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2852]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter reset_period_us bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reset_generator' (2#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2852]
+INFO: [Synth 8-3491] module 'ble_uart' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/ble_uart.vhd:5' bound to instance 'ble_uart_0' of component 'ble_uart' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:393]
+INFO: [Synth 8-638] synthesizing module 'ble_uart' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/ble_uart.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ble_uart' (3#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/ble_uart.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'core' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:110]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter number_of_interrupts bound to: 8 - type: integer 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'rising_edge_detectors' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1358' bound to instance 'edges' of component 'rising_edge_detectors' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'rising_edge_detectors' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1367]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+INFO: [Synth 8-638] synthesizing module 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1288]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-256] done synthesizing module 'rising_edge_detector' (4#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1288]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'rising_edge_detector' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1279' bound to instance 'd_instance' of component 'rising_edge_detector' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1370]
+INFO: [Synth 8-256] done synthesizing module 'rising_edge_detectors' (5#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1367]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter number_of_interrupts bound to: 8 - type: integer 
+	Parameter lowest_interrupt_first bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'interrupt_request_handler' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:241' bound to instance 'irqh_0' of component 'interrupt_request_handler' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'interrupt_request_handler' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:260]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter number_of_interrupts bound to: 8 - type: integer 
+	Parameter lowest_interrupt_first bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module '\reg ' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1061]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module '\reg ' (6#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1061]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized0' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1061]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized0' (6#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1061]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_request_handler' (7#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:260]
+	Parameter asynchronous_reset bound to: 1 - type: bool 
+	Parameter delay bound to: 64'b0000000000000000000000000000000000000000100110001001011010000000 
+	Parameter cpu_id bound to: 16'b0000011001100110 
+	Parameter interrupt_address_length bound to: 3 - type: integer 
+	Parameter start_address bound to: 0 - type: integer 
+	Parameter stack_size_log2 bound to: 6 - type: integer 
+	Parameter use_interrupts bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'h2' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/h2.vhd:69' bound to instance 'h2_0' of component 'h2' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'h2' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/h2.vhd:106]
+	Parameter asynchronous_reset bound to: 1 - type: bool 
+	Parameter delay bound to: 64'b0000000000000000000000000000000000000000100110001001011010000000 
+	Parameter cpu_id bound to: 16'b0000011001100110 
+	Parameter interrupt_address_length bound to: 3 - type: integer 
+	Parameter start_address bound to: 0 - type: integer 
+	Parameter stack_size_log2 bound to: 6 - type: integer 
+	Parameter use_interrupts bound to: 1 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'h2' (8#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/h2.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'dual_port_block_ram' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2089]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter addr_length bound to: 13 - type: integer 
+	Parameter data_length bound to: 16 - type: integer 
+	Parameter file_name bound to: h2.bin - type: string 
+	Parameter file_type bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dual_port_block_ram' (9#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2089]
+INFO: [Synth 8-256] done synthesizing module 'core' (10#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/core.vhd:110]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter baud bound to: 115200 - type: integer 
+	Parameter format bound to: 8'b10000100 
+	Parameter use_fifo bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'uart_top' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:186' bound to instance 'uart_fifo_0' of component 'uart_top' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:569]
+INFO: [Synth 8-638] synthesizing module 'uart_top' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:214]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter baud bound to: 115200 - type: integer 
+	Parameter format bound to: 8'b10000100 
+	Parameter use_fifo bound to: 1 - type: bool 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter baud bound to: 115200 - type: integer 
+	Parameter format bound to: 8'b10000100 
+INFO: [Synth 8-3491] module 'uart_core' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:292' bound to instance 'uart_core_0' of component 'uart_core' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'uart_core' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:318]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter baud bound to: 115200 - type: integer 
+	Parameter format bound to: 8'b10000100 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011011 
+	Parameter N bound to: 16 - type: integer 
+	Parameter D bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'uart_baud' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:430' bound to instance 'baud_tx' of component 'uart_baud' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:368]
+INFO: [Synth 8-638] synthesizing module 'uart_baud' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:444]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011011 
+	Parameter N bound to: 16 - type: integer 
+	Parameter D bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_baud' (11#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:444]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011010 
+	Parameter N bound to: 16 - type: integer 
+	Parameter D bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'uart_baud' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:430' bound to instance 'baud_rx' of component 'uart_baud' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:379]
+INFO: [Synth 8-638] synthesizing module 'uart_baud__parameterized1' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:444]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter init bound to: 32'sb00000000000000000000000000011010 
+	Parameter N bound to: 16 - type: integer 
+	Parameter D bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_baud__parameterized1' (11#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:444]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter format bound to: 8'b10000100 
+INFO: [Synth 8-3491] module 'uart_tx' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:693' bound to instance 'tx_0' of component 'uart_tx' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:389]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:708]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter format bound to: 8'b10000100 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (12#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:708]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter D bound to: 3 - type: integer 
+	Parameter format bound to: 8'b10000100 
+INFO: [Synth 8-3491] module 'uart_rx' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:517' bound to instance 'rx_0' of component 'uart_rx' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:404]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:536]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter D bound to: 3 - type: integer 
+	Parameter format bound to: 8'b10000100 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (13#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:536]
+INFO: [Synth 8-256] done synthesizing module 'uart_core' (14#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:318]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 8 - type: integer 
+	Parameter read_first bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'fifo' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1493' bound to instance 'uart_fifo_tx_0' of component 'fifo' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'fifo' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1511]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 8 - type: integer 
+	Parameter read_first bound to: 1 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'fifo' (15#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1511]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 8 - type: integer 
+	Parameter read_first bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'fifo' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1493' bound to instance 'uart_fifo_rx_0' of component 'fifo' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized1' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1511]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 8 - type: integer 
+	Parameter read_first bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized1' (15#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1511]
+INFO: [Synth 8-256] done synthesizing module 'uart_top' (16#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/uart.vhd:214]
+INFO: [Synth 8-638] synthesizing module 'timer' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/timer.vhd:43]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_length bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'timer' (17#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/timer.vhd:43]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 5 - type: integer 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_block_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2751' bound to instance 'button_debouncer' of component 'debounce_block_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:619]
+INFO: [Synth 8-638] synthesizing module 'debounce_block_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2759]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 5 - type: integer 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+INFO: [Synth 8-638] synthesizing module 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2680]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'timer_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1200' bound to instance 'timer' of component 'timer_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2684]
+INFO: [Synth 8-638] synthesizing module 'timer_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1208]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'timer_us' (18#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1208]
+INFO: [Synth 8-256] done synthesizing module 'debounce_us' (19#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2680]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+INFO: [Synth 8-256] done synthesizing module 'debounce_block_us' (20#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2759]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'state_block_changed' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2818' bound to instance 'state_changed' of component 'state_block_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:638]
+INFO: [Synth 8-638] synthesizing module 'state_block_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2827]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 5 - type: integer 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2830]
+INFO: [Synth 8-638] synthesizing module 'state_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2785]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-256] done synthesizing module 'state_changed' (21#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2785]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2830]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2830]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2830]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+INFO: [Synth 8-3491] module 'state_changed' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2776' bound to instance 'd_instance' of component 'state_changed' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2830]
+INFO: [Synth 8-256] done synthesizing module 'state_block_changed' (22#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2827]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1051' bound to instance 'state_changed_reg' of component 'reg' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:652]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized2' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1061]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized2' (22#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:1061]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_block_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2751' bound to instance 'sw_debouncer' of component 'debounce_block_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:665]
+INFO: [Synth 8-638] synthesizing module 'debounce_block_us__parameterized1' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2759]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter N bound to: 8 - type: integer 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+	Parameter g bound to: 96'b000001011111010111100001000000000000000000000000000000000000000000000001001100010010110100000001 
+	Parameter timer_period_us bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce_us' declared at 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2672' bound to instance 'd_instance' of component 'debounce_us' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2762]
+INFO: [Synth 8-256] done synthesizing module 'debounce_block_us__parameterized1' (22#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/util.vhd:2759]
+INFO: [Synth 8-256] done synthesizing module 'top' (23#1) [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:67]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1009.625 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1009.625 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1009.625 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.240 . Memory (MB): peak = 1009.625 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/tsk_mod_synth_1/tsk_mod/tsk_mod_in_context.xdc] for cell 'tsk_reg'
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/tsk_mod_synth_1/tsk_mod/tsk_mod_in_context.xdc] for cell 'tsk_reg'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.gen/sources_1/ip/clock_manager/clock_manager/clock_manager_in_context.xdc] for cell 'cm'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.gen/sources_1/ip/clock_manager/clock_manager/clock_manager_in_context.xdc] for cell 'cm'
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/hd_reconfig.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/hd_reconfig.xdc]
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/constrs_1/Nexys-Video-Master.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/constrs_1/Nexys-Video-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/constrs_1/Nexys-Video-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1127.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1127.156 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1127.156 ; gain = 117.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1127.156 ; gain = 117.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in. (constraint file  d:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.gen/sources_1/ip/clock_manager/clock_manager/clock_manager_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in. (constraint file  d:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.gen/sources_1/ip/clock_manager/clock_manager/clock_manager_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for tsk_reg. (constraint file  D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/hd_reconfig.xdc, line 4).
+Applied set_property HD.RECONFIGURABLE = true for tsk_reg. (constraint file  D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/hd_reconfig.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for cm. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1127.156 ; gain = 117.531
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_c_reg' in module 'uart_tx'
+WARNING: [Synth 8-327] inferring latch for variable 'r_n_reg' [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/new/custom_reg.vhd:33]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                              000 |                              000
+                    idle |                              001 |                              001
+                   start |                              010 |                              010
+                    data |                              011 |                              011
+                  parity |                              100 |                              100
+                    stop |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_c_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1127.156 ; gain = 117.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 13    
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input   13 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 5     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 22    
+	   9 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 128   
+	               20 Bit    Registers := 13    
+	               16 Bit    Registers := 7     
+	               13 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 52    
++---RAMs : 
+	             128K Bit	(8192 X 16 bit)          RAMs := 1     
+	             1024 Bit	(64 X 16 bit)          RAMs := 1     
+	               64 Bit	(8 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 256   
+	   2 Input   20 Bit        Muxes := 13    
+	   2 Input   16 Bit        Muxes := 45    
+	  23 Input   16 Bit        Muxes := 1     
+	   7 Input   16 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 4     
+	   6 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 5     
+	   8 Input    8 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 4     
+	   6 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 4     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	  11 Input    3 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   8 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 27    
+	  23 Input    1 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 7     
+	   9 Input    1 Bit        Muxes := 1     
+	 129 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1127.156 ; gain = 117.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------+-----------+----------------------+--------------------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives               | 
++------------+-------------------------------+-----------+----------------------+--------------------------+
+|core_0      | h2_0/vstk_ram_reg             | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|core_0      | h2_0/rstk_ram_reg             | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|core_0      | mem_h2_0/ram_reg              | Implied   | 8 K x 16             | RAM128X1D x 1024	        | 
+|uart_fifo_0 | ugen1.uart_fifo_tx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
+|uart_fifo_0 | ugen1.uart_fifo_rx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
++------------+-------------------------------+-----------+----------------------+--------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1127.156 ; gain = 117.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1153.426 ; gain = 143.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++------------+-------------------------------+-----------+----------------------+--------------------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives               | 
++------------+-------------------------------+-----------+----------------------+--------------------------+
+|core_0      | h2_0/vstk_ram_reg             | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|core_0      | h2_0/rstk_ram_reg             | Implied   | 64 x 16              | RAM64X1D x 1	RAM64M x 5	 | 
+|core_0      | mem_h2_0/ram_reg              | Implied   | 8 K x 16             | RAM128X1D x 1024	        | 
+|uart_fifo_0 | ugen1.uart_fifo_tx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
+|uart_fifo_0 | ugen1.uart_fifo_rx_0/data_reg | Implied   | 8 x 8                | RAM32M x 2	              | 
++------------+-------------------------------+-----------+----------------------+--------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'tx' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.srcs/sources_1/top.vhd:24]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |tsk_mod       |         1|
+|2     |clock_manager |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |clock_manager_bbox |     1|
+|2     |tsk_mod_bbox       |     1|
+|3     |CARRY4             |   108|
+|4     |LUT1               |    16|
+|5     |LUT2               |   344|
+|6     |LUT3               |   310|
+|7     |LUT4               |   164|
+|8     |LUT5               |   352|
+|9     |LUT6               |  1455|
+|10    |MUXF7              |   519|
+|11    |MUXF8              |   176|
+|12    |RAM128X1D          |  1024|
+|13    |RAM32M             |     4|
+|14    |RAM64M             |    10|
+|15    |RAM64X1D           |     2|
+|16    |FDCE               |  2587|
+|17    |FDPE               |    11|
+|18    |FDRE               |    97|
+|19    |IBUF               |    15|
+|20    |OBUF               |    12|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1171.480 ; gain = 161.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:58 . Memory (MB): peak = 1171.480 ; gain = 44.324
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1171.480 ; gain = 161.855
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 1176.332 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1843 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1179.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1040 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 10 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+121 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:17 . Memory (MB): peak = 1179.020 ; gain = 169.395
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/FCPU_PR2/FCPU_PR2.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 20:26:15 2021...

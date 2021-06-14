@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1570641593">
+  <File Type="ROUTE-PWR" Name="hdmi_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hdmi_wrapper.tcl"/>
+  <File Type="BITSTR-BMM" Name="hdmi_wrapper_bd.bmm"/>
+  <File Type="ROUTE-PWR-SUM" Name="hdmi_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hdmi_wrapper_reports.tcl"/>
+  <File Type="OPT-DCP" Name="hdmi_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="hdmi_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hdmi_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hdmi_wrapper_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="hdmi_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hdmi_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hdmi_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hdmi_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hdmi_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hdmi_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="hdmi_wrapper.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hdmi_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="hdmi_wrapper.bin"/>
+  <File Type="PHYSOPT-DCP" Name="hdmi_wrapper_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="hdmi_wrapper.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hdmi_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hdmi_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hdmi_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hdmi_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="hdmi_wrapper.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="hdmi_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_wrapper_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="hdmi_wrapper.sysdef"/>
+  <File Type="ROUTE-PWR-RPX" Name="hdmi_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="hdmi_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hdmi_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hdmi_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hdmi_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="hdmi_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hdmi_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hdmi_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hdmi_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="hdmi_wrapper.bit"/>
+  <File Type="BITSTR-RBT" Name="hdmi_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="hdmi_wrapper.nky"/>
+  <File Type="BG-DRC" Name="hdmi_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="hdmi_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/hdmi/hdmi.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Nexys-Video-HDMI.srcs/sources_1/bd/hdmi/hdmi.bd"/>
+        <Attr Name="ImportTime" Val="1570641381"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/hdmi_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Nexys-Video-HDMI.srcs/sources_1/bd/hdmi/hdl/hdmi_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1570641382"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/mig_b.prj">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Nexys-Video-HDMI.srcs/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/mig_b.prj"/>
+        <Attr Name="ImportTime" Val="1570641378"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="hdmi_mig_7series_0_0"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hdmi_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/vdma_timing_workaround.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../src/constraints/vdma_timing_workaround.xdc"/>
+        <Attr Name="ImportTime" Val="1570629542"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/NexysVideo_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../src/constraints/NexysVideo_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1570609252"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Performance_Explore" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

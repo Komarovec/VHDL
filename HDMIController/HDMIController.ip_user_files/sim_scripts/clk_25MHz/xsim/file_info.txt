@@ -1,0 +1,3 @@
+clk_25MHz_clk_wiz.v,verilog,xil_defaultlib,../../../../HDMIController.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+clk_25MHz.v,verilog,xil_defaultlib,../../../../HDMIController.gen/sources_1/ip/clk_25MHz/clk_25MHz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="light_count_up_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1622660997">
+  <File Type="PA-TCL" Name="light_count_up.tcl"/>
+  <File Type="REPORTS-TCL" Name="light_count_up_reports.tcl"/>
+  <File Type="RDS-RDS" Name="light_count_up.vds"/>
+  <File Type="RDS-UTIL" Name="light_count_up_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="light_count_up_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="light_count_up.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/light_count_up">
+    <File Path="$PSRCDIR/sources_1/imports/new/light_count_up.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="light_count_up"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/light_count_up">
+    <File Path="$PSRCDIR/sources_1/imports/new/light_count_up.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="light_count_up"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

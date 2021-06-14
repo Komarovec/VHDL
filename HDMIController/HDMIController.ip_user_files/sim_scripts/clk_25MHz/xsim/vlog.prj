@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../HDMIController.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" \
+"../../../../HDMIController.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

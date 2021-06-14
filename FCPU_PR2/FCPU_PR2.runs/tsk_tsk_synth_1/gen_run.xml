@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="tsk_tsk_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1612293777">
+  <File Type="PA-TCL" Name="tsk_tsk.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tsk_tsk_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="tsk_tsk_reports.tcl"/>
+  <File Type="RDS-RDS" Name="tsk_tsk.vds"/>
+  <File Type="RDS-UTIL" Name="tsk_tsk_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="tsk_tsk_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="tsk_tsk.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="tsk_tsk_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="tsk_tsk_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tsk_tsk">
+    <File Path="$PSRCDIR/sources_1/fixed_pkg_2008.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="Library" Val="ieee_proposed"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/tsk/trimf.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/tsk_tsk/tsk_util.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/tsk_tsk/tsk.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="tsk_tsk"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tsk_tsk">
+    <File Path="$PSRCDIR/sources_1/fixed_pkg_2008.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="Library" Val="ieee_proposed"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/tsk/trimf.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/tsk_tsk/tsk_util.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/tsk_tsk/tsk.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="tsk_tsk"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

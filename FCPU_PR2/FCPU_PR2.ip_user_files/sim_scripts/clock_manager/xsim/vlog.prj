@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../FCPU_PR2.gen/sources_1/ip/clock_manager/clock_manager_clk_wiz.v" \
+"../../../../FCPU_PR2.gen/sources_1/ip/clock_manager/clock_manager.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

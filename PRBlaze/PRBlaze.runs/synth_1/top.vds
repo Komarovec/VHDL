@@ -1,0 +1,472 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jun  6 23:11:18 2021
+# Process ID: 7052
+# Current directory: D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/top.vds
+# Journal file: D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.000 ; gain = 0.000
+Command: synth_design -top top -part xc7a200tsbg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28304
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1007.000 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/sources_1/imports/new/top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
+INFO: [Synth 8-3491] module 'design_1' declared at 'd:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1354' bound to instance 'design_1_i' of component 'design_1' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'design_1' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1381]
+INFO: [Synth 8-3491] module 'design_1_axi_hwicap_0_4' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_axi_hwicap_0_4_stub.vhdl:5' bound to instance 'axi_hwicap_0' of component 'design_1_axi_hwicap_0_4' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2044]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_hwicap_0_4' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_axi_hwicap_0_4_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_5' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_axi_smc_5_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_5' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2069]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_5' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_axi_smc_5_stub.vhdl:95]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_4' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_axi_uartlite_0_4_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_4' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2156]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_4' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_axi_uartlite_0_4_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_3' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_clk_wiz_0_3_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_3' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2181]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_3' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_clk_wiz_0_3_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_4' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_clk_wiz_0_4_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_0_4' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2188]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_4' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_clk_wiz_0_4_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_5' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_mdm_1_5_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_5' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2195]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_5' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_mdm_1_5_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_6' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_microblaze_0_6_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_6' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2208]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_6' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_microblaze_0_6_stub.vhdl:137]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_9' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:951]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (1#1) [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (2#1) [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:821]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (3#1) [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:821]
+INFO: [Synth 8-3491] module 'design_1_xbar_7' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_xbar_7_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_7' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1289]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_7' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_xbar_7_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_9' (4#1) [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:951]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:242]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_7' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_dlmb_bram_if_cntlr_7_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_7' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:456]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_7' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_dlmb_bram_if_cntlr_7_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_7' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_dlmb_v10_7_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_7' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:510]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_7' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_dlmb_v10_7_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_7' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_ilmb_bram_if_cntlr_7_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_7' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:538]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_7' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_ilmb_bram_if_cntlr_7_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_7' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_ilmb_v10_7_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_7' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:592]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_7' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_ilmb_v10_7_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_7' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_lmb_bram_7_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_7' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:620]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_7' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_lmb_bram_7_stub.vhdl:27]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (5#1) [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:242]
+WARNING: [Synth 8-5640] Port 'app_sr_active' is missing in component declaration [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1538]
+WARNING: [Synth 8-5640] Port 'app_ref_ack' is missing in component declaration [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1538]
+WARNING: [Synth 8-5640] Port 'app_zq_ack' is missing in component declaration [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1538]
+WARNING: [Synth 8-5640] Port 'device_temp' is missing in component declaration [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1538]
+INFO: [Synth 8-3491] module 'design_1_mig_7series_0_5' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_mig_7series_0_5_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'design_1_mig_7series_0_5' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2425]
+INFO: [Synth 8-638] synthesizing module 'design_1_mig_7series_0_5' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_mig_7series_0_5_stub.vhdl:73]
+INFO: [Synth 8-3491] module 'design_1_reset_inv_0_4' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_reset_inv_0_4_stub.vhdl:5' bound to instance 'reset_inv_0' of component 'design_1_reset_inv_0_4' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2486]
+INFO: [Synth 8-638] synthesizing module 'design_1_reset_inv_0_4' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_reset_inv_0_4_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_200M_1' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_rst_clk_wiz_0_200M_1_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_200M' of component 'design_1_rst_clk_wiz_0_200M_1' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2491]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_200M_1' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_rst_clk_wiz_0_200M_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_mig_7series_0_100M_4' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_rst_mig_7series_0_100M_4_stub.vhdl:5' bound to instance 'rst_mig_7series_0_100M' of component 'design_1_rst_mig_7series_0_100M_4' [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:2504]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_mig_7series_0_100M_4' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/design_1_rst_mig_7series_0_100M_4_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (6#1) [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/synth/design_1.vhd:1381]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (7#1) [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'clock_generator' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/sources_1/imports/new/clock_generator.vhd:14]
+	Parameter to_divide bound to: 50000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_generator' (8#1) [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/sources_1/imports/new/clock_generator.vhd:14]
+INFO: [Synth 8-3491] module 'light_count_shift' declared at 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/light_count_shift_stub.vhdl:5' bound to instance 'light_count' of component 'light_count_shift' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/sources_1/imports/new/top.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'light_count_shift' [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/.Xil/Vivado-7052-KomaroKomp/realtime/light_count_shift_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/sources_1/imports/new/top.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.395 ; gain = 20.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1027.395 ; gain = 20.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1027.395 ; gain = 20.395
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1027.395 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/light_count_shift_synth_1/light_count_shift/light_count_shift_in_context.xdc] for cell 'light_count'
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/light_count_shift_synth_1/light_count_shift/light_count_shift_in_context.xdc] for cell 'light_count'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_6/design_1_microblaze_0_6/design_1_microblaze_0_1_in_context.xdc] for cell 'mb/design_1_i/microblaze_0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_6/design_1_microblaze_0_6/design_1_microblaze_0_1_in_context.xdc] for cell 'mb/design_1_i/microblaze_0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_axi_hwicap_0_4/design_1_axi_hwicap_0_4/design_1_axi_hwicap_0_4_in_context.xdc] for cell 'mb/design_1_i/axi_hwicap_0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_axi_hwicap_0_4/design_1_axi_hwicap_0_4/design_1_axi_hwicap_0_4_in_context.xdc] for cell 'mb/design_1_i/axi_hwicap_0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc] for cell 'mb/design_1_i/mig_7series_0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc] for cell 'mb/design_1_i/mig_7series_0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_4/design_1_axi_uartlite_0_4/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'mb/design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_4/design_1_axi_uartlite_0_4/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'mb/design_1_i/axi_uartlite_0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3_in_context.xdc] for cell 'mb/design_1_i/clk_wiz_0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3_in_context.xdc] for cell 'mb/design_1_i/clk_wiz_0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_7/design_1_dlmb_v10_7/design_1_dlmb_v10_1_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_7/design_1_dlmb_v10_7/design_1_dlmb_v10_1_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_7/design_1_ilmb_v10_7/design_1_dlmb_v10_1_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_7/design_1_ilmb_v10_7/design_1_dlmb_v10_1_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_7/design_1_dlmb_bram_if_cntlr_7/design_1_dlmb_bram_if_cntlr_2_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_7/design_1_dlmb_bram_if_cntlr_7/design_1_dlmb_bram_if_cntlr_2_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_7/design_1_ilmb_bram_if_cntlr_7/design_1_ilmb_bram_if_cntlr_2_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_7/design_1_ilmb_bram_if_cntlr_7/design_1_ilmb_bram_if_cntlr_2_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_7/design_1_lmb_bram_7/design_1_lmb_bram_7_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_7/design_1_lmb_bram_7/design_1_lmb_bram_7_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mdm_1_5/design_1_mdm_1_5/design_1_mdm_0_0_in_context.xdc] for cell 'mb/design_1_i/mdm_1'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mdm_1_5/design_1_mdm_1_5/design_1_mdm_0_0_in_context.xdc] for cell 'mb/design_1_i/mdm_1'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_200M_1/design_1_rst_clk_wiz_0_200M_1/design_1_rst_clk_wiz_1_100M_1_in_context.xdc] for cell 'mb/design_1_i/rst_clk_wiz_0_200M'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_200M_1/design_1_rst_clk_wiz_0_200M_1/design_1_rst_clk_wiz_1_100M_1_in_context.xdc] for cell 'mb/design_1_i/rst_clk_wiz_0_200M'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_reset_inv_0_4/design_1_reset_inv_0_4/design_1_reset_inv_0_0_in_context.xdc] for cell 'mb/design_1_i/reset_inv_0'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_reset_inv_0_4/design_1_reset_inv_0_4/design_1_reset_inv_0_0_in_context.xdc] for cell 'mb/design_1_i/reset_inv_0'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_4/design_1_rst_mig_7series_0_100M_4/design_1_rst_mig_7series_0_100M_0_in_context.xdc] for cell 'mb/design_1_i/rst_mig_7series_0_100M'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_4/design_1_rst_mig_7series_0_100M_4/design_1_rst_mig_7series_0_100M_0_in_context.xdc] for cell 'mb/design_1_i/rst_mig_7series_0_100M'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_xbar_7/design_1_xbar_7/design_1_xbar_5_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_xbar_7/design_1_xbar_7/design_1_xbar_5_in_context.xdc] for cell 'mb/design_1_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_axi_smc_5/design_1_axi_smc_5/design_1_axi_smc_5_in_context.xdc] for cell 'mb/design_1_i/axi_smc'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_axi_smc_5/design_1_axi_smc_5/design_1_axi_smc_5_in_context.xdc] for cell 'mb/design_1_i/axi_smc'
+Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_4/design_1_clk_wiz_0_4/design_1_clk_wiz_0_4_in_context.xdc] for cell 'mb/design_1_i/clk_wiz_1'
+Finished Parsing XDC File [d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_4/design_1_clk_wiz_0_4/design_1_clk_wiz_0_4_in_context.xdc] for cell 'mb/design_1_i/clk_wiz_1'
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/hd_reconfig.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/hd_reconfig.xdc]
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.srcs/constrs_1/imports/VHDL/Nexys-Video-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1102.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1102.562 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb/design_1_i/axi_hwicap_0' at clock pin 's_axi_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb/design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1108.617 ; gain = 101.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1108.617 ; gain = 101.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[10]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[10]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[11]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[11]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[12]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[12]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[13]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[13]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[14]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[14]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[2]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[2]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[3]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[3]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[4]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[4]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[5]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[5]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[6]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[6]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[7]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[7]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[8]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[8]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[9]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[9]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ba[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ba[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ba[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ba[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ba[2]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ba[2]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_cas_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_cas_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ck_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ck_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ck_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ck_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_cke[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_cke[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[10]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[10]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[11]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[11]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[12]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[12]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[13]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[13]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[14]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[14]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[15]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[15]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[2]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[2]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[3]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[3]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[4]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[4]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[5]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[5]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[6]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[6]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[7]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[7]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[8]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[8]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[9]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[9]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[1]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_odt[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_odt[0]. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ras_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ras_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_reset_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_reset_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_we_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_we_n. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/design_1_mig_7series_0_5_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3/design_1_clk_wiz_0_3_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for light_count. (constraint file  D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/hd_reconfig.xdc, line 4).
+Applied set_property HD.RECONFIGURABLE = true for light_count. (constraint file  D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/hd_reconfig.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/axi_hwicap_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/mig_7series_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/rst_clk_wiz_0_200M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/reset_inv_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/rst_mig_7series_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb/design_1_i/clk_wiz_1. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1108.617 ; gain = 101.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1108.617 ; gain = 101.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1108.617 ; gain = 101.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1112.773 ; gain = 105.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1134.301 ; gain = 127.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1135.121 ; gain = 128.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------+----------+
+|      |BlackBox name                     |Instances |
++------+----------------------------------+----------+
+|1     |light_count_shift                 |         1|
+|2     |design_1_xbar_7                   |         1|
+|3     |design_1_axi_hwicap_0_4           |         1|
+|4     |design_1_axi_smc_5                |         1|
+|5     |design_1_axi_uartlite_0_4         |         1|
+|6     |design_1_clk_wiz_0_3              |         1|
+|7     |design_1_clk_wiz_0_4              |         1|
+|8     |design_1_mdm_1_5                  |         1|
+|9     |design_1_microblaze_0_6           |         1|
+|10    |design_1_mig_7series_0_5          |         1|
+|11    |design_1_reset_inv_0_4            |         1|
+|12    |design_1_rst_clk_wiz_0_200M_1     |         1|
+|13    |design_1_rst_mig_7series_0_100M_4 |         1|
+|14    |design_1_dlmb_bram_if_cntlr_7     |         1|
+|15    |design_1_dlmb_v10_7               |         1|
+|16    |design_1_ilmb_bram_if_cntlr_7     |         1|
+|17    |design_1_ilmb_v10_7               |         1|
+|18    |design_1_lmb_bram_7               |         1|
++------+----------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------+------+
+|      |Cell                                   |Count |
++------+---------------------------------------+------+
+|1     |design_1_axi_hwicap_0_4_bbox           |     1|
+|2     |design_1_axi_smc_5_bbox                |     1|
+|3     |design_1_axi_uartlite_0_4_bbox         |     1|
+|4     |design_1_clk_wiz_0_3_bbox              |     1|
+|5     |design_1_clk_wiz_0_4_bbox              |     1|
+|6     |design_1_dlmb_bram_if_cntlr_7_bbox     |     1|
+|7     |design_1_dlmb_v10_7_bbox               |     1|
+|8     |design_1_ilmb_bram_if_cntlr_7_bbox     |     1|
+|9     |design_1_ilmb_v10_7_bbox               |     1|
+|10    |design_1_lmb_bram_7_bbox               |     1|
+|11    |design_1_mdm_1_5_bbox                  |     1|
+|12    |design_1_microblaze_0_6_bbox           |     1|
+|13    |design_1_mig_7series_0_5_bbox          |     1|
+|14    |design_1_reset_inv_0_4_bbox            |     1|
+|15    |design_1_rst_clk_wiz_0_200M_1_bbox     |     1|
+|16    |design_1_rst_mig_7series_0_100M_4_bbox |     1|
+|17    |design_1_xbar_7_bbox                   |     1|
+|18    |light_count_shift_bbox                 |     1|
+|19    |CARRY4                                 |     8|
+|20    |LUT4                                   |     7|
+|21    |LUT5                                   |     3|
+|22    |LUT6                                   |     2|
+|23    |FDRE                                   |    34|
+|24    |IBUF                                   |     2|
+|25    |OBUF                                   |     1|
++------+---------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1139.863 ; gain = 132.863
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1139.863 ; gain = 51.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1139.863 ; gain = 132.863
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1149.078 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1160.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+74 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1160.379 ; gain = 153.379
+INFO: [Common 17-1381] The checkpoint 'D:/Entertaiment/Programy/VHDL/PRBlaze/PRBlaze.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  6 23:12:18 2021...
